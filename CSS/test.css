@@ -1,0 +1,81 @@
+@keyframes entree {
+    from {opacity:0;
+    left:0px}
+    to {opacity:1;
+    left:128px}
+}
+@keyframes sortie {
+    from {opacity:1;
+    left:128px}
+    to {opacity:0;
+    left:0px}
+}
+@keyframes entree2 {
+    from {opacity:0;
+    left:0px}
+    to {opacity:1;
+    left:-128px}
+}
+@keyframes sortie2 {
+    from {opacity:1;
+    left:-128px}
+    to {opacity:0;
+    left:0px}
+}
+.main{
+    animation-name: sortie;
+    animation-duration: 0.5s;
+    position:absolute;
+    opacity: 0;
+    height: 256px;
+    left:0px;
+    top:0px;
+    z-index: -2;
+}
+.test:hover .main{
+    animation-name: entree;
+    animation-duration: 0.5s;
+    opacity: 1;
+    left:128px
+}
+.main2{
+    animation-name: sortie2;
+    animation-duration: 0.5s;
+    position:absolute;
+    opacity: 0;
+    height: 256px;
+    left:0px;
+    top:0px;
+    z-index: -2;
+}
+.test:hover .main2{
+    animation-name: entree2;
+    animation-duration: 0.5s;
+    opacity: 1;
+    left:-128px
+}
+.main3{
+    position:absolute;
+    height:256px;
+    left:0px;
+    top:0px;
+    z-index: -1;
+}
+.test{
+    position:relative;
+    color: #ff3320;
+    left:10px;
+    top: 10px;
+    font-weight: bold;
+    text-shadow:1px 1px black;
+}
+.card{
+    border-radius: 10px;
+    background-color: #00a1fc;
+    width: 208px;
+    height: 278px;
+    position:relative;
+    left:256px;
+    top:256px;
+    z-index: -3;
+}
