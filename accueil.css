@@ -119,3 +119,78 @@ body {
     font-size:150%
 
     }
+    @keyframes entree {
+        from {opacity:0;
+        left:10px}
+        to {opacity:1;
+        left:138px}
+    }
+    @keyframes sortie {
+        from {opacity:1;
+        left:138px}
+        to {opacity:0;
+        left:10px}
+    }
+    @keyframes entree2 {
+        from {opacity:0;
+        left:10px}
+        to {opacity:1;
+        left:-118px}
+    }
+    @keyframes sortie2 {
+        from {opacity:1;
+        left:-118px}
+        to {opacity:0;
+        left:0px}
+    }
+    .flex{
+        display: flex;
+        justify-content: center;
+    }
+    .main{
+        animation-name: sortie;
+        animation-duration: 0.5s;
+        position:absolute;
+        opacity: 0;
+        height: 256px;
+        z-index: -2;
+        top:10px;
+        left:10px;
+    }
+    .flex:hover .main{
+        animation-name: entree;
+        animation-duration: 0.5s;
+        opacity: 1;
+        left:138px
+    }
+    .main2{
+        animation-name: sortie2;
+        animation-duration: 0.5s;
+        position:absolute;
+        opacity: 0;
+        height: 256px;
+        z-index: -2;
+        top:10px;
+        left:10px;
+    }
+    .flex:hover .main2{
+        animation-name: entree2;
+        animation-duration: 0.5s;
+        opacity: 1;
+        left:-118px
+    }
+    .main3{
+        position:absolute;
+        height:256px;
+        z-index: -1;
+        top:10px;
+        left:10px;
+    }
+    .card{
+        border-radius: 10px;
+        background-color: #00a1fc;
+        width: 208px;
+        height: 278px;
+        position:relative;
+        z-index: -3;
+    }
