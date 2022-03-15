@@ -326,6 +326,9 @@ h3 {
     p{
         text-align: center;
     }
+    .footerp{
+        text-align: start;
+    }
     h3{
         text-align: center;
         font-size: 64px;
@@ -383,4 +386,7 @@ h3 {
         animation-name: pompe;
         animation-duration: 3s;
         animation-iteration-count: infinite;
+    }
+    a{
+        color: white;
     }
