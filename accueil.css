@@ -195,7 +195,7 @@ body {
         display: flex;
         flex-direction:row;
         justify-content: space-evenly;
-        padding-bottom: 10px;
+        padding-bottom: 24px;
     }
     .left{
         animation-name: sortie;
