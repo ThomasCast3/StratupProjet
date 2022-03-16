@@ -14,6 +14,12 @@ body {
     background-color: rgb(159, 198, 40);
 }
 
+.langage {
+    margin-top: 17px;
+    width: 30px;
+    height: 30px;
+}
+
 .navbar a {
     float: left;
     font-size: 16px;
@@ -160,7 +166,7 @@ body {
 
 #soustxtAccueil {
     text-align: center;
-    color: #04A0E9;
+    color: rgb(159, 198, 40);
     padding-bottom: 10%;
     padding-left: 10%;
     font-size: 150%
@@ -304,7 +310,6 @@ h3 {
     animation-duration: 0.5s;
     opacity: 1;
     left: 138px;
-    background-color: rgb(159, 198, 40);
 }
 
 .right {
@@ -382,20 +387,20 @@ footer {
 }
 
 .page {
-    background-color: #0398f1;
+    background-color: rgb(159, 198, 40);
     width: 1440px;
     height: 10px;
 }
 
 .sphère {
     border-radius: 128px;
-    background-color: #0398f1;
+    background-color: rgb(159, 198, 40);
     width: 12px;
     height: 12px;
 }
 
 .barre {
-    background-color: #0398f1;
+    background-color: rgb(159, 198, 40);
     width: 256px;
     height: 8px;
 }
@@ -418,7 +423,7 @@ footer {
 
 .transmission {
     position: absolute;
-    background-color: #0398f1;
+    background-color: rgb(159, 198, 40);
     border-radius: 128px;
     width: 10px;
     height: 10px;
