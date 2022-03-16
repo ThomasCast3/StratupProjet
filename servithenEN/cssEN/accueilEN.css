@@ -150,7 +150,7 @@ body {
 }
 
 #infoAccueil {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/fondaccueil.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/img/fondaccueil.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -160,7 +160,6 @@ body {
     text-align: center;
     color: white;
     padding-top: 10%;
-    padding-left: 10%;
     font-size: 300%
 }
 
@@ -168,7 +167,6 @@ body {
     text-align: center;
     color: rgb(159, 198, 40);
     padding-bottom: 10%;
-    padding-left: 10%;
     font-size: 150%
 }
 
