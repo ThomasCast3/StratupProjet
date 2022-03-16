@@ -132,8 +132,43 @@ body {
     height: 60px;
 }
 
-.p {
-    padding-top: 48px;
+.presentation {
+    font-size: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 79%;
+}
+
+.texteGazelle {
+    font-size: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+}
+
+.prixGazelle {
+    width: 30%;
+    align-items: center;
+}
+
+.fond {
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.fond2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.textphoto {
+    font-size: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
 }
 
 .bandeauTop {
