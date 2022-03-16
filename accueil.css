@@ -8,10 +8,10 @@ body {
     position: fixed;
     z-index: 210;
     max-width: 100%;
-    top: 1px;
+    top: 0px;
     width: 100%;
     border-bottom: 0;
-    background-color: black;
+    background-color: rgb(159, 198, 40);
 }
 
 .navbar a {
@@ -40,7 +40,7 @@ body {
 }
 
 .dropdown:hover .dropbtn {
-    background-color: black;
+    background-color: rgb(159, 198, 40);
 }
 
 .dropdown-content1 {
@@ -236,157 +236,207 @@ h3 {
 .copy {
     padding-top: 250px;
 }
-    @keyframes entree {
-        from {opacity:0;
-        left:10px}
-        to {opacity:1;
-        left:138px}
-    }
-    @keyframes sortie {
-        from {opacity:1;
-        left:138px}
-        to {opacity:0;
-        left:10px}
-    }
-    @keyframes entree2 {
-        from {opacity:0;
-        left:10px}
-        to {opacity:1;
-        left:-118px}
-    }
-    @keyframes sortie2 {
-        from {opacity:1;
-        left:-118px}
-        to {opacity:0;
-        left:0px}
-    }
-    .flex{
-        display: flex;
-        flex-direction:row;
-        justify-content: space-evenly;
-        padding-bottom: 24px;
-    }
-    .left{
-        animation-name: sortie;
-        animation-duration: 0.5s;
-        position:absolute;
+
+@keyframes entree {
+    from {
         opacity: 0;
-        height: 256px;
-        z-index: -2;
-        top:10px;
-        left:10px;
+        left: 10px
     }
-    .hover:hover .left{
-        animation-name: entree;
-        animation-duration: 0.5s;
+    to {
         opacity: 1;
-        left:138px
+        left: 138px
     }
-    .right{
-        animation-name: sortie2;
-        animation-duration: 0.5s;
-        position:absolute;
+}
+
+@keyframes sortie {
+    from {
+        opacity: 1;
+        left: 138px
+    }
+    to {
         opacity: 0;
-        height: 256px;
-        z-index: -2;
-        top:10px;
-        left:10px;
+        left: 10px
     }
-    .hover:hover .right{
-        animation-name: entree2;
-        animation-duration: 0.5s;
+}
+
+@keyframes entree2 {
+    from {
+        opacity: 0;
+        left: 10px
+    }
+    to {
         opacity: 1;
-        left:-118px
+        left: -118px
     }
-    .middle{
-        position:absolute;
-        height:256px;
-        z-index: -1;
-        top:10px;
-        transform:scale(100%);
-        transition: transform 1s;
+}
+
+@keyframes sortie2 {
+    from {
+        opacity: 1;
+        left: -118px
     }
-    .hover:hover .middle{
-        transform:scale(105%);
-        transition: transform 1s;
+    to {
+        opacity: 0;
+        left: 0px
     }
-    .card2{
-        border-radius: 10px;
-        width: 250px;
-        display: flex;
-        justify-content: center;
-        height: 278px;
-        position:relative;
-        z-index: -3;
-        box-shadow: 2px 5px 10px black;
-        background-image: url("./img/Motif.png");
-        background-repeat: no-repeat;
-        background-size:cover;
+}
+
+.flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-bottom: 24px;
+}
+
+.left {
+    animation-name: sortie;
+    animation-duration: 0.5s;
+    position: absolute;
+    opacity: 0;
+    height: 256px;
+    z-index: -2;
+    top: 10px;
+    left: 10px;
+}
+
+.hover:hover .left {
+    animation-name: entree;
+    animation-duration: 0.5s;
+    opacity: 1;
+    left: 138px;
+    background-color: rgb(159, 198, 40);
+}
+
+.right {
+    animation-name: sortie2;
+    animation-duration: 0.5s;
+    position: absolute;
+    opacity: 0;
+    height: 256px;
+    z-index: -2;
+    top: 10px;
+    left: 10px;
+}
+
+.hover:hover .right {
+    animation-name: entree2;
+    animation-duration: 0.5s;
+    opacity: 1;
+    left: -118px;
+}
+
+.middle {
+    position: absolute;
+    height: 256px;
+    z-index: -1;
+    top: 10px;
+    transform: scale(100%);
+    transition: transform 1s;
+}
+
+.hover:hover .middle {
+    transform: scale(105%);
+    transition: transform 1s;
+}
+
+.card2 {
+    border-radius: 10px;
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    height: 278px;
+    position: relative;
+    z-index: -3;
+    box-shadow: 2px 5px 10px black;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.footerp {
+    text-align: start;
+}
+
+h3 {
+    text-align: center;
+    font-size: 64px;
+    margin-bottom: 16px;
+}
+
+.description {
+    text-shadow: 0px 0px 5px white;
+    color: black;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    padding-bottom: 10px;
+    display: flex;
+}
+
+.transition {
+    position: absolute;
+    top: 480px;
+    width: 1440px;
+    height: 50px;
+}
+
+.page {
+    background-color: #0398f1;
+    width: 1440px;
+    height: 10px;
+}
+
+.sphère {
+    border-radius: 128px;
+    background-color: #0398f1;
+    width: 12px;
+    height: 12px;
+}
+
+.barre {
+    background-color: #0398f1;
+    width: 256px;
+    height: 8px;
+}
+
+.déco {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 64px;
+}
+
+@keyframes pompe {
+    from {
+        left: 582px;
     }
-    p{
-        text-align: center;
+    to {
+        left: 850px;
     }
-    .footerp{
-        text-align: start;
-    }
-    h3{
-        text-align: center;
-        font-size: 64px;
-        margin-bottom: 16px;
-    }
-    .description{
-        text-shadow: 0px 0px 5px white;
-        color: black;
-    }
-    footer{
-        background-color: black;
-        color: white;
-        padding-bottom: 10px;
-        display: flex;
-    }
-    .transition{
-        position: absolute;
-        top: 480px;
-        width: 1440px;
-        height: 50px;
-    }
-    .page{
-        background-color: #0398f1;
-        width: 1440px;
-        height: 10px;
-    }
-    .sphère{
-        border-radius: 128px;
-        background-color: #0398f1;
-        width: 12px;
-        height: 12px;
-    }
-    .barre{
-        background-color: #0398f1;
-        width: 256px;
-        height: 8px;
-    }
-    .déco{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 64px;
-    }
-    @keyframes pompe{
-        from{left:582px;}
-        to{left:850px;}
-    }
-    .transmission{
-        position: absolute;
-        background-color: #0398f1;
-        border-radius: 128px;
-        width: 10px;
-        height: 10px;
-        left:582px;
-        animation-name: pompe;
-        animation-duration: 3s;
-        animation-iteration-count: infinite;
-    }
-    a{
-        color: white;
-    }
+}
+
+.transmission {
+    position: absolute;
+    background-color: #0398f1;
+    border-radius: 128px;
+    width: 10px;
+    height: 10px;
+    left: 582px;
+    animation-name: pompe;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+a {
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    text-align: start;
+}
+
+.footers {}
+
+.footers1 {
+    margin-top: 16px;
+}
