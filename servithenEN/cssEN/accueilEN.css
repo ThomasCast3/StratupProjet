@@ -165,7 +165,7 @@ body {
 
 #soustxtAccueil {
     text-align: center;
-    color: rgb(159, 198, 40);
+    color: white;
     padding-bottom: 10%;
     font-size: 150%
 }
@@ -377,13 +377,6 @@ footer {
     display: flex;
 }
 
-.transition {
-    position: absolute;
-    top: 480px;
-    width: 1440px;
-    height: 50px;
-}
-
 .page {
     background-color: rgb(159, 198, 40);
     width: 1440px;
@@ -437,8 +430,6 @@ a {
     text-decoration: none;
     text-align: start;
 }
-
-.footers {}
 
 .footers1 {
     margin-top: 16px;
