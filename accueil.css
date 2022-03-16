@@ -17,7 +17,7 @@ body {
 .navbar a {
     float: left;
     font-size: 16px;
-    color: white;
+    color: black;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -32,7 +32,7 @@ body {
     font-size: 16px;
     border: none;
     outline: none;
-    color: white;
+    color: black;
     padding: 37px 20px;
     background-color: inherit;
     font-family: inherit;
@@ -40,7 +40,7 @@ body {
 }
 
 .dropdown:hover .dropbtn {
-    background-color: rgb(159, 198, 40);
+    background-color: #0398f1;
 }
 
 .dropdown-content1 {
@@ -134,7 +134,7 @@ body {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: rgb(90, 159, 248);
+    background-color: #9fc628;
     width: 100%;
 }
 
@@ -148,21 +148,18 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    padding-top: 256px;
 }
 
 #txtAccueil {
     text-align: center;
     color: white;
-    padding-top: 10%;
-    padding-left: 10%;
     font-size: 300%
 }
 
 #soustxtAccueil {
     text-align: center;
-    color: #04A0E9;
-    padding-bottom: 10%;
-    padding-left: 10%;
+    color: #9fc628;
     font-size: 150%
 }
 
@@ -413,6 +410,101 @@ footer {
     }
     to {
         left: 850px;
+    .card2{
+        border-radius: 10px;
+        width: 250px;
+        display: flex;
+        justify-content: center;
+        height: 278px;
+        position:relative;
+        z-index: -3;
+        box-shadow: 2px 5px 10px #9fc628;
+        background-color: #9fc628;
+    }
+    p{
+        text-align: center;
+    }
+    .footerp{
+        text-align: start;
+    }
+    h3{
+        text-align: center;
+        font-size: 64px;
+        margin-bottom: 16px;
+    }
+    .description{
+        text-shadow: 0px 0px 5px white;
+        color: black;
+    }
+    footer{
+        background-color: #9fc628;
+        color: white;
+        padding-bottom: 10px;
+        display: flex;
+    }
+    .transition{
+        width: 1440px;
+        height: 50px;
+    }
+    .page{
+        background-color: #9fc628;
+        width: 1440px;
+        height: 10px;
+    }
+    .sphère{
+        border-radius: 128px;
+        background-color: #9fc628;
+        width: 12px;
+        height: 12px;
+    }
+    .barre{
+        background-color: #9fc628;
+        width: 256px;
+        height: 8px;
+    }
+    .déco{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 64px;
+    }
+    @keyframes pompe{
+        from{left:582px;}
+        to{left:850px;}
+    }
+    .transmission{
+        position: absolute;
+        background-color: #9fc628;
+        border-radius: 128px;
+        width: 10px;
+        height: 10px;
+        left:582px;
+        animation-name: pompe;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+    }
+    a{
+        color: white;
+    }
+    .real{
+        width: 1440px;
+        height: 64px;
+        position: absolute;
+        top:30px;
+        z-index: -1;
+    }
+    textarea{
+        justify-self: center;
+    }
+    .fond{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    #infoAccueil{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
     }
 }
 
