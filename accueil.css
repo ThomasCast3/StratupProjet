@@ -150,7 +150,7 @@ body {
 }
 
 #infoAccueil {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/fondaccueil.jpg);
+    background: linear-gradient(rgb(159, 198, 40),transparent), url(img/fondaccueil.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -159,17 +159,19 @@ body {
 #txtAccueil {
     text-align: center;
     color: white;
-    padding-top: 10%;
-    padding-left: 10%;
-    font-size: 300%
+    padding-top: 15%;
+     font-size: 300%;
 }
 
 #soustxtAccueil {
     text-align: center;
-    color: rgb(159, 198, 40);
+    color: white;
     padding-bottom: 10%;
-    padding-left: 10%;
-    font-size: 150%
+    font-size: 150%;
+}
+
+.pTitre{
+    margin:0;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
@@ -379,12 +381,7 @@ footer {
     display: flex;
 }
 
-.transition {
-    position: absolute;
-    top: 480px;
-    width: 1440px;
-    height: 50px;
-}
+
 
 .page {
     background-color: rgb(159, 198, 40);
