@@ -150,7 +150,7 @@ body {
 }
 
 #infoAccueil {
-    background: linear-gradient(rgb(159, 198, 40),transparent), url(img/fondaccueil.jpg);
+    background: linear-gradient(to top ,rgb(159, 198, 40),transparent), url(img/fondaccueil.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
