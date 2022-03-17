@@ -1,86 +1,83 @@
-#txtAccueil{
+#txtAccueil {
     padding-bottom: 5%;
-    }
-    
-    h2{
-        text-align: left;
-    }
-    
-    #contact{
-        margin: 10px;
-        padding: 10px;
-        display: flex;
-       
-    }
-    
-    .formulaire{
-        background-color: rgb(159, 198, 40);
-        -moz-border-radius: 10px;
-        -webkit-border-radius: 10px;
-        border-radius: 10px;
-        box-shadow: 10px 5px 5px black;
-    }
-    
-    #titreForm{
-        font-size: 30px;
-        padding-bottom: 20px;
-    }
-    
-    #message{
-        resize: none;
-    }
-    
-    #nousContacter{
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-    }
-    
-    .champSaisi{
-     
-        width: 70%;
-        background-color: transparent;
-        border-top: none;
-        border-left: none;
-        border-right: none;
-    }
-    
-    ::placeholder {
-        color: black;
-      }
-    
-    #asideContainer{
+}
+
+h2 {
+    text-align: left;
+}
+
+#contact {
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+}
+
+.formulaire {
+    background-color: rgb(47, 53, 83);
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    box-shadow: 10px 5px 5px black;
+}
+
+#titreForm {
+    font-size: 30px;
+    padding-bottom: 20px;
+}
+
+#message {
+    resize: none;
+}
+
+#nousContacter {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.champSaisi {
+    width: 70%;
+    background-color: transparent;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+ ::placeholder {
+    color: white;
+}
+
+#asideContainer {
     width: 20%;
     margin: 40px;
     padding: 10px;
-    border:  2px solid black;
+    border: 2px solid black;
     box-shadow: 6px 3px 3px gray;
-    
-      }
-    
-    
-      .logoInfo{
-          height: 5%;
-          width: 5%;
-          margin: 5%;
-      }
-    
-      .logoP{
-          display: flex;
-        align-items: center;
-      }
-    
-      #test{
-          display: inline;
-      }
-      #containerInfo{
-        display: flex;
-        flex-direction: column;
-    
-    }
-    
-    #lienLink{
-        text-decoration: none;
-        color: black;
-    }
+    background-color: rgba(160, 157, 157, 0.884);
+}
+
+.logoInfo {
+    height: 5%;
+    width: 5%;
+    margin: 5%;
+}
+
+.logoP {
+    display: flex;
+    align-items: center;
+}
+
+#test {
+    display: inline;
+}
+
+#containerInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+#lienLink {
+    text-decoration: none;
+    color: black;
+}
