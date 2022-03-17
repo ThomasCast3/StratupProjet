@@ -40,3 +40,14 @@ text-align: center ;
 }
 
 
+
+#nomAppli{
+    text-align: center;
+    color: white;
+    padding-bottom: 10%;
+    font-size: 300%;
+}
+
+.pTitre{
+    margin:0;
+}
