@@ -30,4 +30,12 @@ function changetext(site){
   document.getElementById('middle2').value = site["Francais"]["middle2"];
   document.getElementById('middle3').value = site["Francais"]["middle3"];
   document.getElementById('middle4').value = site["Francais"]["middle4"];
+  let Confiance = document.getElementById('Confiance')
+    for (let i = 0; i < site["Francais"]["Confiance"].length; i++) {
+        Confiance.innerHTML = Confiance.innerHTML + '<textarea name="Conf' + i + '" value="' + site["Francais"]["Confiance"][i]["Image"] +'"></textarea>';
+    }
+    let Partenaire = document.getElementById('Partenaire')
+    for (let i = 0; i < site["Francais"]["Partenaire"].length; i++) {
+        Partenaire.innerHTML = Partenaire.innerHTML + '<textarea name="Part' + i + '" value="' + site["Francais"]["Partenaire"][i]["Image"] +'"></textarea>';
+    }
 }

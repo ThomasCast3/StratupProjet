@@ -1,5 +1,5 @@
 {"Francais":{"Titre":"Coding Factory\r\n\r\n\r\n","SousTitre":"Smash\r\n","Activity":"Activit\u00e9","Telephone":"","TelephoneURL":"","Mail":"","MailURL":"","Linkedin":"","LinkedinURL":"","Localisation":"","LocalisationURL":"","Backgroundimg":"img\/fondaccueil.jpg\r\n\r\n","left1":"img\/IMG_E7116.jpeg","left2":"img\/20220310_152203741_iOS.jpeg","left3":"img\/Gaine 2701 assemblage 2.png","left4":"img\/\/c0cc2127-d5d1-4551-a58b-f8810966ded9.jpeg","right1":"img\/IMG_7078.jpeg","right2":"img\/20220310_152209869_iOS.jpeg","right3":"img\/Capture 2910 3.png","right4":"img\/4173969b-65fc-4617-843d-711aa44b1d9e.jpeg","middle1":"img\/IMG_7104 bis.jpeg","middle2":"img\/Norme.png","middle3":"img\/Capture 2701 3d.png","middle4":"img\/120e21a2-83cb-43ba-9fa4-f79532850dd7.jpeg",
-    "Partenaire":[
+    "Confiance":[
         {
             "Image":"img/LogoConfiance/artelia.png"
         },
@@ -14,5 +14,37 @@
         },
         {
             "Image":"img/LogoConfiance/Logo-Veolia.png"
+        },
+        {
+            "Image":"img/LogoConfiance/ocp.png"
+        },
+        {
+            "Image":"img/LogoConfiance/orano-logo.png"
+        },
+        {
+            "Image":"img/LogoConfiance/sgd-pharma-logo.svg"
+        },
+        {
+            "Image":"img/LogoConfiance/siaap.png"
+        },
+        {
+            "Image":"img/LogoConfiance/suez.png"
+        },
+        {
+            "Image":"mg/LogoConfiance/valorhin.png"
+        }
+    ],
+    "Partenaire":[
+        {
+            "Image":"img/partenaire/lechler_logo_juin19.png"
+        },
+        {
+            "Image":"img/partenaire/logo-neu-process.png"
+        },
+        {
+            "Image":"img/partenaire/logo-Siemens.png"
+        },
+        {
+            "Image":"img/partenaire/someflu.png"
         }
     ]}}
