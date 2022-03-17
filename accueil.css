@@ -12,7 +12,7 @@ body {
     top: 0px;
     width: 100%;
     border-bottom: 0;
-    background-color: rgb(159, 198, 40);
+    background-color: rgb(1, 0, 70);
 }
 
 .langage {
@@ -24,7 +24,7 @@ body {
 .navbar a {
     float: left;
     font-size: 16px;
-    color: black;
+    color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -39,7 +39,7 @@ body {
     font-size: 16px;
     border: none;
     outline: none;
-    color: black;
+    color: white;
     padding: 37px 20px;
     background-color: inherit;
     font-family: inherit;
@@ -141,7 +141,7 @@ body {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #9fc628;
+    background-color: rgb(47, 53, 83);
     width: 100%;
 }
 
@@ -151,10 +151,6 @@ body {
 }
 
 #infoAccueil {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/fondaccueil.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
     padding-top: 256px;
 }
 #txtAccueil {
@@ -165,7 +161,7 @@ body {
 
 #soustxtAccueil {
     text-align: center;
-    color: #9fc628;
+    color: rgb(47, 53, 83);
     font-size: 150%;
     padding-bottom: 64px;
 }
@@ -298,7 +294,7 @@ h3 {
     position: absolute;
     opacity: 0;
     height: 256px;
-    z-index: -2;
+    z-index: 1;
     top: 10px;
     left: 10px;
 }
@@ -316,7 +312,7 @@ h3 {
     position: absolute;
     opacity: 0;
     height: 256px;
-    z-index: -2;
+    z-index: 1;
     top: 10px;
     left: 10px;
 }
@@ -331,7 +327,7 @@ h3 {
 .middle {
     position: absolute;
     height: 256px;
-    z-index: -1;
+    z-index: 2;
     top: 10px;
     transform: scale(100%);
     transition: transform 1s;
@@ -349,7 +345,7 @@ h3 {
     justify-content: center;
     height: 278px;
     position: relative;
-    z-index: -3;
+    z-index: 0;
     box-shadow: 2px 5px 10px black;
     background-repeat: no-repeat;
     background-size: cover;
@@ -368,6 +364,7 @@ h3 {
 .description {
     text-shadow: 0px 0px 5px white;
     color: black;
+    z-index: 3;
 }
 
 footer {
@@ -411,17 +408,6 @@ footer {
         left: 850px;
     }
 }
-    .card2{
-        border-radius: 10px;
-        width: 250px;
-        display: flex;
-        justify-content: center;
-        height: 278px;
-        position:relative;
-        z-index: -3;
-        box-shadow: 2px 5px 10px #9fc628;
-        background-color: #9fc628;
-    }
     p{
         text-align: center;
     }
@@ -433,12 +419,8 @@ footer {
         font-size: 64px;
         margin-bottom: 16px;
     }
-    .description{
-        text-shadow: 0px 0px 5px white;
-        color: black;
-    }
     footer{
-        background-color: #9fc628;
+        background-color: rgb(47, 53, 83);
         color: white;
         padding-bottom: 10px;
         display: flex;
@@ -448,18 +430,18 @@ footer {
         height: 50px;
     }
     .page{
-        background-color: #9fc628;
+        background-color: rgb(47, 53, 83);
         width: 1440px;
         height: 10px;
     }
     .sphère{
         border-radius: 128px;
-        background-color: #9fc628;
+        background-color: rgb(47, 53, 83);
         width: 12px;
         height: 12px;
     }
     .barre{
-        background-color: #9fc628;
+        background-color: rgb(47, 53, 83);
         width: 256px;
         height: 8px;
     }
@@ -470,12 +452,12 @@ footer {
         margin-bottom: 64px;
     }
     @keyframes pompe{
-        from{left:582px;}
-        to{left:850px;}
+        from{left:40.25vw;}
+        to{left:59vw;}
     }
     .transmission{
         position: absolute;
-        background-color: #9fc628;
+        background-color: rgb(47, 53, 83);
         border-radius: 128px;
         width: 10px;
         height: 10px;
@@ -508,11 +490,10 @@ footer {
 
 .transmission {
     position: absolute;
-    background-color: rgb(159, 198, 40);
+    background-color: rgb(47, 53, 83);
     border-radius: 128px;
     width: 10px;
     height: 10px;
-    left: 582px;
     animation-name: pompe;
     animation-duration: 3s;
     animation-iteration-count: infinite;
@@ -526,4 +507,28 @@ a {
 }
 .footers1 {
     margin-top: 16px;
+}
+.fondaccueil {
+    z-index: -1;
+    position: absolute;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+    width: 100vw;
+}
+section{
+    background-color: #F9F9F9;
+}
+.modifright{
+    position: absolute;
+    left: 188px
+}
+.modifleft{
+    position: absolute;
+    left: -188px
+}
+.descriptionmodif{
+    position: absolute;
+}
+.modifmiddle{
+    position: absolute;
+    top: 64px;
 }
