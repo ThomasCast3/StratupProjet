@@ -1,4 +1,5 @@
 body {
+    background-color: #F9F9F9;
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     margin-top: -16px;
@@ -156,7 +157,6 @@ body {
     background-position: center;
     padding-top: 256px;
 }
-
 #txtAccueil {
     text-align: center;
     color: white;
@@ -166,7 +166,8 @@ body {
 #soustxtAccueil {
     text-align: center;
     color: #9fc628;
-    font-size: 150%
+    font-size: 150%;
+    padding-bottom: 64px;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
@@ -376,13 +377,6 @@ footer {
     display: flex;
 }
 
-.transition {
-    position: absolute;
-    top: 480px;
-    width: 1440px;
-    height: 50px;
-}
-
 .page {
     background-color: rgb(159, 198, 40);
     width: 1440px;
@@ -415,6 +409,8 @@ footer {
     }
     to {
         left: 850px;
+    }
+}
     .card2{
         border-radius: 10px;
         width: 250px;
@@ -498,20 +494,17 @@ footer {
         top:30px;
         z-index: -1;
     }
-    textarea{
-        justify-self: center;
-    }
     .fond{
         display: flex;
         justify-content: center;
         flex-direction: column;
+
     }
     #infoAccueil{
         display: flex;
         justify-content: center;
         flex-direction: column;
     }
-}
 
 .transmission {
     position: absolute;
@@ -531,9 +524,6 @@ a {
     text-decoration: none;
     text-align: start;
 }
-
-
-
 .footers1 {
     margin-top: 16px;
 }
