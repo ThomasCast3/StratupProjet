@@ -11,13 +11,17 @@ body {
     top: 0px;
     width: 100%;
     border-bottom: 0;
-    background-color: rgb(159, 198, 40);
+    background-color: rgb(47, 53, 83);
 }
 
 .langage {
     margin-top: 17px;
     width: 30px;
     height: 30px;
+}
+
+#caroussel {
+    background-color: whitesmoke;
 }
 
 .navbar a {
@@ -46,7 +50,7 @@ body {
 }
 
 .dropdown:hover .dropbtn {
-    background-color: rgb(159, 198, 40);
+    background-color: rgb(47, 53, 83);
 }
 
 .dropdown-content1 {
@@ -185,7 +189,7 @@ body {
 }
 
 #infoAccueil {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/img/fondaccueil.jpg);
+    background-image: linear-gradient( rgb(47, 53, 83), transparent), url(/img/fondaccueil.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -200,7 +204,7 @@ body {
 
 #soustxtAccueil {
     text-align: center;
-    color: rgb(159, 198, 40);
+    color: white;
     padding-bottom: 10%;
     font-size: 150%
 }
@@ -420,20 +424,20 @@ footer {
 }
 
 .page {
-    background-color: rgb(159, 198, 40);
-    width: 1440px;
-    height: 10px;
+    background-color: rgb(47, 53, 83);
+    width: 100%;
+    height: 4px;
 }
 
 .sphère {
     border-radius: 128px;
-    background-color: rgb(159, 198, 40);
+    background-color: rgb(47, 53, 83);
     width: 12px;
     height: 12px;
 }
 
 .barre {
-    background-color: rgb(159, 198, 40);
+    background-color: rgb(47, 53, 83);
     width: 256px;
     height: 8px;
 }
@@ -456,7 +460,7 @@ footer {
 
 .transmission {
     position: absolute;
-    background-color: rgb(159, 198, 40);
+    background-color: rgb(47, 53, 83);
     border-radius: 128px;
     width: 10px;
     height: 10px;
