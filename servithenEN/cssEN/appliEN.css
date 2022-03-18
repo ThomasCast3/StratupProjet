@@ -1,23 +1,22 @@
-#containerAppli{
+#containerAppli {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
-
 }
 
-#dlAppli{
+#dlAppli {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-#logoAppli{
+#logoAppli {
     width: 16%;
     height: 16%;
 }
 
-#pInfoAppli{
+#pInfoAppli {
     margin: 2%;
     padding: 1%;
     -moz-border-radius: 10px;
@@ -26,28 +25,20 @@
     color: white;
     background-color: rgb(47, 53, 83);
     box-shadow: 6px 3px 3px gray;
- 
 }
 
-.ppExplication{
+.ppExplication {
     width: 60%;
     height: 60%;
 }
 
-#containerImg{
-
-text-align: center ;
-}
-
-
-
-#nomAppli{
+#nomAppli {
     text-align: center;
     color: white;
     padding-bottom: 10%;
     font-size: 300%;
 }
 
-.pTitre{
-    margin:0;
+.pTitre {
+    margin: 0;
 }
