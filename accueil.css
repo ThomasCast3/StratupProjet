@@ -532,3 +532,13 @@ section{
     position: absolute;
     top: 64px;
 }
+.button{
+    position: relative;
+    border-radius: 4px;
+    background-color: grey;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    left: 50vw;
+    text-align: center;
+}
