@@ -14,10 +14,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     function get_data() {
         class stock{
         }
-        class langue{
-        }
-        $file_name='StudentsData'. '.json';
-        $datae2=new langue();
+        $file_name='accueil.json';
+        $datae2=new stock();
         $datae2->Titre = $_POST['Titre'];
         $datae2->SousTitre = $_POST['SousTitre'];
         $datae2->Activity = $_POST['Activity'];
@@ -30,6 +28,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $datae2->Localisation = $_POST['Local'];
         $datae2->LocalisationURL = $_POST['LocalURL'];
         $datae2->Backgroundimg = $_POST['Backgroundimg'];
+        $datae2->description1 = $_POST['description1'];
+        $datae2->description2 = $_POST['description2'];
+        $datae2->description3 = $_POST['description3'];
+        $datae2->description4 = $_POST['description4'];
         $datae2->left1 = $_POST['left1'];
         $datae2->left2 = $_POST['left2'];
         $datae2->left3 = $_POST['left3'];
@@ -42,22 +44,36 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $datae2->middle2 = $_POST['middle2'];
         $datae2->middle3 = $_POST['middle3'];
         $datae2->middle4 = $_POST['middle4'];
+        $numbP = $_POST['NumbPart'];
+        for ($i = 0; $i < $numbP; $i++) {
+            $datae3 = new stock();
+            $datae3->Image = $_POST['Part'.$i];
+            $dataeP[$i] = $datae3;
+        };
+        $numbC = $_POST['NumbConf'];
+        for ($i = 0; $i < $numbC; $i++) {
+            $datae4 = new stock();
+            $datae4->Image = $_POST['Conf'.$i];
+            $dataeC[$i] = $datae4;
+        };
+        $datae2->Partenaire = $dataeP;
+        $datae2->Confiance = $dataeC;
         $datae=new stock();
         $datae->Francais=$datae2;
         return json_encode($datae);
         }
     }
     
-    $file_name='StudentsData'. '.json';
+    $file_name='accueil.json';
         
     if(file_put_contents("$file_name", get_data())) {
         echo 'success';
-        $redirect_page = 'accueil.html';
+        $redirect_page = 'accueilFR.html';
         header('Location:'  .$redirect_page);
     }                
     else {
         echo 'There is some error';  
-        $redirect_page = 'modif accueil.html';
+        $redirect_page = 'modifaccueilFR.html';
         header('Location:'  .$redirect_page);             
     }           
 ?>

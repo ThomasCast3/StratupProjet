@@ -37,14 +37,14 @@ function changetext(site){
     let Confiance = document.getElementById('Confiance')
     for (let i = 0; i < site["Francais"]["Confiance"].length; i++) {
         if (i == 4){
-        Confiance.innerHTML = Confiance.innerHTML + '<div class="slide"><img src="' + site["Francais"]["Confiance"][i]["Image"] +'"></div>';
+        Confiance.innerHTML = Confiance.innerHTML + '<div class="slide"><img class="TailleImg" src="' + site["Francais"]["Confiance"][i]["Image"] +'"></div>';
         } else {
-            Confiance.innerHTML = Confiance.innerHTML + '<div class="slide"><img class="TailleImg" src="' + site["Francais"]["Confiance"][i]["Image"] +'"></div>';
+            Confiance.innerHTML = Confiance.innerHTML + '<div class="slide"><img src="' + site["Francais"]["Confiance"][i]["Image"] +'"></div>';
         }
     }
     let Partenaire = document.getElementById('Partenaire')
     for (let i = 0; i < site["Francais"]["Partenaire"].length; i++) {
-        Partenaire.innerHTML = Partenaire.innerHTML + '<div class="slide"><img class="TailleImg" src="' + site["Francais"]["Partenaire"][i]["Image"] +'"></div>';
+        Partenaire.innerHTML = Partenaire.innerHTML + '<div class="slide"><img src="' + site["Francais"]["Partenaire"][i]["Image"] +'"></div>';
     }
     $('.customer-logos').slick({
         slidesToShow: 6,
