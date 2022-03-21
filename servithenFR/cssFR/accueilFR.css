@@ -588,6 +588,9 @@ P.mention {
     width: 75%;
 }
 
-h3 {
-    font-size: 180%;
+h4 {
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+    font-size: 120%;
 }
