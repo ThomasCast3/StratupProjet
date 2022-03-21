@@ -523,10 +523,6 @@ footer {
     width: 100%;
 }
 
-.DL {
-    color: black;
-}
-
 .imgBrochur {
     width: 30%;
     margin: 3%;
@@ -546,6 +542,11 @@ footer {
 .texteBroch {
     color: white;
     margin: 3%;
+}
+
+.DL {
+    color: black;
+    text-decoration: none;
 }
 
 .btnPDF {
