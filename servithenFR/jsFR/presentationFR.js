@@ -1,4 +1,4 @@
-var requestURL = "accueil.json";
+var requestURL = "general.json";
 fetch(requestURL)
   .then(response => response.json())
   .then(jsonData => {
@@ -16,9 +16,6 @@ function changetext(site){
     document.getElementById('Linkedin').href = site["Francais"]["LinkedinURL"];
     document.getElementById('Local').innerHTML = site["Francais"]["Localisation"];
     document.getElementById('Local').href = site["Francais"]["LocalisationURL"];
-    document.getElementById('P1').innerHTML = site["Francais"]["Presentation1"];
-    document.getElementById('P2').innerHTML = site["Francais"]["Presentation2"];
-    document.getElementById('P3').innerHTML = site["Francais"]["Presentation3"];
     document.getElementById('infoAccueil').innerHTML = '<img src="' + site["Francais"]["Backgroundimg"] + '" class="fondaccueil">' + document.getElementById('infoAccueil').innerHTML;
     let Confiance = document.getElementById('Confiance')
     for (let i = 0; i < site["Francais"]["Confiance"].length; i++) {
@@ -71,3 +68,15 @@ function changetext(site){
         }]
     });
 }
+var requestURL = "presentation.json";
+fetch(requestURL)
+  .then(response => response.json())
+  .then(jsonData => {
+    console.log(jsonData)
+    changetextP(jsonData)
+  })
+  function changetextP(site){
+    document.getElementById('P1').innerHTML = site["Francais"]["Presentation1"];
+    document.getElementById('P2').innerHTML = site["Francais"]["Presentation2"];
+    document.getElementById('P3').innerHTML = site["Francais"]["Presentation3"];
+  }

@@ -1,4 +1,4 @@
-var requestURL = "accueil.json";
+var requestURL = "general.json";
 fetch(requestURL)
   .then(response => response.json())
   .then(jsonData => {
@@ -8,7 +8,6 @@ fetch(requestURL)
 function changetext(site){
     document.getElementById('txtTitre').innerHTML = site["Francais"]["Titre"];
     document.getElementById('stxtTitre').innerHTML = site["Francais"]["SousTitre"];
-    document.getElementById('DescActi').innerHTML = site["Francais"]["Activity"];
     document.getElementById('Telephone').innerHTML = site["Francais"]["Telephone"];
     document.getElementById('Telephone').href = site["Francais"]["TelephoneURL"];
     document.getElementById('Mail').innerHTML = site["Francais"]["Mail"];
@@ -18,22 +17,6 @@ function changetext(site){
     document.getElementById('Local').innerHTML = site["Francais"]["Localisation"];
     document.getElementById('Local').href = site["Francais"]["LocalisationURL"];
     document.getElementById('infoAccueil').innerHTML = '<img src="' + site["Francais"]["Backgroundimg"] + '" class="fondaccueil">' + document.getElementById('infoAccueil').innerHTML;
-    document.getElementById('description1').innerHTML = site["Francais"]["description1"];
-    document.getElementById('description2').innerHTML = site["Francais"]["description2"];
-    document.getElementById('description3').innerHTML = site["Francais"]["description3"];
-    document.getElementById('description4').innerHTML = site["Francais"]["description4"];
-    document.getElementById('L1').src = site["Francais"]["left1"];
-    document.getElementById('L2').src = site["Francais"]["left2"];
-    document.getElementById('L3').src = site["Francais"]["left3"];
-    document.getElementById('L4').src = site["Francais"]["left4"];
-    document.getElementById('R1').src = site["Francais"]["right1"];
-    document.getElementById('R2').src = site["Francais"]["right2"];
-    document.getElementById('R3').src = site["Francais"]["right3"];
-    document.getElementById('R4').src = site["Francais"]["right4"];
-    document.getElementById('M1').src = site["Francais"]["middle1"];
-    document.getElementById('M2').src = site["Francais"]["middle2"];
-    document.getElementById('M3').src = site["Francais"]["middle3"];
-    document.getElementById('M4').src = site["Francais"]["middle4"];
     let Confiance = document.getElementById('Confiance')
     for (let i = 0; i < site["Francais"]["Confiance"].length; i++) {
         if (i == 4){
@@ -85,3 +68,29 @@ function changetext(site){
         }]
     });
 }
+var requestURL = "accueil.json";
+fetch(requestURL)
+  .then(response => response.json())
+  .then(jsonData => {
+    console.log(jsonData)
+    changetextP(jsonData)
+  })
+  function changetextP(site){
+    document.getElementById('description1').innerHTML = site["Francais"]["description1"];
+    document.getElementById('description2').innerHTML = site["Francais"]["description2"];
+    document.getElementById('description3').innerHTML = site["Francais"]["description3"];
+    document.getElementById('description4').innerHTML = site["Francais"]["description4"];
+    document.getElementById('L1').src = site["Francais"]["left1"];
+    document.getElementById('L2').src = site["Francais"]["left2"];
+    document.getElementById('L3').src = site["Francais"]["left3"];
+    document.getElementById('L4').src = site["Francais"]["left4"];
+    document.getElementById('R1').src = site["Francais"]["right1"];
+    document.getElementById('R2').src = site["Francais"]["right2"];
+    document.getElementById('R3').src = site["Francais"]["right3"];
+    document.getElementById('R4').src = site["Francais"]["right4"];
+    document.getElementById('M1').src = site["Francais"]["middle1"];
+    document.getElementById('M2').src = site["Francais"]["middle2"];
+    document.getElementById('M3').src = site["Francais"]["middle3"];
+    document.getElementById('M4').src = site["Francais"]["middle4"];
+    document.getElementById('DescActi').innerHTML = site["Francais"]["Activity"];
+  }

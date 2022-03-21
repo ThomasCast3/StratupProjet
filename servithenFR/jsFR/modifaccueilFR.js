@@ -1,4 +1,4 @@
-var requestURL = "accueil.json";
+var requestURL = "general.json";
 fetch(requestURL)
   .then(response => response.json())
   .then(jsonData => {
@@ -8,7 +8,6 @@ fetch(requestURL)
 function changetext(site){
   document.getElementById('txtTitre').value = site["Francais"]["Titre"];
   document.getElementById('stxtTitre').value = site["Francais"]["SousTitre"];
-  document.getElementById('DescActi').value = site["Francais"]["Activity"];
   document.getElementById('Telephone').value = site["Francais"]["Telephone"];
   document.getElementById('TelephoneURL').value = site["Francais"]["TelephoneURL"];
   document.getElementById('Mail').value = site["Francais"]["Mail"];
@@ -18,22 +17,7 @@ function changetext(site){
   document.getElementById('Local').value = site["Francais"]["Localisation"];
   document.getElementById('LocalURL').value = site["Francais"]["LocalisationURL"];
   document.getElementById('Background').value = site["Francais"]["Backgroundimg"];
-  document.getElementById('description1').value = site["Francais"]["description1"];
-  document.getElementById('description2').value = site["Francais"]["description2"];
-  document.getElementById('description3').value = site["Francais"]["description3"];
-  document.getElementById('description4').value = site["Francais"]["description4"];
-  document.getElementById('left1').value = site["Francais"]["left1"];
-  document.getElementById('left2').value = site["Francais"]["left2"];
-  document.getElementById('left3').value = site["Francais"]["left3"];
-  document.getElementById('left4').value = site["Francais"]["left4"];
-  document.getElementById('right1').value = site["Francais"]["right1"];
-  document.getElementById('right2').value = site["Francais"]["right2"];
-  document.getElementById('right3').value = site["Francais"]["right3"];
-  document.getElementById('right4').value = site["Francais"]["right4"];
-  document.getElementById('middle1').value = site["Francais"]["middle1"];
-  document.getElementById('middle2').value = site["Francais"]["middle2"];
-  document.getElementById('middle3').value = site["Francais"]["middle3"];
-  document.getElementById('middle4').value = site["Francais"]["middle4"];
+
   function restart(Type){
     if (Type == "Conf"){
       for(let r = 0;r < site["Francais"]["Confiance"].length;r++){
@@ -86,3 +70,29 @@ function changetext(site){
       NumbPart.value = j;
     })
 }
+var requestURL = "accueil.json";
+fetch(requestURL)
+  .then(response => response.json())
+  .then(jsonData => {
+    console.log(jsonData)
+    changetextP(jsonData)
+  })
+  function changetextP(site){
+    document.getElementById('description1').value = site["Francais"]["description1"];
+    document.getElementById('description2').value = site["Francais"]["description2"];
+    document.getElementById('description3').value = site["Francais"]["description3"];
+    document.getElementById('description4').value = site["Francais"]["description4"];
+    document.getElementById('left1').value = site["Francais"]["left1"];
+    document.getElementById('left2').value = site["Francais"]["left2"];
+    document.getElementById('left3').value = site["Francais"]["left3"];
+    document.getElementById('left4').value = site["Francais"]["left4"];
+    document.getElementById('right1').value = site["Francais"]["right1"];
+    document.getElementById('right2').value = site["Francais"]["right2"];
+    document.getElementById('right3').value = site["Francais"]["right3"];
+    document.getElementById('right4').value = site["Francais"]["right4"];
+    document.getElementById('middle1').value = site["Francais"]["middle1"];
+    document.getElementById('middle2').value = site["Francais"]["middle2"];
+    document.getElementById('middle3').value = site["Francais"]["middle3"];
+    document.getElementById('middle4').value = site["Francais"]["middle4"];
+    document.getElementById('DescActi').value = site["Francais"]["Activity"];
+  }

@@ -1,4 +1,4 @@
-var requestURL = "accueil.json";
+var requestURL = "general.json";
 fetch(requestURL)
   .then(response => response.json())
   .then(jsonData => {
@@ -68,4 +68,16 @@ function changetext(site){
       document.getElementById('Part'+j).remove();
       NumbPart.value = j;
     })
+}
+var requestURL = "presentation.json";
+fetch(requestURL)
+  .then(response => response.json())
+  .then(jsonData => {
+    console.log(jsonData)
+    changetextP(jsonData)
+  })
+  function changetextP(site){
+    document.getElementById('P1').innerHTML = site["Francais"]["Presentation1"];
+    document.getElementById('P2').innerHTML = site["Francais"]["Presentation2"];
+    document.getElementById('P3').innerHTML = site["Francais"]["Presentation3"];
 }

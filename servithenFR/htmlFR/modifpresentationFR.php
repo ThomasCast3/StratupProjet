@@ -14,50 +14,62 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     function get_data() {
         class stock{
         }
-        $file_name='accueil.json';
+        $file_name='presentation.json';
         $datae2=new stock();
-        $datae2->Titre = $_POST['Titre'];
-        $datae2->SousTitre = $_POST['SousTitre'];
-        $datae2->Telephone = $_POST['Telephone'];
-        $datae2->TelephoneURL = $_POST['TelephoneURL'];
-        $datae2->Mail = $_POST['Mail'];
-        $datae2->MailURL = $_POST['MailURL'];
-        $datae2->Linkedin = $_POST['Linkedin'];
-        $datae2->LinkedinURL = $_POST['LinkedinURL'];
-        $datae2->Localisation = $_POST['Local'];
-        $datae2->LocalisationURL = $_POST['LocalURL'];
-        $datae2->Backgroundimg = $_POST['Backgroundimg'];
-        $datae2->Presentation1 = $_POST['Backgroundimg'];
-        $numbP = $_POST['NumbPart'];
-        for ($i = 0; $i < $numbP; $i++) {
-            $datae3 = new stock();
-            $datae3->Image = $_POST['Part'.$i];
-            $dataeP[$i] = $datae3;
-        };
-        $numbC = $_POST['NumbConf'];
-        for ($i = 0; $i < $numbC; $i++) {
-            $datae4 = new stock();
-            $datae4->Image = $_POST['Conf'.$i];
-            $dataeC[$i] = $datae4;
-        };
-        $datae2->Partenaire = $dataeP;
-        $datae2->Confiance = $dataeC;
+        $datae2->Presentation1 = $_POST['presentation1'];
+        $datae2->Presentation2 = $_POST['presentation2'];
+        $datae2->Presentation3 = $_POST['presentation3'];
         $datae=new stock();
         $datae->Francais=$datae2;
         return json_encode($datae);
+    }
+    function get_dataG() {
+        $file_name='general.json';
+        $dataeG2=new stock();
+        $dataeG2->Titre = $_POST['Titre'];
+        $dataeG2->SousTitre = $_POST['SousTitre'];
+        $dataeG2->Telephone = $_POST['Telephone'];
+        $dataeG2->TelephoneURL = $_POST['TelephoneURL'];
+        $dataeG2->Mail = $_POST['Mail'];
+        $dataeG2->MailURL = $_POST['MailURL'];
+        $dataeG2->Linkedin = $_POST['Linkedin'];
+        $dataeG2->LinkedinURL = $_POST['LinkedinURL'];
+        $dataeG2->Localisation = $_POST['Local'];
+        $dataeG2->LocalisationURL = $_POST['LocalURL'];
+        $dataeG2->Backgroundimg = $_POST['Backgroundimg'];
+        $numbP = $_POST['NumbPart'];
+        for ($i = 0; $i < $numbP; $i++) {
+            $dataeG3 = new stock();
+            $dataeG3->Image = $_POST['Part'.$i];
+            $dataeGP[$i] = $dataeG3;
+        };
+        $numbC = $_POST['NumbConf'];
+        for ($i = 0; $i < $numbC; $i++) {
+            $dataeG4 = new stock();
+            $dataeG4->Image = $_POST['Conf'.$i];
+            $dataeGC[$i] = $dataeG4;
+        };
+        $dataeG2->Partenaire = $dataeGP;
+        $dataeG2->Confiance = $dataeGC;
+        $dataeG=new stock();
+        $dataeG->Francais=$dataeG2;
+        return json_encode($dataeG);
         }
     }
     
-    $file_name='accueil.json';
+    $file_name='presentation.json';
         
     if(file_put_contents("$file_name", get_data())) {
-        echo 'success';
-        $redirect_page = 'accueilFR.html';
-        header('Location:'  .$redirect_page);
+        $file_name='general.json';
+        if(file_put_contents("$file_name", get_dataG())) {
+            echo 'success';
+            $redirect_page = 'presentationFR.html';
+            header('Location:'  .$redirect_page);
+        }
     }                
     else {
         echo 'There is some error';  
-        $redirect_page = 'modifaccueilFR.html';
+        $redirect_page = 'modifpresentationFR.html';
         header('Location:'  .$redirect_page);             
     }           
 ?>
