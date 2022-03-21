@@ -78,7 +78,7 @@
             <textarea id="stxtTitre" name="SousTitre" class="pTitre">
             </textarea>
         </div>
-
+        <textarea name="Backgroundimg" id="Background"></textarea>
     </div>
     <div class="page"></div>
     <!-- texte et prix gazellz -->
@@ -92,18 +92,18 @@
                 <div class="barre"></div>
                 <div class="sphère"></div>
             </div>
-            <textarea class="presentation">La société Servithen (Services Thermique Environnement) a été créée en 1986. Principalement centrée à l'origine sur l'audit et la mise en conformité d'installations thermiques existantes elle a étendu ses prestations à l'installation de lignes
+            <textarea name="presentation1" id="presentation1" class="presentation">La société Servithen (Services Thermique Environnement) a été créée en 1986. Principalement centrée à l'origine sur l'audit et la mise en conformité d'installations thermiques existantes elle a étendu ses prestations à l'installation de lignes
                 complètes d'incinération et de traitement de fumées ou d'effluents gazeux et à la fourniture d'équipements spécifiques, ou d'installations "clé-en-main", avec en particulier :
             </textarea>
-            <textarea class="presentation"> · Des fours,<br><br> · Des laveurs de fumées pour l'abattement des poussières et la neutralisation des gaz acides,<br><br> · Des filtres électrostatiques humides permettant des rendements élevés de captation des poussières,<br><br> · Des unités
+            <textarea name="presentation2" id="presentation2" class="presentation"> · Des fours,<br><br> · Des laveurs de fumées pour l'abattement des poussières et la neutralisation des gaz acides,<br><br> · Des filtres électrostatiques humides permettant des rendements élevés de captation des poussières,<br><br> · Des unités
                 de traitement sec de fumées d'incinération,<br><br> · Des installations de traitement de composés organiques volatiles (COV), d'odeurs ou de traitement deNOx.
-            </textarea class="presentation">
-            <textarea class="presentation"> La Société SERVITHEN s’est vu décerner le label Gazelle 2005 par le ministre des PME, du commerce, de l’artisanat et des professions libérales, Monsieur Renaud DUTREIL. Ce trophée récompense 2.000 Entreprises françaises sur 1,2 millions de
+            </textarea>
+            <textarea name="presentation3" id="presentation3" class="presentation"> La Société SERVITHEN s’est vu décerner le label Gazelle 2005 par le ministre des PME, du commerce, de l’artisanat et des professions libérales, Monsieur Renaud DUTREIL. Ce trophée récompense 2.000 Entreprises françaises sur 1,2 millions de
                 PME. Les gazelles retenues sont les PME qui croissent pendant la période étudiée de 1993 à 2003, soit deux ou trois plus vite que celles du même secteur d’activité, soit celles qui sont dans le top 5 où 10 % de leur population en termes
                 de croissance et qui, ont une rentabilité supérieure à celle de leurs homologues. L’objectif de ce programme gouvernemental est de favoriser le maintien de la croissance rapide de ces PME les plus dynamiques. Notamment, en mobilisant toutes
                 les compétences pour leurs permettre de soutenir leur croissance, en particulier en enrichissant leur réseau relationnel, et en leur donnant accès à des offres spécifiques de partenaires, entre autres financiers</textarea>
-            <textarea class="texteGazelle">SERVITHEN Prix Gazelle 2005 :</textarea>
-            <textarea class="prixGazelle" src="/img/20220310_152203741_iOS.jpeg"></textarea>
+            <textarea id="textGazelle" class="texteGazelle">SERVITHEN Prix Gazelle 2005 :</textarea>
+            <textarea id="PrixGazelle" class="prixGazelle" value="/img/20220310_152203741_iOS.jpeg"></textarea>
         </div>
     </section>
 
@@ -122,6 +122,10 @@
             </div>
             <section id="Partenaire" class="customer-logos2 slider2">
             </section>
+            <div>
+                <button id="PartB+" type="button">+</button><button type="button" id="PartB-">-</button>
+                <textarea id="NumbPart" name="NumbPart"></textarea>
+            </div>
         </div>
 
 
@@ -130,6 +134,10 @@
             <h2 class="text-center font-weight-bold">nous font confiance :</h2>
             <section id="Confiance" class="customer-logos slider">
             </section>
+            <div>
+                <button id="ConfB+" type="button">+</button><button type="button" id="ConfB-">-</button>
+                <textarea id="NumbConf" name="NumbConf"></textarea>
+            </div>
         </div>
 
 
@@ -138,7 +146,7 @@
         <footer class="coordonne">
 
             <div class="foters">
-                <h4>Coordonné :</h4>
+                <h4>Coordonnées :</h4>
             </div>
 
             <div class="foter">

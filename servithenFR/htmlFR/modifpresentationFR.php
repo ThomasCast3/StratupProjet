@@ -27,6 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $datae2->Localisation = $_POST['Local'];
         $datae2->LocalisationURL = $_POST['LocalURL'];
         $datae2->Backgroundimg = $_POST['Backgroundimg'];
+        $datae2->Presentation1 = $_POST['Backgroundimg'];
         $numbP = $_POST['NumbPart'];
         for ($i = 0; $i < $numbP; $i++) {
             $datae3 = new stock();
