@@ -45,6 +45,20 @@ body {
     background-color: inherit;
     font-family: inherit;
     margin: 0;
+    font-size: 12px;
+}
+
+.MenuBtn {
+    display: flex;
+    font-size: 12px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 37px 10px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+    text-decoration: none;
 }
 
 .dropdown:hover .dropbtn {
@@ -403,6 +417,9 @@ h3 {
 
 .footerp {
     text-align: start;
+    color: white;
+    text-align: center;
+    text-decoration: none;
 }
 
 h3 {
@@ -475,13 +492,6 @@ footer {
     animation-name: pompe;
     animation-duration: 3s;
     animation-iteration-count: infinite;
-}
-
-a {
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    text-align: start;
 }
 
 .footers1 {
