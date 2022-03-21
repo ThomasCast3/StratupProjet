@@ -18,17 +18,18 @@ body {
     width: 100%;
     border-bottom: 0;
     background-color: rgb(47, 53, 83);
+    box-shadow: rgb(0 0 0 / 12%) 0 1px 3px;
 }
 
 .langage {
     float: right;
-    padding: 31px 16px;
-    width: 30px;
-    height: 30px;
+    padding: 38px 16px;
+    width: 20px;
+    height: 15px;
 }
 
 #caroussel {
-    background-color: whitesmoke;
+    background-color: rgb(214, 213, 213);
 }
 
 .dropdown {
@@ -38,14 +39,27 @@ body {
 
 .dropdown .dropbtn {
     display: flex;
-    font-size: 16px;
     border: none;
     outline: none;
     color: white;
-    padding: 37px 20px;
+    padding: 37px 10px;
     background-color: inherit;
     font-family: inherit;
     margin: 0;
+    font-size: 12px;
+}
+
+.MenuBtn {
+    display: flex;
+    font-size: 12px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 37px 10px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+    text-decoration: none;
 }
 
 .dropdown:hover .dropbtn {
@@ -54,7 +68,7 @@ body {
 
 .dropdown-content1 {
     display: none;
-    position: fixed;
+    position: absolute;
     background-color: #f9f9f9;
     min-width: 115px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
@@ -131,10 +145,10 @@ body {
 }
 
 .logo {
-    padding: 14px 16px;
+    padding-left: 10px;
     float: left;
-    width: 60px;
-    height: 60px;
+    width: 91px;
+    height: 91px;
 }
 
 .presentation {
@@ -210,8 +224,7 @@ body {
     font-size: 150%
 }
 
-
-#nomAppli{
+#nomAppli {
     text-align: center;
     color: white;
     padding-bottom: 10%;
@@ -409,6 +422,9 @@ h3 {
 
 .footerp {
     text-align: start;
+    color: white;
+    text-align: center;
+    text-decoration: none;
 }
 
 h3 {
@@ -483,17 +499,6 @@ footer {
     animation-iteration-count: infinite;
 }
 
-a {
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    text-align: start;
-}
-
-
-
-
-
 .footers1 {
     margin-top: 16px;
 }
@@ -521,6 +526,62 @@ a {
     flex-direction: column;
     align-items: center;
     width: 100%;
+}
+
+.imgBrochur {
+    width: 30%;
+    margin: 3%;
+    float: left;
+}
+
+.fondBroch {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.carrerimg {
+    background-color: rgb(47, 53, 83);
+}
+
+.texteBroch {
+    color: white;
+    margin: 3%;
+}
+
+.DL {
+    color: black;
+    text-decoration: none;
+}
+
+.btnPDF {
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    font: 14px/100% Arial, Helvetica, sans-serif;
+    padding: .5em 2em .55em;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
+    -webkit-border-radius: .5em;
+    -moz-border-radius: .5em;
+    border-radius: .5em;
+    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+    -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+}
+
+.btnPDF:hover {
+    text-decoration: none;
+}
+
+.btnPDF:active {
+    position: relative;
+    top: 1px;
+}
+
+.btnPDF {
+    background-color: white;
 }
 .modifright{
     position: absolute;
