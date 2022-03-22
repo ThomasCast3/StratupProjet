@@ -240,6 +240,18 @@ h2 {
     padding: 20px;
 }
 
+h3 {
+    text-align: center;
+    padding: 20px;
+    font-size: 64px;
+    margin-bottom: 16px;
+}
+
+h4 {
+    text-align: center;
+    padding: 20px;
+}
+
 .slick-slide {
     margin: 20px;
 }
@@ -415,13 +427,6 @@ h2 {
     color: white;
     text-align: center;
     text-decoration: none;
-}
-
-h3 {
-    padding: 20px;
-    text-align: center;
-    font-size: 64px;
-    margin-bottom: 16px;
 }
 
 .description {
