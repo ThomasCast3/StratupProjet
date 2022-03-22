@@ -14,11 +14,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     function get_data() {
         class stock{
         }
-        $file_name='Tours.json';
+        $serv = $_POST['serv'];
+        $file_name='service'.$serv.'.json';
         $datae2=new stock();
-        $datae2->imgProduit = $_POST['imgProduit'];
-        $datae2->txtProduit = $_POST['txtProduit'];
-        $datae2->lienProduit = $_POST['lienProduit'];
+        $datae2->text1 = $_POST['text1'];
+        $datae2->text2 = $_POST['text2'];
+        $numbimg = $_POST['Numbimg'];
+        for ($i = 0; $i < $numbimg; $i++) {
+            $datae3 = new stock();
+            $datae3->Image = $_POST['photoService'.$i];
+            $dataeI[$i] = $datae3;
+        };
+        $datae2->img = $dataeI;
         $datae=new stock();
         $datae->Francais=$datae2;
         return json_encode($datae);
@@ -56,20 +63,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         return json_encode($dataeG);
         }
     }
-    
-    $file_name='Tours.json';
-        
+    $serv = $_POST['serv'];
+    $file_name = "service".$serv.".json";
     if(file_put_contents("$file_name", get_data())) {
-        $file_name='/servithenFR/htmlFR/general.json';
+        $file_name = "/Users/arxcoz/Downloads/StratupProjet/servithenFR/htmlFR/general.json";
         if(file_put_contents("$file_name", get_dataG())) {
             echo 'success';
-            $redirect_page = 'ToursDeLavageFR.html';
-            header('Location:'  .$redirect_page);
+            $redirect_page = 'service'.$serv.'.html';
+            header('Location:'.$redirect_page);
         }
     }                
     else {
         echo 'There is some error';  
-        $redirect_page = 'modifToursDeLavageFR.html';
-        header('Location:'  .$redirect_page);             
+        $redirect_page = 'modifservice'.$serv.'.html';
+        header('Location:'.$redirect_page);
     }           
 ?>

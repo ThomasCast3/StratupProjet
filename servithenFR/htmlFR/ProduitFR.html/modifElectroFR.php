@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         return json_encode($datae);
     }
     function get_dataG() {
-        $file_name='general.json';
+        $file_name='/servithenFR/htmlFR/general.json';
         $dataeG2=new stock();
         $dataeG2->Titre = $_POST['Titre'];
         $dataeG2->SousTitre = $_POST['SousTitre'];
@@ -60,7 +60,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $file_name='Electro.json';
         
     if(file_put_contents("$file_name", get_data())) {
-        $file_name='general.json';
+        $file_name='/servithenFR/htmlFR/general.json';
         if(file_put_contents("$file_name", get_dataG())) {
             echo 'success';
             $redirect_page = 'ElectrofiltresHumidesSecsFR.html';
