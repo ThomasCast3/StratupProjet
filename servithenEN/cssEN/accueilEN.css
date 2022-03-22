@@ -17,7 +17,7 @@ body {
     width: 100%;
     border-bottom: 0;
     background-color: rgb(47, 53, 83);
-    box-shadow: rgb(0 0 0 / 12%) 0 1px 3px;
+    box-shadow: rgb(0 0 0 / 62%) 0 5px 20px;
 }
 
 .langage {
@@ -240,11 +240,6 @@ h2 {
     padding: 20px;
 }
 
-h3 {
-    text-align: center;
-    padding: 20px;
-}
-
 .slick-slide {
     margin: 20px;
 }
@@ -423,6 +418,7 @@ h3 {
 }
 
 h3 {
+    padding: 20px;
     text-align: center;
     font-size: 64px;
     margin-bottom: 16px;
@@ -523,10 +519,6 @@ footer {
     width: 100%;
 }
 
-.DL {
-    color: black;
-}
-
 .imgBrochur {
     width: 30%;
     margin: 3%;
@@ -548,25 +540,25 @@ footer {
     margin: 3%;
 }
 
+.DL {
+    color: black;
+    text-decoration: none;
+}
+
 .btnPDF {
     display: inline-block;
     outline: none;
     cursor: pointer;
     text-align: center;
     text-decoration: none;
-    font: 14px/100% Arial, Helvetica, sans-serif;
-    padding: .5em 2em .55em;
-    text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
-    -webkit-border-radius: .5em;
-    -moz-border-radius: .5em;
-    border-radius: .5em;
-    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
-    -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
-    box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+    padding: 1% 1% 1%;
+    border-radius: 30px;
+    background-color: rgb(214, 213, 213);
 }
 
 .btnPDF:hover {
     text-decoration: none;
+    background-color: rgb(233, 232, 232);
 }
 
 .btnPDF:active {
@@ -574,6 +566,23 @@ footer {
     top: 1px;
 }
 
-.btnPDF {
-    background-color: white;
+.Copyright {
+    text-align: start;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+P.mention {
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+}
+
+h4 {
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+    font-size: 120%;
 }

@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="accueil.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
-    <script type="text/javascript" src="/servithenFR/jsFR/confianceFR.js"></script>
+    <script src="/servithenFR/jsFR/confianceFR.js"></script>
 
 </head>
 
@@ -25,11 +25,12 @@
         <div class="navbar">
 
 
-            <a href="/servithenFR/htmlFR/accueilFR.html"><img class="logo" src="/img/logoSite/logo.png "></a>
+          
+            <a href="/servithenFR/htmlFR/accueilFR.html"><img class="logo" src="/img/logoSite/logo.png " alt="logo Servithen"></a>
 
-            <a href="/servithenFR/htmlFR/formFR.html"><img class="langage" src="/img/drapeau/france-flag-png-large.png" /></a>
+            <a href="/servithenFR/htmlFR/formFR.html"><img class="langage" src="/img/drapeau/france-flag-png-large.png" alt="logo drapeau fr"/></a>
 
-            <a href="/servithenEN/htmlEN/formEN.html"><img class="langage" src="/img/drapeau/united-kingdom-flag-png-large.png" /></a>
+            <a href="/servithenEN/htmlEN/formEN.html"><img class="langage" src="/img/drapeau/united-kingdom-flag-png-large.png" alt="logo drapeau en"/></a>
 
 
             <div class="dropdown">
@@ -109,7 +110,7 @@
 
     <!-- le formulaire -->
 
-    <section id="nousContacter">
+    <div id="nousContacter">
         <div id="contact">
             <form id="formContact" action="accueil.html" method="post" autocomplete="on">
                 <fieldset class="formulaire" form="formContact">
@@ -149,14 +150,14 @@
                 </div>
             </div>
         </aside>
-    </section>
+    </div>
 
 
     <!-- le google map -->
 
     <div>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2627.235857724453!2d1.9062641155682958!3d48.815561111675535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e69b2e4c101591%3A0x3c4b6015d2f3a5ea!2s8%20Rue%20Guillaume%20de%20Bois%20Nivard%2C%2078640%20Neauphle-le-Ch%C3%A2teau!5e0!3m2!1sfr!2sfr!4v1647355210357!5m2!1sfr!2sfr"
-            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <iframe id="mapGoogle" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2627.235857724453!2d1.9062641155682958!3d48.815561111675535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e69b2e4c101591%3A0x3c4b6015d2f3a5ea!2s8%20Rue%20Guillaume%20de%20Bois%20Nivard%2C%2078640%20Neauphle-le-Ch%C3%A2teau!5e0!3m2!1sfr!2sfr!4v1647355210357!5m2!1sfr!2sfr"
+             height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </div>
 
     <!-- Les partenaires et nous font confiance -->
@@ -171,32 +172,34 @@
                 <div class="barre"></div>
                 <div class="sphère"></div>
             </div>
-            <section class="customer-logos2 slider2">
-                <div class="slide2"><img src="/img/partenaire/lechler_logo.png"></div>
-                <div class="slide2"><img src="/img/partenaire/logo-neu-process.png"></div>
-                <div class="slide2"><img src="/img/partenaire/logo-Siemens.png"></div>
-                <div class="slide2"><img src="/img/partenaire/someflu.png"></div>
-            </section>
+            <div class="customer-logos2 slider2">
+                <div class="slide2"><img src="/img/partenaire/lechler_logo.png" alt="logo partenaire lechler"></div>
+                <div class="slide2"><img src="/img/partenaire/logo-neu-process.png" alt="logo partenaire NEU JKF"></div>
+                <div class="slide2"><img src="/img/partenaire/logo-Siemens.png" alt="logo partenaire siemens"></div>
+                <div class="slide2"><img src="/img/partenaire/someflu.png" alt="logo partenaire someflu"></div>
+            </div>
         </div>
 
 
 
         <div class="container">
-            <h2 class="text-center font-weight-bold">nous font confiance :</h2>
-            <section class="customer-logos slider">
-                <div class="slide"><img src="/img/LogoConfiance/artelia.png"></div>
-                <div class="slide"><img src="/img/LogoConfiance/guerbet.png"></div>
-                <div class="slide"><img src="/img/LogoConfiance/logo-constellium.png"></div>
-                <div class="slide"><img src="/img/LogoConfiance/logo-orange.png"></div>
-                <div class="slide"><img src="/img/LogoConfiance/Logo-Veolia.png"></div>
-                <div class="slide"><img src="/img/LogoConfiance/ocp.png"></div>
-                <div class="slide"><img src="/img/LogoConfiance/orano-logo.png"></div>
-                <div class="slide"><img src="/img/LogoConfiance/sgd-pharma-logo.svg"></div>
-                <div class="slide"><img src="/img/LogoConfiance/siaap.png"></div>
-                <div class="slide"><img src="/img/LogoConfiance/suez.png"></div>
-                <div class="slide"><img src="/img/LogoConfiance/valorhin.png"></div>
-            </section>
+            <h3 class="text-center font-weight-bold">nous font confiance :</h3>
+            <div class="customer-logos slider">
+                <div class="slide"><img src="/img/LogoConfiance/artelia.png" alt="logo confiance artelia"></div>
+                <div class="slide"><img src="/img/LogoConfiance/guerbet.png" alt="logo confiance guerbet"></div>
+                <div class="slide"><img src="/img/LogoConfiance/logo-constellium.png" alt="logo confiance constellium"></div>
+                <div class="slide"><img src="/img/LogoConfiance/logo-orange.png" alt="logo confiance orange"></div>
+                <div class="slide"><img src="/img/LogoConfiance/Logo-Veolia.png" alt="logo confiance veolia"></div>
+                <div class="slide"><img src="/img/LogoConfiance/ocp.png" alt="logo confiance ocp"></div>
+                <div class="slide"><img src="/img/LogoConfiance/orano-logo.png" alt="logo confiance orano"></div>
+                <div class="slide"><img src="/img/LogoConfiance/sgd-pharma-logo.svg" alt="logo confiance sgd-pharma"></div>
+                <div class="slide"><img src="/img/LogoConfiance/siaap.png" alt="logo confiance siaap"></div>
+                <div class="slide"><img src="/img/LogoConfiance/suez.png" alt="logo confiance suez"></div>
+                <div class="slide"><img src="/img/LogoConfiance/valorhin.png" alt="logo confiance valorhin"></div>
+            </div>
         </div>
+
+    </div>
 
         <!-- bas de la page avec les coordonnées -->
 
@@ -207,8 +210,8 @@
             </div>
 
             <div class="foter">
-                <img class="logoinfo" src="/img/LogoFooter/logoTelW.png">
-                <a class="footerp" href="Tel:+33134897146"> +33 (0) 1 34 89 71 46</a>
+                <img class="logoinfo" src="/img/LogoFooter/logoTelW.png" alt="logo telephone ">
+                <a  class="footerp" href="Tel:+33134897146"> +33 (0) 1 34 89 71 46</a>
             </div>
             <br>
             <div class="foter">
@@ -217,16 +220,17 @@
             </div>
             <br>
             <div class="foter">
-                <img class="logoinfo" src="/img/LogoFooter/linkedinW.png">
-                <a target="_blank" class="footerp" href="https://www.linkedin.com/company/servithen/">Société SERVITHEN</a>
+                <img class="logoinfo" src="/img/LogoFooter/linkedinW.png"  alt="logo linkedin ">
+                <a target="_blank" class="footerp" href="https://www.linkedin.com/company/servithen/">SERVITHEN</a>
             </div>
             <br>
             <div class="foter">
-                <img class="logoinfo" src="/img/LogoFooter/logoPosW.png">
-                <a target="_blank" class="footerp" href="https://www.google.fr/maps/place/SERVITHEN/@48.8155515,1.9083403,20z/data=!4m13!1m7!3m6!1s0x47e69b2e4c101591:0x3c4b6015d2f3a5ea!2s8+Rue+Guillaume+de+Bois+Nivard,+78640+Neauphle-le-Ch%C3%A2teau!3b1!8m2!3d48.8155576!4d1.9084528!3m4!1s0x47e69b2e4914fd6f:0xefa5b210e1554b90!8m2!3d48.8155084!4d1.9085263">
+                <img class="logoinfo" src="/img/LogoFooter/logoPosW.png"  alt="logo position ">
+                <a  class="footerp" target="_blank" href="https://www.google.fr/maps/place/SERVITHEN/@48.8155515,1.9083403,20z/data=!4m13!1m7!3m6!1s0x47e69b2e4c101591:0x3c4b6015d2f3a5ea!2s8+Rue+Guillaume+de+Bois+Nivard,+78640+Neauphle-le-Ch%C3%A2teau!3b1!8m2!3d48.8155576!4d1.9084528!3m4!1s0x47e69b2e4914fd6f:0xefa5b210e1554b90!8m2!3d48.8155084!4d1.9085263">
                         8 Rue Guillaume de Bois Nivard,<br> 78640 Neauphle-le-Château</a>
 
             </div>
+            <p class="Copyright">&copy; Copyright 1986 - 2022 | SERVITHEN | Tous droits réservés | <a class="Copyright" href="/servithenFR/htmlFR/MentionsLegales.html">Mentions légales</a> </p>
 
         </footer>
 </body>

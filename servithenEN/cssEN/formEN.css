@@ -115,3 +115,7 @@ footer {
     padding-bottom: 10px;
     display: flex;
 }
+
+#mapGoogle{
+    width: 100%;
+}
