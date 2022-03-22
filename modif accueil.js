@@ -2,7 +2,6 @@ var requestURL = "accueil.json";
 fetch(requestURL)
   .then(response => response.json())
   .then(jsonData => {
-    console.log(jsonData)
     changetext(jsonData)
   })
 function changetext(site){

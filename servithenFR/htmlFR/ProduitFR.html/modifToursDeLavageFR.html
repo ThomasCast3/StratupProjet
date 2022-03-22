@@ -10,12 +10,11 @@
     <link rel="stylesheet" href="/servithenFR/cssFR/accueilFR.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
-    <script type="text/javascript" src="/servithenFR/jsFR/InstallationsFR.js"></script>
-
+    <script type="text/javascript" src="/servithenFR/jsFR/modifToursDeLavageFR.js"></script>
 </head>
 
 <body>
-
+    <form method="post" action="modifToursFR.php">
     <header>
 
         <!-- La bar navigation -->
@@ -25,11 +24,11 @@
             <div class="navbar">
 
 
-                <a href="/servithenFR/htmlFR/accueilFR.html"><img class="logo" src="/img/logoSite/logo.png "></a>
+                <a href="/servithenFR/htmlFR/modifaccueilFR.html"><img class="logo" src="/img/logoSite/logo.png "></a>
+                <button>Confirmer les changements</button>
+                <a href="/servithenFR/htmlFR//ProduitFR.html/ToursDeLavageFR.html"><img class="langage" src="/img/drapeau/france-flag-png-large.png" /></a>
 
-                <a href="/servithenFR/htmlFR//ProduitFR.html/InstallationsFR.html"><img class="langage" src="/img/drapeau/france-flag-png-large.png" /></a>
-
-                <a href="/servithenEN/htmlEN//ProduitEN.html/InstallationsEN.html"><img class="langage" src="/img/drapeau/united-kingdom-flag-png-large.png" /></a>
+                <a href="/servithenEN/htmlEN//ProduitEN.html/ToursDeLavageEN.html"><img class="langage" src="/img/drapeau/united-kingdom-flag-png-large.png" /></a>
 
 
                 <div class="dropdown">
@@ -63,14 +62,14 @@
                     <button class="dropbtn">PRODUITS 
                   </button>
                     <div class="dropdown-content3">
-                        <a href="/servithenFR/htmlFR//ProduitFR.html/ToursDeLavageFR.html">Tours de lavage</a>
-                        <a href="/servithenFR/htmlFR//ProduitFR.html/VenturiFR.html">Venturi</a>
-                        <a href="/servithenFR/htmlFR//ProduitFR.html/ElectrofiltresHumidesSecsFR.html">Electrofiltres humides / secs</a>
-                        <a href="/servithenFR/htmlFR//ProduitFR.html/FiltresManchesFR.html">Filtres à manches</a>
-                        <a href="/servithenFR/htmlFR//ProduitFR.html/EquipementsDosageInjectionDePoudresFR.html">EDIP : Equipements de Dosage et Injection de Poudres</a>
-                        <a href="/servithenFR/htmlFR//ProduitFR.html/InstallationsFR.html">Installations « Clés en mains »</a>
-                        <a href="/servithenFR/htmlFR//ProduitFR.html/RecuperationEnergiFR.html">Récupération d’énergie</a>
-                        <a href="/servithenFR/htmlFR//ProduitFR.html/FourniturePiecesRechangeFR.html">Fourniture de pièces de rechange</a>
+                        <a href="/servithenFR/htmlFR//ProduitFR.html/modifToursDeLavageFR.html">Tours de lavage</a>
+                        <a href="/servithenFR/htmlFR//ProduitFR.html/modifVenturiFR.html">Venturi</a>
+                        <a href="/servithenFR/htmlFR//ProduitFR.html/modifElectroFR.html">Electrofiltres humides / secs</a>
+                        <a href="/servithenFR/htmlFR//ProduitFR.html/modifFiltresFR.html">Filtres à manches</a>
+                        <a href="/servithenFR/htmlFR//ProduitFR.html/modifEquipementFR.html">EDIP : Equipements de Dosage et Injection de Poudres</a>
+                        <a href="/servithenFR/htmlFR//ProduitFR.html/modifInstallationsFR.html">Installations « Clés en mains »</a>
+                        <a href="/servithenFR/htmlFR//ProduitFR.html/modifRecuperationFR.html">Récupération d’énergie</a>
+                        <a href="/servithenFR/htmlFR//ProduitFR.html/modifFournitureFR.html">Fourniture de pièces de rechange</a>
                     </div>
                 </div>
 
@@ -78,7 +77,7 @@
                     <button class="dropbtn">SAVOIR-FAIRE 
                   </button>
                     <div class="dropdown-content3">
-                        <a href="/servithenFR/htmlFR/presentationFR.html">Présentation</a>
+                        <a href="/servithenFR/htmlFR/modifpresentationFR.html">Présentation</a>
                         <a target="_blank" href="https://www.youtube.com/watch?v=XqZsoesa55w">Link 2</a>
                         <a target="_blank" href="https://www.youtube.com/watch?v=XqZsoesa55w">Link 3</a>
                     </div>
@@ -86,7 +85,7 @@
 
                 <div class="dropdown">
 
-                    <a class="MenuBtn" href="/servithenFR/htmlFR/accueilFR.html">ACCUEIL</a>
+                    <a class="MenuBtn" href="/servithenFR/htmlFR/modifaccueilFR.html">ACCUEIL</a>
 
                 </div>
 
@@ -102,14 +101,14 @@
 
     <div id="infoAccueil">
         <div id="txtAccueil">
-            <p id="txtTitre" class="pTitre">
-            </p>
+            <textarea id="txtTitre" class="pTitre">
+            </textarea>
         </div>
         <div id="soustxtAccueil">
-            <p id="stxtTitre" class="pTitre">
-            </p>
+            <textarea id="stxtTitre" class="pTitre">
+            </textarea>
         </div>
-
+        <textarea name="Backgroundimg" id="Background"></textarea>
     </div>
 
     <!-- section notre activité avec les image et les texte-->
@@ -117,7 +116,7 @@
     <div class="page"></div>
     <section class="nav">
         <div class="fondBroch">
-            <h3>Installations « Clés en mains »</h3>
+            <h3>Tours de lavage</h3>
             <div class="déco">
                 <div class="sphère"></div>
                 <div class="transmission"></div>
@@ -128,12 +127,12 @@
 
             </div>
             <div class="carrerimg">
-                <div id="imgProduit">
-                    <img class="imgBrochur">
+                <div>
+                <textarea name="imgProduit" id="imgProduit"></textarea>
                 </div>
-                <p id="txtProduit" class="texteBroch"></p>
+                <textarea name="txtProduit" id="txtProduit"></textarea>
                 <button class="btnPDF">
-                    <a id="lienProduit" class="DL" target="_blank">Afficher la brochure</a>
+                    <textarea name="lienProduit" id="lienProduit" target="_blank"></textarea>
                 </button>
             </div>
 
@@ -152,16 +151,21 @@
                 <div class="barre"></div>
                 <div class="sphère"></div>
             </div>
-            <section class="customer-logos2 slider2">
+            <section id="Partenaire" class="customer-logos2 slider2">
             </section>
+            <div>
+                <button id="PartB+" type="button">+</button><button id="PartB-" type="button">-</button>
+                <textarea id="NumbPart" name="NumbPart"></textarea>
+            </div>
         </div>
-
-
-
         <div class="container">
             <h2 class="text-center font-weight-bold">nous font confiance :</h2>
-            <section class="customer-logos slider">
+            <section id="Confiance" class="customer-logos slider">
             </section>
+            <div>
+                <button id="ConfB+" type="button">+</button><button type="button" id="ConfB-">-</button>
+                <textarea id="NumbConf" name="NumbConf"></textarea>
+            </div>
         </div>
 
 
@@ -174,25 +178,30 @@
 
             <div class="foter">
                 <img class="logoinfo" src="/img/LogoFooter/logoTelW.png">
-                <a id="Telephone" class="footerp"></a>
+                <textarea id="Telephone" class="footerp"></textarea>
+                <textarea id="TelephoneURL"></textarea>
             </div>
             <br>
             <div class="foter">
                 <img class="logoinfo" src="/img/LogoFooter/logoMailW.png">
-                <a id="Mail" class="footerp"></a>
+                <textarea id="Mail" class="footerp"></textarea>
+                <textarea id="MailURL"></textarea>
             </div>
             <br>
             <div class="foter">
                 <img class="logoinfo" src="/img/LogoFooter/linkedinW.png">
-                <a id="Linkedin" target="_blank" class="footerp"></a>
+                <textarea id="Linkedin" target="_blank" class="footerp"></textarea>
+                <textarea id="LinkedinURL"></textarea>
             </div>
             <br>
             <div class="foter">
                 <img class="logoinfo" src="/img/LogoFooter/logoPosW.png">
-                <a id="Local" target="_blank" class="footerp"></a>
+                <textarea id="Local" target="_blank" class="footerp"></textarea>
+                <textarea id="LocalURL"></textarea>
             </div>
 
         </footer>
+    </form>
 </body>
 
 </html>

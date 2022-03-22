@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="/servithenFR/cssFR/accueilFR.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
-    <script type="text/javascript" src="/servithenFR/jsFR/confianceFR.js"></script>
+    <script type="text/javascript" src="/servithenFR/jsFR/EquipementFR.js"></script>
 
 </head>
 
@@ -102,16 +102,14 @@
 
     <div id="infoAccueil">
         <div id="txtAccueil">
-            <p class="pTitre">
-                Servithen, industrie française, <br> 30 ans de savoir faire. <br>
+            <p id="txtTitre" class="pTitre">
             </p>
         </div>
         <div id="soustxtAccueil">
-            <p class="pTitre">
-                Ingénierie, audit et assistance à la maitrise d'ouvrage.
+            <p id="stxtTitre" class="pTitre">
             </p>
         </div>
-
+        <div name="Backgroundimg" id="Background"></div>
     </div>
 
     <!-- section notre activité avec les image et les texte-->
@@ -130,10 +128,12 @@
 
             </div>
             <div class="carrerimg">
-                <img class="imgBrochur" src="/img/20220310_152203741_iOS.jpeg">
-                <p class="texteBroch">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti temporibus tempora consequatur autem, quas molestiae adipisci nulla exercitationem ex eos voluptate itaque labore delectus non? Fugit saepe ex dolore? Ducimus.</p>
+                <div id="imgProduit">
+                    <img class="imgBrochur">
+                </div>
+                <p id="txtProduit" class="texteBroch"></p>
                 <button class="btnPDF">
-                    <a class="DL" target="_blank" href="/img/brochure/FicheLAVEURSDEFUMÉES.pdf">Afficher la brochure</a>
+                    <a id="lienProduit" class="DL" target="_blank">Afficher la brochure</a>
                 </button>
             </div>
 
@@ -152,11 +152,7 @@
                 <div class="barre"></div>
                 <div class="sphère"></div>
             </div>
-            <section class="customer-logos2 slider2">
-                <div class="slide2"><img src="/img/partenaire/lechler_logo.png"></div>
-                <div class="slide2"><img src="/img/partenaire/logo-neu-process.png"></div>
-                <div class="slide2"><img src="/img/partenaire/logo-Siemens.png"></div>
-                <div class="slide2"><img src="/img/partenaire/someflu.png"></div>
+            <section id="Partenaire" class="customer-logos2 slider2">
             </section>
         </div>
 
@@ -164,18 +160,7 @@
 
         <div class="container">
             <h2 class="text-center font-weight-bold">nous font confiance :</h2>
-            <section class="customer-logos slider">
-                <div class="slide"><img src="/img/LogoConfiance/artelia.png"></div>
-                <div class="slide"><img src="/img/LogoConfiance/guerbet.png"></div>
-                <div class="slide"><img src="/img/LogoConfiance/logo-constellium.png"></div>
-                <div class="slide"><img src="/img/LogoConfiance/logo-orange.png"></div>
-                <div class="slide"><img src="/img/LogoConfiance/Logo-Veolia.png"></div>
-                <div class="slide"><img src="/img/LogoConfiance/ocp.png"></div>
-                <div class="slide"><img src="/img/LogoConfiance/orano-logo.png"></div>
-                <div class="slide"><img src="/img/LogoConfiance/sgd-pharma-logo.svg"></div>
-                <div class="slide"><img src="/img/LogoConfiance/siaap.png"></div>
-                <div class="slide"><img src="/img/LogoConfiance/suez.png"></div>
-                <div class="slide"><img src="/img/LogoConfiance/valorhin.png"></div>
+            <section id="Confiance" class="customer-logos slider">
             </section>
         </div>
 
@@ -189,24 +174,22 @@
 
             <div class="foter">
                 <img class="logoinfo" src="/img/LogoFooter/logoTelW.png">
-                <a class="footerp" href="Tel:+33134897146"> +33 (0) 1 34 89 71 46</a>
+                <a id="Telephone" class="footerp"></a>
             </div>
             <br>
             <div class="foter">
                 <img class="logoinfo" src="/img/LogoFooter/logoMailW.png">
-                <a class="footerp" href="mailto:info@servithen.fr">info@servithen.fr</a>
+                <a id="Mail" class="footerp"></a>
             </div>
             <br>
             <div class="foter">
                 <img class="logoinfo" src="/img/LogoFooter/linkedinW.png">
-                <a target="_blank" class="footerp" href="https://www.linkedin.com/company/servithen/">Société SERVITHEN</a>
+                <a id="Linkedin" target="_blank" class="footerp"></a>
             </div>
             <br>
             <div class="foter">
                 <img class="logoinfo" src="/img/LogoFooter/logoPosW.png">
-                <a target="_blank" class="footerp" href="https://www.google.fr/maps/place/SERVITHEN/@48.8155515,1.9083403,20z/data=!4m13!1m7!3m6!1s0x47e69b2e4c101591:0x3c4b6015d2f3a5ea!2s8+Rue+Guillaume+de+Bois+Nivard,+78640+Neauphle-le-Ch%C3%A2teau!3b1!8m2!3d48.8155576!4d1.9084528!3m4!1s0x47e69b2e4914fd6f:0xefa5b210e1554b90!8m2!3d48.8155084!4d1.9085263">
-                        8 Rue Guillaume de Bois Nivard,<br> 78640 Neauphle-le-Château</a>
-
+                <a id="Local" target="_blank" class="footerp"></a>
             </div>
 
         </footer>

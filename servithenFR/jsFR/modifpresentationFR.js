@@ -2,7 +2,6 @@ var requestURL = "general.json";
 fetch(requestURL)
   .then(response => response.json())
   .then(jsonData => {
-    console.log(jsonData)
     changetext(jsonData)
   })
 function changetext(site){
@@ -73,7 +72,6 @@ var requestURL = "presentation.json";
 fetch(requestURL)
   .then(response => response.json())
   .then(jsonData => {
-    console.log(jsonData)
     changetextP(jsonData)
   })
   function changetextP(site){
