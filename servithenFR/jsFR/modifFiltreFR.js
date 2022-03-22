@@ -68,7 +68,7 @@ function changetext(site){
       NumbPart.value = j;
     })
 }
-var requestURL = "/servithenFR/htmlFR/ProduitFR.html/Tours.json";
+var requestURL = "/servithenFR/htmlFR/ProduitFR.html/Filtre.json";
 fetch(requestURL)
   .then(response => response.json())
   .then(jsonData => {
