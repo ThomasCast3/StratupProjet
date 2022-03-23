@@ -16,6 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
         $file_name='pourquoi.json';
         $datae2=new stock();
+        $datae2->SousTitre = $_POST['SousTitre'];
         $datae2->Presentation1 = $_POST['presentation1'];
         $datae2->Presentation2 = $_POST['presentation2'];
         $datae2->Presentation3 = $_POST['presentation3'];
@@ -27,7 +28,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $file_name='general.json';
         $dataeG2=new stock();
         $dataeG2->Titre = $_POST['Titre'];
-        $dataeG2->SousTitre = $_POST['SousTitre'];
         $dataeG2->Telephone = $_POST['Telephone'];
         $dataeG2->TelephoneURL = $_POST['TelephoneURL'];
         $dataeG2->Mail = $_POST['Mail'];

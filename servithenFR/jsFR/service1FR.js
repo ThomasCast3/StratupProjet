@@ -66,7 +66,7 @@ function changetext(site){
         }]
     });
 }
-var requestURL = "/servithenFR/htmlFR/ProduitFR.html/Equipement.json";
+var requestURL = "service1.json";
 fetch(requestURL)
   .then(response => response.json())
   .then(jsonData => {
@@ -74,7 +74,11 @@ fetch(requestURL)
   })
   function changetextP(site){
     document.getElementById('stxtTitre').innerHTML = site["Francais"]["SousTitre"];
-    document.getElementById('imgProduit').innerHTML = `<img class="imgBrochur" src="`+ site["Francais"]["imgProduit"] +`">`;
-    document.getElementById('txtProduit').innerHTML = site["Francais"]["txtProduit"];
-    document.getElementById('lienProduit').href = site["Francais"]["lienProduit"];
+    document.getElementById('text1').innerHTML = site["Francais"]["text1"];
+    document.getElementById('text2').innerHTML = site["Francais"]["text2"];
+    let Photo = document.getElementById('containerPhoto')
+    Photo.innerHTML="";
+    for (let i = 0; i < site["Francais"]["img"].length; i++) {
+        Photo.innerHTML = Photo.innerHTML + '<img class="photoService" src="' + site["Francais"]["img"][i]["Image"] +'">';
+    }
   }

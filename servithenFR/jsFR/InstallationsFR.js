@@ -6,7 +6,6 @@ fetch(requestURL)
   })
 function changetext(site){
     document.getElementById('txtTitre').innerHTML = site["Francais"]["Titre"];
-    document.getElementById('stxtTitre').innerHTML = site["Francais"]["SousTitre"];
     document.getElementById('Telephone').innerHTML = site["Francais"]["Telephone"];
     document.getElementById('Telephone').href = site["Francais"]["TelephoneURL"];
     document.getElementById('Mail').innerHTML = site["Francais"]["Mail"];
@@ -74,6 +73,7 @@ fetch(requestURL)
     changetextP(jsonData)
   })
   function changetextP(site){
+    document.getElementById('stxtTitre').innerHTML = site["Francais"]["SousTitre"];
     document.getElementById('imgProduit').innerHTML = `<img class="imgBrochur" src="`+ site["Francais"]["imgProduit"] +`">`;
     document.getElementById('txtProduit').innerHTML = site["Francais"]["txtProduit"];
     document.getElementById('lienProduit').href = site["Francais"]["lienProduit"];

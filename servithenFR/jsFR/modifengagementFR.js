@@ -1,4 +1,4 @@
-var requestURL = "/servithenFR/htmlFR/general.json";
+var requestURL = "general.json";
 fetch(requestURL)
   .then(response => response.json())
   .then(jsonData => {
@@ -67,7 +67,7 @@ function changetext(site){
       NumbPart.value = j;
     })
 }
-var requestURL = "/servithenFR/htmlFR/ProduitFR.html/Installation.json";
+var requestURL = "engagement.json";
 fetch(requestURL)
   .then(response => response.json())
   .then(jsonData => {
@@ -75,7 +75,7 @@ fetch(requestURL)
   })
   function changetextP(site){
     document.getElementById('stxtTitre').value = site["Francais"]["SousTitre"];
-    document.getElementById('imgProduit').value = site["Francais"]["imgProduit"];
-    document.getElementById('txtProduit').value = site["Francais"]["txtProduit"];
-    document.getElementById('lienProduit').value = site["Francais"]["lienProduit"];
-  }
+    document.getElementById('P1').value = site["Francais"]["Presentation1"];
+    document.getElementById('P2').value = site["Francais"]["Presentation2"];
+    document.getElementById('P3').value = site["Francais"]["Presentation3"];
+}

@@ -458,6 +458,7 @@ footer {
 .page {
     background-color: rgb(47, 53, 83);
     height: 4px;
+    top: 10px;
 }
 
 .sphère {

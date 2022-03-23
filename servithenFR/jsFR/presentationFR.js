@@ -6,7 +6,6 @@ fetch(requestURL)
   })
 function changetext(site){
     document.getElementById('txtTitre').innerHTML = site["Francais"]["Titre"];
-    document.getElementById('stxtTitre').innerHTML = site["Francais"]["SousTitre"];
     document.getElementById('Telephone').innerHTML = site["Francais"]["Telephone"];
     document.getElementById('Telephone').href = site["Francais"]["TelephoneURL"];
     document.getElementById('Mail').innerHTML = site["Francais"]["Mail"];
@@ -74,6 +73,7 @@ fetch(requestURL)
     changetextP(jsonData)
   })
   function changetextP(site){
+    document.getElementById('stxtTitre').innerHTML = site["Francais"]["SousTitre"];
     document.getElementById('P1').innerHTML = site["Francais"]["Presentation1"];
     document.getElementById('P2').innerHTML = site["Francais"]["Presentation2"];
     document.getElementById('P3').innerHTML = site["Francais"]["Presentation3"];

@@ -19,6 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $datae2->imgProduit = $_POST['imgProduit'];
         $datae2->txtProduit = $_POST['txtProduit'];
         $datae2->lienProduit = $_POST['lienProduit'];
+        $datae2->SousTitre = $_POST['SousTitre'];
         $datae=new stock();
         $datae->Francais=$datae2;
         return json_encode($datae);
@@ -27,7 +28,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $file_name='/servithenFR/htmlFR/general.json';
         $dataeG2=new stock();
         $dataeG2->Titre = $_POST['Titre'];
-        $dataeG2->SousTitre = $_POST['SousTitre'];
         $dataeG2->Telephone = $_POST['Telephone'];
         $dataeG2->TelephoneURL = $_POST['TelephoneURL'];
         $dataeG2->Mail = $_POST['Mail'];

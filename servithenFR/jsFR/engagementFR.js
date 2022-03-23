@@ -1,4 +1,4 @@
-var requestURL = "/servithenFR/htmlFR/general.json";
+var requestURL = "general.json";
 fetch(requestURL)
   .then(response => response.json())
   .then(jsonData => {
@@ -66,7 +66,7 @@ function changetext(site){
         }]
     });
 }
-var requestURL = "/servithenFR/htmlFR/ProduitFR.html/Equipement.json";
+var requestURL = "engagement.json";
 fetch(requestURL)
   .then(response => response.json())
   .then(jsonData => {
@@ -74,7 +74,7 @@ fetch(requestURL)
   })
   function changetextP(site){
     document.getElementById('stxtTitre').innerHTML = site["Francais"]["SousTitre"];
-    document.getElementById('imgProduit').innerHTML = `<img class="imgBrochur" src="`+ site["Francais"]["imgProduit"] +`">`;
-    document.getElementById('txtProduit').innerHTML = site["Francais"]["txtProduit"];
-    document.getElementById('lienProduit').href = site["Francais"]["lienProduit"];
+    document.getElementById('P1').innerHTML = site["Francais"]["Presentation1"];
+    document.getElementById('P2').innerHTML = site["Francais"]["Presentation2"];
+    document.getElementById('P3').innerHTML = site["Francais"]["Presentation3"];
   }
