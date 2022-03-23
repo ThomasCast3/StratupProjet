@@ -457,14 +457,14 @@ footer {
 .sphère {
     border-radius: 128px;
     background-color: rgb(47, 53, 83);
-    width: 6px;
-    height: 6px;
+    width: 12px;
+    height: 12px;
 }
 
 .barre {
     background-color: rgb(47, 53, 83);
     width: 256px;
-    height: 4px;
+    height: 8px;
 }
 
 .déco {
@@ -487,8 +487,8 @@ footer {
     position: absolute;
     background-color: rgb(47, 53, 83);
     border-radius: 128px;
-    width: 6px;
-    height: 6px;
+    width: 10px;
+    height: 10px;
     left: 582px;
     animation-name: pompe;
     animation-duration: 3s;
