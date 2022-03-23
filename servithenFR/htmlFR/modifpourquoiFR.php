@@ -14,31 +14,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     function get_data() {
         class stock{
         }
-        $file_name='/servithenFR/htmlFR/accueil.json';
+        $file_name='pourquoi.json';
         $datae2=new stock();
-        $datae2->Activity = $_POST['Activity'];
-        $datae2->description1 = $_POST['description1'];
-        $datae2->description2 = $_POST['description2'];
-        $datae2->description3 = $_POST['description3'];
-        $datae2->description4 = $_POST['description4'];
-        $datae2->left1 = $_POST['left1'];
-        $datae2->left2 = $_POST['left2'];
-        $datae2->left3 = $_POST['left3'];
-        $datae2->left4 = $_POST['left4'];
-        $datae2->right1 = $_POST['right1'];
-        $datae2->right2 = $_POST['right2'];
-        $datae2->right3 = $_POST['right3'];
-        $datae2->right4 = $_POST['right4'];
-        $datae2->middle1 = $_POST['middle1'];
-        $datae2->middle2 = $_POST['middle2'];
-        $datae2->middle3 = $_POST['middle3'];
-        $datae2->middle4 = $_POST['middle4'];
+        $datae2->Presentation1 = $_POST['presentation1'];
+        $datae2->Presentation2 = $_POST['presentation2'];
+        $datae2->Presentation3 = $_POST['presentation3'];
         $datae=new stock();
         $datae->Francais=$datae2;
         return json_encode($datae);
     }
     function get_dataG() {
-        $file_name='/servithenFR/htmlFR/general.json';
+        $file_name='general.json';
         $dataeG2=new stock();
         $dataeG2->Titre = $_POST['Titre'];
         $dataeG2->SousTitre = $_POST['SousTitre'];
@@ -70,18 +56,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         return json_encode($dataeG);
         }
     }
-    $file_name = "/servithenFR/htmlFR/accueil.json";
+    
+    $file_name='pourquoi.json';
+        
     if(file_put_contents("$file_name", get_data())) {
-        $file_name = "/servithenFR/htmlFR/general.json";
+        $file_name='general.json';
         if(file_put_contents("$file_name", get_dataG())) {
             echo 'success';
-            $redirect_page = 'accueilFR.html';
+            $redirect_page = 'presentationFR.html';
             header('Location:'  .$redirect_page);
         }
     }                
     else {
         echo 'There is some error';  
-        $redirect_page = 'modifaccueilFR.html';
+        $redirect_page = 'modifpresentationFR.html';
         header('Location:'  .$redirect_page);             
     }           
 ?>
