@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     function get_data() {
         class stock{
         }
-        $file_name='/fr/jsonFR/accueil.json';
+        $file_name='../fr/jsonFR/accueil.json';
         $datae2=new stock();
         $datae2->Titre = $_POST['Titre'];
         $datae2->SousTitre = $_POST['SousTitre'];
@@ -64,7 +64,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
     }
     
-    $file_name='/fr/jsonFR/accueil.json';
+    $file_name='../fr/jsonFR/accueil.json';
         
     if(file_put_contents("$file_name", get_data())) {
         echo 'success';

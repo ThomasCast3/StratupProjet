@@ -66,7 +66,7 @@ function changetext(site){
         }]
     });
 }
-var requestURL = "presentation.json";
+var requestURL = "/fr/jsonFR/presentation.json";
 fetch(requestURL)
   .then(response => response.json())
   .then(jsonData => {

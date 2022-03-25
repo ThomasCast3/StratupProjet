@@ -1,20 +1,9 @@
-<!DOCTYPE html>
-<html lang="fr">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Servithen</title>
-    <link rel="shortcut icon" href="/img/Logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="accueil.css">
-</head>    
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     function get_data() {
         class stock{
         }
-        $file_name='/fr/jsonFR//fr/jsonFR/accueil.json';
+        $file_name='../fr/jsonFR/accueil.json';
         $datae2=new stock();
         $datae2->SousTitre = $_POST['SousTitre'];
         $datae2->Activity = $_POST['Activity'];
@@ -75,7 +64,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         return json_encode($datae);
     }
     function get_dataG() {
-        $file_name='/fr/jsonFR/general.json';
+        $file_name='../fr/jsonFR/general.json';
         $dataeG2=new stock();
         $dataeG2->Titre = $_POST['Titre'];
         $dataeG2->Telephone = $_POST['Telephone'];
@@ -106,18 +95,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         return json_encode($dataeG);
         }
     }
-    $file_name = "accueil.json";
+    $file_name = "../fr/jsonFR/accueil.json";
     if(file_put_contents("$file_name", get_data())) {
-        $file_name = "general.json";
+        $file_name = "../fr/jsonFR/general.json";
         if(file_put_contents("$file_name", get_dataG())) {
             echo 'success';
-            /*$redirect_page = '/fr/modifaccueilFR.html';
-            header('Location:'  .$redirect_page);*/
+            $redirect_page = '/fr/modifaccueilFR.html';
+            header('Location:'  .$redirect_page);
         }
     }                
     else {
-        echo 'There is some error';  
-        /*$redirect_page = '/fr/modifaccueilFR.html';
-        header('Location:'  .$redirect_page);*/          
+        echo 'There is some error';        
     }           
 ?>

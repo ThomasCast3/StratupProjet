@@ -17,7 +17,6 @@ function changetext(site){
   document.getElementById('Local').value = site["Francais"]["Localisation"];
   document.getElementById('LocalURL').value = site["Francais"]["LocalisationURL"];
   document.getElementById('Background').value = site["Francais"]["Backgroundimg"];
-
   function restart(Type){
     if (Type == "Conf"){
       for(let r = 0;r < site["Francais"]["Confiance"].length;r++){
