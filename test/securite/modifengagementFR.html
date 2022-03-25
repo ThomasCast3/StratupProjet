@@ -10,11 +10,11 @@
     <link rel="stylesheet" href="/fr/cssFR/accueilFR.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
-    <script type="text/javascript" src="/fr/jsFR/modifElectroFR.js"></script>
+    <script type="text/javascript" src="/fr/jsFR/modifengagementFR.js"></script>
 </head>
 
 <body>
-    <form method="post" action="/PHP/modifElectroFR.php">
+    <form method="post" action="/PHP/modifengagementFR.php">
     <header>
 
         <!-- La bar navigation -->
@@ -25,11 +25,11 @@
 
 
         
-                <a href="/fr/index.html"><img class="logo" src="/img/logo.png " alt="logo Servithen"></a>                
+                <a href="/fr/accueilFR.html"><img class="logo" src="/img/logo.png " alt="logo Servithen"></a>
                 <button>Confirmer les changements</button>
                 <a href="/fr/serviceFR/service1.html"><img class="langage" src="/img/drapeau/france-flag-png-large.png" alt="logo drapeau fr"/></a>
     
-                <a href="/en/index.html"><img class="langage" src="/img/drapeau/united-kingdom-flag-png-large.png" alt="logo drapeau en"/></a>
+                <a href="/en/.html"><img class="langage" src="/img/drapeau/united-kingdom-flag-png-large.png" alt="logo drapeau en"/></a>
     
 
                 <div class="dropdown">
@@ -102,41 +102,35 @@
 
     <div id="infoAccueil">
         <div id="txtAccueil">
-            <textarea name="Titre" id="txtTitre" class="pTitre">
+            <textarea id="txtTitre" name="Titre" class="pTitre">
             </textarea>
         </div>
         <div id="soustxtAccueil">
-            <textarea name="SousTitre" id="stxtTitre" class="pTitre">
+            <textarea id="stxtTitre" name="SousTitre" class="pTitre">
             </textarea>
         </div>
         <textarea name="Backgroundimg" id="Background"></textarea>
     </div>
-
-    <!-- section notre activité avec les image et les texte-->
-
     <div class="page"></div>
+    <!-- texte et prix gazellz -->
+
     <section class="nav">
-        <div class="fondBroch">
-            <h3>Electrofiltres humides / secs</h3>
+        <div class="fond2">
+            <h3>Présentation</h3>
             <div class="déco">
                 <div class="sphère"></div>
                 <div class="transmission"></div>
                 <div class="barre"></div>
                 <div class="sphère"></div>
             </div>
-            <div>
-
-            </div>
-            <div class="carrerimg">
-                <div>
-                <textarea name="imgProduit" id="imgProduit"></textarea>
-                </div>
-                <textarea name="txtProduit" id="txtProduit"></textarea>
-                <textarea name="lienProduit" id="lienProduit" target="_blank"></textarea>
-            </div>
-
+            <textarea name="presentation1" id="P1" class="presentation"></textarea>
+            <textarea name="presentation2" id="P2" class="presentation"></textarea>
+            <textarea name="presentation3" id="P3" class="presentation"></textarea>
+            <p class="texteGazelle">SERVITHEN Prix Gazelle 2005 :</p>
+            <img class="prixGazelle" src="/img/20220310_152203741_iOS.jpeg"></img>
         </div>
     </section>
+
 
     <!-- Les partenaires et nous font confiance -->
 
@@ -153,10 +147,13 @@
             <section id="Partenaire" class="customer-logos2 slider2">
             </section>
             <div>
-                <button id="PartB+" type="button">+</button><button id="PartB-" type="button">-</button>
+                <button id="PartB+" type="button">+</button><button type="button" id="PartB-">-</button>
                 <textarea id="NumbPart" name="NumbPart"></textarea>
             </div>
         </div>
+
+
+
         <div class="container">
             <h2 class="text-center font-weight-bold">nous font confiance :</h2>
             <section id="Confiance" class="customer-logos slider">
@@ -169,6 +166,7 @@
 
 
         <!-- bas de la page avec les coordonnées -->
+
         <footer class="coordonne">
 
             <div class="foters">
