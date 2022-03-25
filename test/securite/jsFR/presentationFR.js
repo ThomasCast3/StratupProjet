@@ -1,4 +1,4 @@
-var requestURL = "/fr/jsonFR/general.json";
+var requestURL = "/securite/jsonFR/general.json";
 fetch(requestURL)
   .then(response => response.json())
   .then(jsonData => {
@@ -66,7 +66,7 @@ function changetext(site){
         }]
     });
 }
-var requestURL = "/fr/jsonFR/presentation.json";
+var requestURL = "/securite/jsonFR/presentation.json";
 fetch(requestURL)
   .then(response => response.json())
   .then(jsonData => {
