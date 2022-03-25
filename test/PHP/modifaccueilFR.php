@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     function get_data() {
         class stock{
         }
-        $file_name='accueil.json';
+        $file_name='/fr/jsonFR//fr/jsonFR/accueil.json';
         $datae2=new stock();
         $datae2->SousTitre = $_POST['SousTitre'];
         $datae2->Activity = $_POST['Activity'];
@@ -75,7 +75,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         return json_encode($datae);
     }
     function get_dataG() {
-        $file_name='general.json';
+        $file_name='/fr/jsonFR/general.json';
         $dataeG2=new stock();
         $dataeG2->Titre = $_POST['Titre'];
         $dataeG2->Telephone = $_POST['Telephone'];
@@ -111,13 +111,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $file_name = "general.json";
         if(file_put_contents("$file_name", get_dataG())) {
             echo 'success';
-            $redirect_page = 'accueilFR.html';
-            header('Location:'  .$redirect_page);
+            /*$redirect_page = '/fr/modifaccueilFR.html';
+            header('Location:'  .$redirect_page);*/
         }
     }                
     else {
         echo 'There is some error';  
-        $redirect_page = 'modifaccueilFR.html';
-        header('Location:'  .$redirect_page);           
+        /*$redirect_page = '/fr/modifaccueilFR.html';
+        header('Location:'  .$redirect_page);*/          
     }           
 ?>

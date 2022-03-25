@@ -1,4 +1,4 @@
-var requestURL = "general.json";
+var requestURL = "/fr/jsonFR/general.json";
 fetch(requestURL)
   .then(response => response.json())
   .then(jsonData => {
@@ -67,7 +67,7 @@ function changetext(site){
       NumbPart.value = j;
     })
 }
-var requestURL = "presentation.json";
+var requestURL = "/fr/jsonFR/presentation.json";
 fetch(requestURL)
   .then(response => response.json())
   .then(jsonData => {

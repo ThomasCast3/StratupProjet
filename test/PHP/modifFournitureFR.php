@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     function get_data() {
         class stock{
         }
-        $file_name='Fourniture.json';
+        $file_name='/fr/jsonFR/Fourniture.json';
         $datae2=new stock();
         $datae2->imgProduit = $_POST['imgProduit'];
         $datae2->txtProduit = $_POST['txtProduit'];
@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         return json_encode($datae);
     }
     function get_dataG() {
-        $file_name='/test/fr/jsonFR/general.json';
+        $file_name='/fr/jsonFR/general.json';
         $dataeG2=new stock();
         $dataeG2->Titre = $_POST['Titre'];
         $dataeG2->Telephone = $_POST['Telephone'];
@@ -57,19 +57,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
     }
     
-    $file_name='Fourniture.json';
+    $file_name='/fr/jsonFR/Fourniture.json';
         
     if(file_put_contents("$file_name", get_data())) {
-        $file_name='/test/fr/jsonFR/general.json';
+        $file_name='/fr/jsonFR/general.json';
         if(file_put_contents("$file_name", get_dataG())) {
             echo 'success';
-            $redirect_page = 'FourniturePiecesRechangeFR.html';
+            $redirect_page = '/fr/ProduitFR/modifFournitureFR.html';
             header('Location:'  .$redirect_page);
         }
     }                
     else {
         echo 'There is some error';  
-        $redirect_page = 'modifFournitureFR.html';
+        $redirect_page = '/fr/ProduitFR/modifFournitureFR.html';
         header('Location:'  .$redirect_page);             
     }           
 ?>
