@@ -13,56 +13,56 @@ let carte11 = document.getElementById("carteProduit6");
 let carte12 = document.getElementById("carteProduit7");
 let carte13 = document.getElementById("carteProduit8");
 
-carte1.addEventListener("click" , function() {
-location.href="serviceFR/service1.html";
+carte1.addEventListener("click", function() {
+    location.href = "/fr/serviceFR/service1.html";
 });
 
-carte2.addEventListener("click" , function() {
-location.href="serviceFR/service2.html";
+carte2.addEventListener("click", function() {
+    location.href = "/fr/serviceFR/service2.html";
 });
 
-carte3.addEventListener("click" , function() {
-location.href="serviceFR/service3.html";
+carte3.addEventListener("click", function() {
+    location.href = "/fr/serviceFR/service3.html";
 });
 
-carte4.addEventListener("click" , function() {
-location.href="serviceFR/service4.html";
+carte4.addEventListener("click", function() {
+    location.href = "/fr/serviceFR/service4.html";
 });
 
-carte5.addEventListener("click" , function() {
-location.href="serviceFR/service5.html";
+carte5.addEventListener("click", function() {
+    location.href = "/fr/serviceFR/service5.html";
 });
 
 
 
-carte6.addEventListener("click" , function() {
-location.href="ProduitFR/ToursDeLavageFR.html";
+carte6.addEventListener("click", function() {
+    location.href = "/fr/ProduitFR/ToursDeLavageFR.html";
 });
 
-carte7.addEventListener("click" , function() {
-location.href="ProduitFR/VenturiFR.html";
+carte7.addEventListener("click", function() {
+    location.href = "/fr/ProduitFR/VenturiFR.html";
 });
 
-carte8.addEventListener("click" , function() {
-location.href="ProduitFR/ElectrofiltresHumidesSecsFR.html";
+carte8.addEventListener("click", function() {
+    location.href = "/fr/ProduitFR/ElectrofiltresHumidesSecsFR.html";
 });
 
-carte9.addEventListener("click" , function() {
-location.href="ProduitFR/FiltresManchesFR.html";
+carte9.addEventListener("click", function() {
+    location.href = "/fr/ProduitFR/FiltresManchesFR.html";
 });
 
-carte10.addEventListener("click" , function() {
-location.href="ProduitFR/EquipementsDosageInjectionDePoudresFR.html";
+carte10.addEventListener("click", function() {
+    location.href = "/fr/ProduitFR/EquipementsDosageInjectionDePoudresFR.html";
 });
 
-carte11.addEventListener("click" , function() {
-    location.href="ProduitFR/InstallationsFR.html";
-    });
-
-carte12.addEventListener("click" , function() {
-    location.href="ProduitFR/RecuperationEnergiFR.html";
+carte11.addEventListener("click", function() {
+    location.href = "/fr/ProduitFR/InstallationsFR.html";
 });
 
-carte13.addEventListener("click" , function() {
-    location.href="ProduitFR/FourniturePiecesRechangeFR.html";
-    });
+carte12.addEventListener("click", function() {
+    location.href = "/fr/ProduitFR/RecuperationEnergiFR.html";
+});
+
+carte13.addEventListener("click", function() {
+    location.href = "/fr/ProduitFR/FourniturePiecesRechangeFR.html";
+});

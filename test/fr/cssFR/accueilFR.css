@@ -252,7 +252,6 @@ h4 {
     padding: 20px;
 }
 
-
 .slick-slide {
     margin: 20px;
 }
@@ -363,7 +362,7 @@ h4 {
 .left {
     animation-name: sortie;
     animation-duration: 0.5s;
-  
+    position: absolute;
     opacity: 0;
     height: 256px;
     z-index: -2;
@@ -381,7 +380,7 @@ h4 {
 .right {
     animation-name: sortie2;
     animation-duration: 0.5s;
-   
+    position: absolute;
     opacity: 0;
     height: 256px;
     z-index: -2;
@@ -397,7 +396,6 @@ h4 {
 }
 
 .middle {
-  
     height: 256px;
     z-index: -1;
     top: 10px;
