@@ -109,12 +109,12 @@
 
     <div id="infoAccueil">
         <div id="txtAccueil">
-            <p class="pTitre">
+            <p id="txtTitre" class="pTitre">
                 Servithen, industrie française, <br> 30 ans de savoir faire. <br>
             </p>
         </div>
         <div id="soustxtAccueil">
-            <p class="pTitre">
+            <p id="stxtTitre" class="pTitre">
                 Ingénierie, audit et assistance à la maitrise d'ouvrage.
             </p>
         </div>
@@ -137,9 +137,12 @@
 
             </div>
             <div class="carrerimg">
-                <img class="imgBrochur" src="/img/20220310_152203741_iOS.jpeg" alt="brochure">
-                <p class="texteBroch">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti temporibus tempora consequatur autem, quas molestiae adipisci nulla exercitationem ex eos voluptate itaque labore delectus non? Fugit saepe ex dolore? Ducimus.</p>
-                <button class="btnPDF" onclick="window.open('/img/brochure/FicheLAVEURSDEFUMÉES.pdf','-_blank')">Afficher la brochure
+                <div id="imgProduit">
+                    <img class="imgBrochur">
+                </div>
+                <p id="txtProduit" class="texteBroch"></p>
+                <button class="btnPDF">
+                    <a id="lienProduit" class="DL" target="_blank">Afficher la brochure</a>
                 </button>
             </div>
 
@@ -158,7 +161,7 @@
                 <div class="barre"></div>
                 <div class="sphère"></div>
             </div>
-            <div class="customer-logos2 slider2">
+            <div id="Partenaire" class="customer-logos2 slider2">
                 <div class="slide2"><img src="/img/partenaire/lechler_logo.png" alt="logo partenaire lechler"></div>
                 <div class="slide2"><img src="/img/partenaire/logo-neu-process.png" alt="logo partenaire NEU JKF"></div>
                 <div class="slide2"><img src="/img/partenaire/logo-Siemens.png" alt="logo partenaire siemens"></div>
@@ -176,7 +179,7 @@
                 <div class="barre"></div>
                 <div class="sphère"></div>
             </div>
-            <div class="customer-logos slider">
+            <div id="Confiance" class="customer-logos slider">
                 <div class="slide"><img src="/img/LogoConfiance/artelia.png" alt="logo confiance artelia"></div>
                 <div class="slide"><img src="/img/LogoConfiance/guerbet.png" alt="logo confiance guerbet"></div>
                 <div class="slide"><img src="/img/LogoConfiance/logo-constellium.png" alt="logo confiance constellium"></div>
@@ -203,7 +206,7 @@
 
             <div class="foter">
                 <img class="logoinfo" src="/img/LogoFooter/logoTelW.png">
-                <a id="Telephone"></a>
+                <a id="Telephone" class="footerp"></a>
             </div>
             <br>
             <div class="foter">
@@ -218,7 +221,7 @@
             <br>
             <div class="foter">
                 <img class="logoinfo" src="/img/LogoFooter/logoPosW.png">
-                <a id="Local" target="_blank"></a>
+                <a id="Local" target="_blank" class="footerp"></a>
 
             </div>
             <p class="Copyright">&copy; Copyright 1986 - 2022 | SERVITHEN | Tous droits réservés | <a class="Copyright" href="/servithenFR/htmlFR/MentionsLegales.html">Mentions légales</a> </p>

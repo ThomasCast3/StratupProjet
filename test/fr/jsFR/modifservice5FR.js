@@ -68,7 +68,7 @@ function changetext(site){
       NumbPart.value = j;
     })
 }
-var requestURL = "/fr/jsonFR/service1.json";
+var requestURL = "/fr/jsonFR/service5.json";
 fetch(requestURL)
   .then(response => response.json())
   .then(jsonData => {

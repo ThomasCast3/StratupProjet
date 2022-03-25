@@ -17,6 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $serv = $_POST['serv'];
         $file_name='../fr/jsonFR/service'.$serv.'.json';
         $datae2=new stock();
+        $datae2->SousTitre = $_POST['SousTitre'];
         $datae2->text1 = $_POST['text1'];
         $datae2->text2 = $_POST['text2'];
         $numbimg = $_POST['Numbimg'];
@@ -28,13 +29,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $datae2->img = $dataeI;
         $datae=new stock();
         $datae->Francais=$datae2;
+        echo(json_encode($datae));
         return json_encode($datae);
     }
     function get_dataG() {
         $file_name='../fr/jsonFR/general.json';
         $dataeG2=new stock();
         $dataeG2->Titre = $_POST['Titre'];
-        $dataeG2->SousTitre = $_POST['SousTitre'];
         $dataeG2->Telephone = $_POST['Telephone'];
         $dataeG2->TelephoneURL = $_POST['TelephoneURL'];
         $dataeG2->Mail = $_POST['Mail'];
