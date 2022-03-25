@@ -1,4 +1,4 @@
-var requestURL = "../fr/jsonFR/general.json";
+var requestURL = "/fr/jsonFR/general.json";
 fetch(requestURL)
   .then(response => response.json())
   .then(jsonData => {

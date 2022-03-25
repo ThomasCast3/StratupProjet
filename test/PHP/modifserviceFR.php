@@ -64,12 +64,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
     }
     $serv = $_POST['serv'];
-    $file_name = "service".$serv.".json";
+    $file_name = "../fr/jsonFR/service".$serv.".json";
     if(file_put_contents("$file_name", get_data())) {
         $file_name = "../fr/jsonFR/general.json";
         if(file_put_contents("$file_name", get_dataG())) {
             echo 'success';
-            $redirect_page = '/fr/modifservice'.$serv.'.html';
+            $redirect_page = '/fr/serviceFR/modifservice'.$serv.'.html';
             header('Location:'.$redirect_page);
         }
     }                
