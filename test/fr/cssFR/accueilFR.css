@@ -248,7 +248,7 @@ h2 {
 h3 {
     text-align: center;
     padding: 20px;
-    font-size: 64px;
+    font-size: 50px;
     margin-bottom: 16px;
 }
 
@@ -493,8 +493,8 @@ footer {
     position: absolute;
     background-color: rgb(47, 53, 83);
     border-radius: 128px;
-    width: 6px;
-    height: 6px;
+    width: 5.5px;
+    height: 5.5px;
     left: 582px;
     animation-name: pompe;
     animation-duration: 3s;
