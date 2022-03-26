@@ -219,7 +219,7 @@ body {
 #soustxtAccueil {
     text-align: center;
     color: white;
-    padding-bottom: 10%;
+    padding-bottom: 15%;
     font-size: 150%
 }
 
@@ -601,6 +601,7 @@ section{
     background-color: white;
 }
 .headtitle{
-    border-top: 0px;
-    margin-top: 50px;
+    margin-top: 0px;
+    padding-top: 50px;
+    z-index: 1;
 }
