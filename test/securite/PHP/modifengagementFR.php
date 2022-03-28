@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     function get_data() {
         class stock{
         }
-        $file_name='../securite/jsonFR/engagement.json';
+        $file_name='../jsonFR/engagement.json';
         $datae2=new stock();
         $datae2->Presentation1 = $_POST['presentation1'];
         $datae2->Presentation2 = $_POST['presentation2'];
@@ -57,13 +57,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
     }
     
-    $file_name='../securite/jsonFR/engagement.json';
+    $file_name='../jsonFR/engagement.json';
         
     if(file_put_contents("$file_name", get_data())) {
-        $file_name='../securite/jsonFR/general.json';
+        $file_name='../jsonFR/general.json';
         if(file_put_contents("$file_name", get_dataG())) {
             echo 'success';
-            $redirect_page = '/securite/modifengagementFR.html';
+            $redirect_page = '../modifengagementFR.html';
             header('Location:'  .$redirect_page);
         }
     }                

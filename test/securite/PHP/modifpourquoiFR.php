@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     function get_data() {
         class stock{
         }
-        $file_name='../securite/jsonFR/pourquoi.json';
+        $file_name='../jsonFR/pourquoi.json';
         $datae2=new stock();
         $datae2->SousTitre = $_POST['SousTitre'];
         $datae2->Presentation1 = $_POST['presentation1'];
@@ -57,13 +57,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
     }
     
-    $file_name='../securite/jsonFR/pourquoi.json';
+    $file_name='../jsonFR/pourquoi.json';
         
     if(file_put_contents("$file_name", get_data())) {
-        $file_name='../securite/jsonFR/general.json';
+        $file_name='../jsonFR/general.json';
         if(file_put_contents("$file_name", get_dataG())) {
             echo 'success';
-            $redirect_page = '/securite/modifpourquoiFR.html';
+            $redirect_page = '../modifpourquoiFR.html';
             header('Location:'  .$redirect_page);
         }
     }                

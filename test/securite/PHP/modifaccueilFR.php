@@ -3,7 +3,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     function get_data() {
         class stock{
         }
-        $file_name='../securite/jsonFR/accueil.json';
+        $file_name='../jsonFR/accueil.json';
         $datae2=new stock();
         $datae2->SousTitre = $_POST['SousTitre'];
         $datae2->Activity = $_POST['Activity'];
@@ -64,7 +64,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         return json_encode($datae);
     }
     function get_dataG() {
-        $file_name='../securite/jsonFR/general.json';
+        $file_name='../jsonFR/general.json';
         $dataeG2=new stock();
         $dataeG2->Titre = $_POST['Titre'];
         $dataeG2->Telephone = $_POST['Telephone'];
@@ -95,12 +95,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         return json_encode($dataeG);
         }
     }
-    $file_name = "../securite/jsonFR/accueil.json";
+    $file_name = "../jsonFR/accueil.json";
     if(file_put_contents("$file_name", get_data())) {
-        $file_name = "../securite/jsonFR/general.json";
+        $file_name = "../jsonFR/general.json";
         if(file_put_contents("$file_name", get_dataG())) {
             echo 'success';
-            $redirect_page = '/securite/modifaccueilFR.html';
+            $redirect_page = '../modifaccueilFR.html';
             header('Location:'  .$redirect_page);
         }
     }                
