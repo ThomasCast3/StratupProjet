@@ -6,15 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Servithen</title>
-    <link rel="shortcut icon" href="/img/logoSite/logo.png " type="/image/x-icon">
+    <link rel="shortcut icon" href="/img/logoSite/logo.png " type="image/x-icon">
     <link rel="stylesheet" href="/fr/cssFR/accueilFR.css">
+    <link rel="stylesheet" href="/fr/cssFR/service.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
-    <script type="text/javascript" src="/securite/jsFR/modifFiltreFR.js"></script>
+    <script  src="/securite/jsFR/modifservice2FR.js"></script>
+
 </head>
 
 <body>
-    <form method="post" action="/securite/PHP/modifFiltresFR.php">
+    <form method="post" action="/securite/PHP/modifserviceFR.php">
     <header>
 
         <!-- La bar navigation -->
@@ -27,6 +29,7 @@
         
                 <a href="/fr/accueilFR.html"><img class="logo" src="/img/logo.png " alt="logo Servithen"></a>
                 <button>Confirmer les changements</button>
+                <textarea name="serv">2</textarea>
                 <a href="/fr/serviceFR/service1.html"><img class="langage" src="/img/drapeau/france-flag-png-large.png" alt="logo drapeau fr"/></a>
     
                 <a href="/en/.html"><img class="langage" src="/img/drapeau/united-kingdom-flag-png-large.png" alt="logo drapeau en"/></a>
@@ -102,11 +105,13 @@
 
     <div id="infoAccueil">
         <div id="txtAccueil">
-            <textarea name="Titre" id="txtTitre" class="pTitre">
+            <textarea id="txtTitre" name="Titre" class="pTitre">
+                Servithen, industrie française, <br> 30 ans de savoir faire. <br>
             </textarea>
         </div>
         <div id="soustxtAccueil">
-            <textarea name="SousTitre" id="stxtTitre" class="pTitre">
+            <textarea id="stxtTitre" name="SousTitre" class="pTitre">
+                Audits et Expertises d’installations.
             </textarea>
         </div>
         <textarea name="Backgroundimg" id="Background"></textarea>
@@ -116,25 +121,26 @@
 
     <div class="page"></div>
     <section class="nav">
-        <div class="fondBroch">
-            <h3>Filtres à manches</h3>
+        <div class="fond">
+            <h3>Audit à chaud et à froid</h3>
             <div class="déco">
                 <div class="sphère"></div>
                 <div class="transmission"></div>
                 <div class="barre"></div>
                 <div class="sphère"></div>
             </div>
+            <div class="pInfoService">
+                <textarea id="text1" name="text1" class="textphoto"></textarea>
+            </div>
+            <div id="containerPhoto">
+            </div>
             <div>
-
+                <button id="imgB+" type="button">+</button><button type="button" id="imgB-">-</button>
+                <textarea id="Numbimg" name="Numbimg"></textarea>
             </div>
-            <div class="carrerimg">
-                <div>
-                <textarea name="imgProduit" id="imgProduit"></textarea>
-                </div>
-                <textarea name="txtProduit" id="txtProduit"></textarea>
-                <textarea name="lienProduit" id="lienProduit" target="_blank"></textarea>
+            <div class="pInfoService">
+                <textarea id="text2" name="text2" class="textphoto"></textarea>
             </div>
-
         </div>
     </section>
 
@@ -157,6 +163,9 @@
                 <textarea id="NumbPart" name="NumbPart"></textarea>
             </div>
         </div>
+
+
+
         <div class="container">
             <h2 class="text-center font-weight-bold">nous font confiance :</h2>
             <section id="Confiance" class="customer-logos slider">
@@ -167,8 +176,10 @@
             </div>
         </div>
 
-
+    </div>
         <!-- bas de la page avec les coordonnées -->
+
+
         <footer class="coordonne">
 
             <div class="foters">
@@ -200,7 +211,6 @@
             </div>
             <p class="Copyright">&copy; Copyright 1986 - 2022 | SERVITHEN | Tous droits réservés | <a class="Copyright" href="/fr/MentionsLegales.html">Mentions légales</a> </p>
         </footer>
-    </form>
 </body>
 
 </html>
