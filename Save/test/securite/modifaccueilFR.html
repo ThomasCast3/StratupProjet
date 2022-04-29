@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Servithen</title>
+    <link rel="shortcut icon" href="/img/logoSite/logo.png " type="/image/x-icon">
+    <link rel="stylesheet" href="/fr/cssFR/accueilFR.css">
+    <link rel="stylesheet" href="/fr/cssFR/accueil2FR.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <script type="text/javascript" src="/securite/jsFR/modifaccueilFR.js"></script>
+</head>
+
+<body>
+    <form method="post" action="/securite/PHP/modifaccueilFR.php">
+    <header>
+
+        <!-- La bar navigation -->
+
+        <div class="navbarcontent">
+
+            <div class="navbar">
+
+
+        
+                <a href="modifaccueilFR.html"><img class="logo" src="/img/logo.png " alt="logo Servithen"></a>
+                <button>Confirmer les changements</button>
+                <a href="PHP/deconnection.php">Deconnection</a>
+                <a href="modifaccueilFR.html"><img class="langage" src="/img/drapeau/france-flag-png-large.png" alt="logo drapeau fr"/></a>
+    
+                <a href="modifpas.html"><img class="langage" src="/img/drapeau/united-kingdom-flag-png-large.png" alt="logo drapeau en"/></a>
+    
+
+                <div class="dropdown">
+
+                    <a class="MenuBtn" href="modifpas.html">NOUS CONTACTER</a>
+
+                </div>
+
+                <div class="dropdown">
+                    <button class="dropbtn">INDUSTRIE 4.0 
+                  </button>
+                    <div class="dropdown-content3">
+                        <a href="modifpas.html">MyPartner</a>
+                        <a href="modifpas.html">Link 3</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button class="dropbtn">SERVICES 
+                  </button>
+                  <div class="dropdown-content3">
+                    <a href="modifservice1.html">Audits et Expertises d’installations</a>
+                    <a href="modifservice2.html">Remise aux normes réglementaire </a>
+                    <a href="modifservice3.html">Valorisation énergétique</a>
+                    <a href="modifservice4.html">Etudes de faisabilité, Avant-projets et études de détail</a>
+                    <a href="modifservice5.html">Maintenance préventive / curative</a>
+                </div>
+                </div>
+
+                <div class="dropdown">
+                    <button class="dropbtn">PRODUITS 
+                  </button>
+                    <div class="dropdown-content3">
+                        <a href="modifToursDeLavageFR.html">Tours de lavage</a>
+                        <a href="modifVenturiFR.html">Venturi</a>
+                        <a href="modifElectroFR.html">Electrofiltres humides / secs</a>
+                        <a href="modifFiltresFR.html">Filtres à manches</a>
+                        <a href="modifEquipementFR.html">EDIP : Equipements de Dosage et Injection de Poudres</a>
+                        <a href="modifInstallationsFR.html">Installations « Clés en mains »</a>
+                        <a href="modifRecuperationFR.html">Récupération d’énergie</a>
+                        <a href="modifFournitureFR.html">Fourniture de pièces de rechange</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button class="dropbtn">SAVOIR-FAIRE 
+                  </button>
+                  <div class="dropdown-content3">
+                    <a href="modifpresentationFR.html">Notre métier</a>
+                    <a href="modifpourquoiFR.html">Pourquoi Servithen</a>
+                    <a href="modifengagementFR.html">Notre engagement</a>
+                </div>
+                </div>
+
+                <div class="dropdown">
+
+                    <a class="MenuBtn" href="modifaccueilFR.html">ACCUEIL</a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+    </header>
+
+    <!-- texte sur l'image en haut de la page -->
+
+    <div id="infoAccueil">
+        <div id="txtAccueil">
+            <textarea name="Titre" id="txtTitre">
+            </textarea>
+        </div>
+        <div id="soustxtAccueil">
+            <textarea name="SousTitre" id="stxtTitre">
+            </textarea>
+        </div>
+        <textarea name="Backgroundimg" id="Background"></textarea>
+    </div>
+
+    <!-- section notre activité avec les image et les texte-->
+
+    <div class="page"></div>
+    <section class="nav">
+        <div class="fond">
+            <h3>Notre activité</h3>
+            <div class="déco">
+                <div class="sphère"></div>
+                <div class="transmission"></div>
+                <div class="barre"></div>
+                <div class="sphère"></div>
+            </div>
+            <textarea name="Activity" id="DescActi"></textarea>
+            <div class="flex">
+                <div class="hover">
+                    <div class="card2">
+                        <textarea name="description1" id="description1" class="descriptionmodif"></textarea>
+                        <textarea name="left1" id="left1" class="modifleft"></textarea> 
+                        <textarea name="right1" id="right1" class="modifright"></textarea> 
+                        <textarea name="middle1" id="middle1" class="modifmiddle"></textarea>
+                </div></div>
+                <div class="hover">
+                    <div class="card2">
+                        <textarea name="description2" id="description2" class="descriptionmodif"></textarea>
+                        <textarea name="left2" id="left2" class="modifleft"></textarea> 
+                        <textarea name="right2" id="right2" class="modifright"></textarea> 
+                        <textarea name="middle2" id="middle2" class="modifmiddle"></textarea>
+                    </div></div>
+            </div>
+            <div class="flex">
+                <div class="hover">
+                    <div class="card2">
+                        <textarea name="description3" id="description3" class="descriptionmodif"></textarea>
+                        <textarea name="left3" id="left3" class="modifleft"></textarea>
+                        <textarea name="right3" id="right3" class="modifright"></textarea> 
+                        <textarea name="middle3" id="middle3" class="modifmiddle"></textarea>
+                    </div></div>
+                <div class="hover">
+                    <div class="card2">
+                        <textarea name="description4" id="description4" class="descriptionmodif"></textarea>
+                        <textarea name="left4" id="left4" class="modifleft"></textarea> 
+                        <textarea name="right4" id="right4" class="modifright"></textarea> 
+                        <textarea name="middle4" id="middle4" class="modifmiddle"></textarea>
+                    </div></div>
+                </div>
+            </div>
+            <div class="flex">
+                <div class="hover">
+                    <div class="card2">
+                        <textarea name="description5" id="description5" class="descriptionmodif"></textarea>
+                        <textarea name="left5" id="left5" class="modifleft"></textarea> 
+                        <textarea name="right5" id="right5" class="modifright"></textarea> 
+                        <textarea name="middle5" id="middle5" class="modifmiddle"></textarea>
+                </div></div>
+            </div>
+            <h3>Nos produits :</h3>
+            <div class="flex">
+                <div class="hover">
+                    <div class="card2">
+                        <textarea name="descriptionP1" id="descriptionP1" class="descriptionmodif"></textarea>
+                        <textarea name="leftP1" id="leftP1" class="modifleft"></textarea> 
+                        <textarea name="rightP1" id="rightP1" class="modifright"></textarea> 
+                        <textarea name="middleP1" id="middleP1" class="modifmiddle"></textarea>
+                </div></div>
+                <div class="hover">
+                    <div class="card2">
+                        <textarea name="descriptionP2" id="descriptionP2" class="descriptionmodif"></textarea>
+                        <textarea name="leftP2" id="leftP2" class="modifleft"></textarea> 
+                        <textarea name="rightP2" id="rightP2" class="modifright"></textarea> 
+                        <textarea name="middleP2" id="middleP2" class="modifmiddle"></textarea>
+                </div></div>
+            </div>
+            <div class="flex">
+                <div class="hover">
+                    <div class="card2">
+                        <textarea name="descriptionP3" id="descriptionP3" class="descriptionmodif"></textarea>
+                        <textarea name="leftP3" id="leftP3" class="modifleft"></textarea> 
+                        <textarea name="rightP3" id="rightP3" class="modifright"></textarea> 
+                        <textarea name="middleP3" id="middleP3" class="modifmiddle"></textarea>
+                    </div>
+                </div>
+                <div class="hover">
+                    <div class="card2">
+                        <textarea name="descriptionP4" id="descriptionP4" class="descriptionmodif"></textarea>
+                        <textarea name="leftP4" id="leftP4" class="modifleft"></textarea> 
+                        <textarea name="rightP4" id="rightP4" class="modifright"></textarea> 
+                        <textarea name="middleP4" id="middleP4" class="modifmiddle"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="flex">
+                <div class="hover">
+                    <div class="card2">
+                        <textarea name="descriptionP5" id="descriptionP5" class="descriptionmodif"></textarea>
+                        <textarea name="leftP5" id="leftP5" class="modifleft"></textarea> 
+                        <textarea name="rightP5" id="rightP5" class="modifright"></textarea> 
+                        <textarea name="middleP5" id="middleP5" class="modifmiddle"></textarea>
+                </div></div>
+                <div class="hover">
+                    <div class="card2">
+                        <textarea name="descriptionP6" id="descriptionP6" class="descriptionmodif"></textarea>
+                        <textarea name="leftP6" id="leftP6" class="modifleft"></textarea> 
+                        <textarea name="rightP6" id="rightP6" class="modifright"></textarea> 
+                        <textarea name="middleP6" id="middleP6" class="modifmiddle"></textarea>
+                </div></div>
+            </div>
+            <div class="flex">
+                <div class="hover">
+                    <div class="card2">
+                        <textarea name="descriptionP7" id="descriptionP7" class="descriptionmodif"></textarea>
+                        <textarea name="leftP7" id="leftP7" class="modifleft"></textarea> 
+                        <textarea name="rightP7" id="rightP7" class="modifright"></textarea> 
+                        <textarea name="middleP7" id="middleP7" class="modifmiddle"></textarea>
+                </div></div>
+                <div class="hover">
+                    <div class="card2">
+                        <textarea name="descriptionP8" id="descriptionP8" class="descriptionmodif"></textarea>
+                        <textarea name="leftP8" id="leftP8" class="modifleft"></textarea> 
+                        <textarea name="rightP8" id="rightP8" class="modifright"></textarea> 
+                        <textarea name="middleP8" id="middleP8" class="modifmiddle"></textarea>
+                </div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Les partenaires et nous font confiance -->
+
+    <div id="caroussel">
+
+        <div class="container2">
+            <h3 class="text-center2 font-weight-bold2">Nos partenaires :</h3>
+            <div class="déco">
+                <div class="sphère"></div>
+                <div class="transmission"></div>
+                <div class="barre"></div>
+                <div class="sphère"></div>
+            </div>
+            <section id="Partenaire" class="customer-logos2 slider2">
+            </section>
+            <div>
+                <button id="PartB+" type="button">+</button><button id="PartB-" type="button">-</button>
+                <textarea id="NumbPart" name="NumbPart"></textarea>
+            </div>
+        </div>
+
+        <div class="container">
+            <h2 class="text-center font-weight-bold">nous font confiance :</h2>
+            <section id="Confiance" class="customer-logos slider">
+            </section>
+            <div>
+                <button id="ConfB+" type="button">+</button><button type="button" id="ConfB-">-</button>
+                <textarea id="NumbConf" name="NumbConf"></textarea>
+            </div>
+        </div>
+
+
+        <!-- bas de la page avec les coordonnées -->
+        <footer class="coordonne">
+
+            <div class="foters">
+                <h4>Coordonnées :</h4>
+            </div>
+
+            <div class="foter">
+                <img class="logoinfo" src="/img/LogoFooter/logoTelW.png">
+                <textarea name="Telephone" id="Telephone"></textarea>
+                <textarea name="TelephoneURL" id="TelephoneURL"></textarea>
+            </div>
+            <br>
+            <div class="foter">
+                <img class="logoinfo" src="/img/LogoFooter/logoMailW.png">
+                <textarea name="Mail" id="Mail"></textarea>
+                <textarea name="MailURL" id="MailURL"></textarea>
+            </div>
+            <br>
+            <div class="foter">
+                <img class="logoinfo" src="/img/LogoFooter/linkedinW.png">
+                <textarea name="Linkedin" id="Linkedin"></textarea>
+                <textarea name="LinkedinURL" id="LinkedinURL"></textarea>
+            </div>
+            <br>
+            <div class="foter">
+                <img class="logoinfo" src="/img/LogoFooter/logoPosW.png">
+                <textarea name="Local" id="Local"></textarea>
+                <textarea name="LocalURL" id="LocalURL"></textarea>
+            </div>
+            <p class="Copyright">&copy; Copyright 1986 - 2022 | SERVITHEN | Tous droits réservés | <a class="Copyright" href="/fr/MentionsLegales.html">Mentions légales</a> </p>
+        </footer>
+    </form>
+</body>
+</html>

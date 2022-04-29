@@ -1,0 +1,4 @@
+AuthUserFile /securite/.htpasswd
+AuthName "Accès Protégé"
+AuthType Basic
+Require valid-user
