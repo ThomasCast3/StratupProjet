@@ -62,7 +62,7 @@ body {
 }
 
 .dropdown:hover .dropbtn {
-    background-color: rgb(47, 53, 83);
+    background-color: rgb(.drown, 53, 83);
 }
 
 .dropdown-content1 {
@@ -203,7 +203,7 @@ body {
 }
 
 #infoAccueil {
-    background-image: linear-gradient( rgb(47, 53, 83), transparent)/*, url(/img/fondaccueil.jpg)*/;
+    background-image: linear-gradient( rgb(47, 53, 83), transparent);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;

@@ -1,8 +1,7 @@
 function changetext(site) {
   document.getElementById('txtTitre').value = site[langage]["Titre"];
 }
-function changetextC(site) {
-  document.getElementById('langage').value = langage;
+function changetextC(site){
   document.getElementById('Telephone').value = site["Francais"]["Telephone"];
   document.getElementById('TelephoneURL').value = site["Francais"]["TelephoneURL"];
   document.getElementById('Mail').value = site["Francais"]["Mail"];
@@ -11,31 +10,24 @@ function changetextC(site) {
   document.getElementById('LinkedinURL').value = site["Francais"]["LinkedinURL"];
   document.getElementById('Local').value = site["Francais"]["Localisation"];
   document.getElementById('LocalURL').value = site["Francais"]["LocalisationURL"];
-  document.getElementById('Background').value = site["Francais"]["Backgroundimg"];
-  function restart(Type){
-    if (Type == "Conf"){
-      for(let r = 0;r < site["Francais"]["Confiance"].length;r++){
-        document.getElementById('Conf'+ r).value = site["Francais"]["Confiance"][r]["Image"];
-      }
-    }
-    if (Type == "Part"){
-      for(let r = 0;r < site["Francais"]["Partenaire"].length;r++){
-        document.getElementById('Part'+ r).value = site["Francais"]["Partenaire"][r]["Image"];
-      }
-    }
+  let ShowConfiance = document.getElementById('ShowConfiance')
+  for (let i = 0; i < site["Francais"]["numbC"]; i++) {
+    ShowConfiance.innerHTML = ShowConfiance.innerHTML + '<div class="slide"><img src="/img/LogoConfiance/Conf' + i +'.png"></div>';
+  }
+  let ShowPartenaire = document.getElementById('ShowPartenaire')
+  for (let i = 0; i < site["Francais"]["numbP"]; i++) {
+    ShowPartenaire.innerHTML = ShowPartenaire.innerHTML + '<div class="slide"><img src="/img/Partenaire/Part'+i+'.png"></div>';
   }
   let ConfNumb = document.getElementById('NumbConf')
   let Confiance = document.getElementById('Confiance')
   let i = 0;
-  for (i = 0; i < site["Francais"]["Confiance"].length; i++) {
-    Confiance.innerHTML = Confiance.innerHTML + '<textarea id="Conf' + i + '" name="Conf' + i + '" ></textarea>';
+  for (i = 0; i < site["Francais"]["numbC"]; i++) {
+    Confiance.innerHTML = Confiance.innerHTML + '<input type="file" id="Conf' + i + '" name="Conf' + i + '" >';
   }
-  restart("Conf");
   ConfNumb.value = i;
   document.getElementById('ConfB+').addEventListener('click',function(){
-    Confiance.innerHTML = Confiance.innerHTML + '<textarea id="Conf' + i + '" name="Conf' + i + '" ></textarea>';
+    Confiance.innerHTML = Confiance.innerHTML + '<input type="file" id="Conf' + i + '" name="Conf' + i + '" >';
     i++;
-    restart("Conf");
     ConfNumb.value = i;
   })
   document.getElementById('ConfB-').addEventListener('click',function(){
@@ -46,16 +38,13 @@ function changetextC(site) {
   let NumbPart = document.getElementById('NumbPart')
   let Partenaire = document.getElementById('Partenaire');
   let j = 0;
-  for (j = 0; j < site["Francais"]["Partenaire"].length; j++) {
-    Partenaire.innerHTML = Partenaire.innerHTML + '<textarea id="Part' + j + '" name="Part' + j + '" ></textarea>';
-    document.getElementById('Part'+ j).value = site["Francais"]["Partenaire"][j]["Image"];
+  for (j = 0; j < site["Francais"]["numbP"]; j++) {
+    Partenaire.innerHTML = Partenaire.innerHTML + '<input type="file" id="Part' + j + '" name="Part' + j + '" >';
   }
-  restart("Part");
   NumbPart.value = j;
   document.getElementById('PartB+').addEventListener('click',function(){
-    Partenaire.innerHTML = Partenaire.innerHTML + '<textarea id="Part' + j + '" name="Part' + j + '" ></textarea>';
+    Partenaire.innerHTML = Partenaire.innerHTML + '<input type="file" id="Part' + j + '" name="Part' + j + '" >';
     j++;
-    restart("Part");
     NumbPart.value = j;
   })
   document.getElementById('PartB-').addEventListener('click',function(){
@@ -63,6 +52,81 @@ function changetextC(site) {
     document.getElementById('Part'+j).remove();
     NumbPart.value = j;
   })
+  document.getElementById("red").value = site["Francais"]["red"];
+  document.getElementById("green").value = site["Francais"]["green"];
+  document.getElementById("blue").value = site["Francais"]["blue"];
+  window.onmousemove = function () {
+    R = document.getElementById("red").value;
+    G = document.getElementById("green").value;
+    B = document.getElementById("blue").value;
+    document.getElementById("redt").innerHTML = "R:"+R;
+    document.getElementById("greent").innerHTML = "G:"+G;
+    document.getElementById("bluet").innerHTML = "B:"+B;
+    document.getElementsByClassName("coordonne")[0].style.backgroundColor = "rgb("+R+","+G+","+B+")";
+    document.getElementsByClassName("navbar")[0].style.backgroundColor = "rgb("+R+","+G+","+B+")";
+    document.getElementsByClassName("navbar")[0].style.boxShadow = "rgb("+R+","+G+","+B+" / 62%) 0 5px 20px";
+    document.getElementsByClassName("logoedit")[0].style.backgroundColor = "rgb("+R+","+G+","+B+")";
+    document.getElementsByClassName("page")[0].style.backgroundColor = "rgb("+R+","+G+","+B+")";
+    for (let k = 0; k < document.getElementsByClassName("sphère").length; k++) {
+      document.getElementsByClassName("sphère")[k].style.backgroundColor = "rgb("+R+","+G+","+B+")";
+    }
+    for (let k = 0; k < document.getElementsByClassName("barre").length; k++) {
+      document.getElementsByClassName("barre")[k].style.backgroundColor = "rgb("+R+","+G+","+B+")";
+    }
+    document.getElementById("infoAccueil").style.backgroundImage = "linear-gradient( rgb("+R+","+G+","+B+"), rgba(0,0,0,0))";
+    document.getElementById("Background").style.backgroundColor = "rgb("+R+","+G+","+B+")";
+    document.getElementById("ConfB+").style.backgroundColor = "rgb("+R+","+G+","+B+")";
+    document.getElementById("ConfB-").style.backgroundColor = "rgb("+R+","+G+","+B+")";
+    document.getElementById("PartB+").style.backgroundColor = "rgb("+R+","+G+","+B+")";
+    document.getElementById("PartB-").style.backgroundColor = "rgb("+R+","+G+","+B+")";
+    document.getElementById("Confirm").style.backgroundColor = "rgb("+R+","+G+","+B+")";
+    if (document.getElementById("fin"))
+    {
+      document.getElementById("fin").style.backgroundColor = "rgb("+R+","+G+","+B+")";
+    }
+    for (let i = 0; i < site["Francais"]["numbP"]; i++) {
+      document.getElementById("Part"+i).style.backgroundColor = "rgb("+R+","+G+","+B+")";
+    }
+    for (let i = 0; i < site["Francais"]["numbC"]; i++) {
+      document.getElementById("Conf"+i).style.backgroundColor = "rgb("+R+","+G+","+B+")";
+    }
+  }
+  $('.customer-logos').slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 1500,
+    arrows: false,
+    responsive: [{
+      breakpoint: 768,
+      setting: {
+        slidesToShow: 4
+      }
+    }, {
+      breakpoint: 520,
+      setting: {
+        slidesToShow: 3
+      }
+    }]
+  });
+  $('.customer-logos2').slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 1500,
+    arrows: false,
+    responsive: [{
+      breakpoint: 768,
+      setting: {
+        slidesToShow: 4
+      }
+    }, {
+      breakpoint: 520,
+      setting: {
+        slidesToShow: 3
+      }
+    }]
+  });
 }
 function changetextP(site){
   document.getElementById('stxtTitre').value = site[langage]["SousTitre"];
@@ -106,9 +170,6 @@ window.onload = function () {
       if (document.getElementById("stxtTitre").name !== "SousTitre") {
         reditSousTitre(document.getElementById("2"));
       }
-      if (document.getElementById("Background").name !== "Backgroundimg") {
-        reditFond(document.getElementById("3"));
-      }
       if (document.getElementById("P1").name !== "presentation1") {
         reditText1(document.getElementById("T1"))
       }
@@ -117,12 +178,6 @@ window.onload = function () {
       }
       if (document.getElementById("P3").name !== "presentation3") {
         reditText3(document.getElementById("T3"))
-      }
-      if (document.getElementById("Part0").name !== "Part0") {
-        reditPartenaire()
-      }
-      if (document.getElementById("Conf0").name !== "Conf0") {
-        reditConfiance()
       }
       if (document.getElementById("Telephone").name !== "Telephone") {
         reditPhone(document.getElementById("Phone"));
@@ -182,12 +237,9 @@ if (langage === "Francais") {
 function edit() {
   editTitre()
   editSousTitre()
-  editFond()
   editText1()
   editText2()
   editText3()
-  editPartenaire()
-  editConfiance()
   editPhone()
   editMail()
   editLinkedin()
@@ -265,46 +317,6 @@ function reditSousTitre(edit) {
     editSousTitre();
   })
 }
-function editFond() {
-  Fond = document.createElement("img");
-  FondOrigine = document.getElementById("Background");
-  Fond.id = FondOrigine.id;
-  Fond.src = FondOrigine.value;
-  Fond.className = "fondaccueil";
-  FondOrigine.remove();
-  document.getElementById("infoAccueil").appendChild(Fond);
-  editeur = document.createElement("img");
-  editeur.className = "edit";
-  editeur.src = "https://s1.qwant.com/thumbr/0x380/b/0/becdf805fd34b4faa5c667fd83a386d47b1dc8459d37fdd89ffe1305138080/img_376363.png?u=http%3A%2F%2Fcdn.onlinewebfonts.com%2Fsvg%2Fimg_376363.png&q=0&b=1&p=0&a=0"
-  editeur.id = "3";
-  document.getElementById("infoAccueil").append(editeur)
-  document.getElementById("3").addEventListener('click',function () {
-    reditFond(this);
-  })
-}
-function reditFond(edit) {
-  edit.remove()
-  FondOrigine = document.createElement("textarea");
-  Fond = document.getElementById("Background");
-  FondOrigine.id = Fond.id;
-  FondOrigine.name = "Backgroundimg";
-  FondOrigine.value = Fond.src;
-  Fond.remove();
-  document.getElementById("infoAccueil").appendChild(FondOrigine);
-  editeur = document.createElement("img");
-  editeur.className = "edit";
-  editeur.src = "https://s1.qwant.com/thumbr/0x380/b/0/becdf805fd34b4faa5c667fd83a386d47b1dc8459d37fdd89ffe1305138080/img_376363.png?u=http%3A%2F%2Fcdn.onlinewebfonts.com%2Fsvg%2Fimg_376363.png&q=0&b=1&p=0&a=0"
-  editeur.id = "3";
-  document.getElementById("infoAccueil").appendChild(editeur);
-  editeur.addEventListener('click',function () {
-    if (document.getElementById("fin") != null)
-    {
-      document.getElementById("fin").remove()
-    }
-    this.remove()
-    editFond();
-  })
-}
 function editText1() {
   Text1 = document.createElement("p");
   Text1Origine = document.getElementById("P1");
@@ -324,7 +336,7 @@ function reditText1(edit) {
   Text1Origine.id = Text1.id;
   Text1Origine.className = Text1.className;
   Text1Origine.name = Text1.parentElement.id;
-  Text1Origine.value = Text1.innerText;
+  Text1Origine.value = Text1.innerHTML;
   Text1.remove();
   document.getElementById("presentation1").appendChild(Text1Origine);
   editeur = document.createElement("img");
@@ -360,7 +372,7 @@ function reditText2(edit) {
   Text2Origine.id = Text2.id;
   Text2Origine.className = Text2.className;
   Text2Origine.name = Text2.parentElement.id;
-  Text2Origine.value = Text2.innerText;
+  Text2Origine.value = Text2.innerHTML;
   Text2.remove();
   document.getElementById("presentation2").appendChild(Text2Origine);
   editeur = document.createElement("img");
@@ -396,7 +408,7 @@ function reditText3(edit) {
   Text3Origine.id = Text3.id;
   Text3Origine.className = Text3.className;
   Text3Origine.name = Text3.parentElement.id;
-  Text3Origine.value = Text3.innerText;
+  Text3Origine.value = Text3.innerHTML;
   Text3.remove();
   document.getElementById("presentation3").appendChild(Text3Origine);
   editeur = document.createElement("img");
@@ -411,150 +423,6 @@ function reditText3(edit) {
     }
     this.remove()
     editText3();
-  })
-}
-function editPartenaire() {
-  for (let i = 0; i < document.getElementById("NumbPart").value; i++) {
-    PartOrigine = document.getElementById("Part"+i)
-    Part = document.createElement("img")
-    Part.id = PartOrigine.id;
-    Part.src = PartOrigine.value;
-    PartOrigine.remove();
-    Div = document.createElement("div")
-    Div.className = "slide"
-    Div.append(Part);
-    document.getElementById("Partenaire").append(Div);
-  }
-  editeur = document.createElement("img");
-  editeur.className = "edit";
-  editeur.src = "https://s1.qwant.com/thumbr/0x380/b/0/becdf805fd34b4faa5c667fd83a386d47b1dc8459d37fdd89ffe1305138080/img_376363.png?u=http%3A%2F%2Fcdn.onlinewebfonts.com%2Fsvg%2Fimg_376363.png&q=0&b=1&p=0&a=0"
-  editeur.id = "Part";
-  document.getElementById("PartB+").className = "hide";
-  document.getElementById("PartB-").className = "hide";
-  document.getElementById("PartChange").append(editeur)
-  editeur.addEventListener('click',function () {
-    this.remove()
-    reditPartenaire();
-  })
-  $('.customer-logos2').slick({
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 1500,
-    arrows: false,
-    responsive: [{
-      breakpoint: 768,
-      setting: {
-        slidesToShow: 4
-      }
-    }, {
-      breakpoint: 520,
-      setting: {
-        slidesToShow: 3
-      }
-    }]
-  });
-}
-function reditPartenaire() {
-  for (let i = 0; i < document.getElementById("NumbPart").value; i++) {
-    Part = document.getElementById("Part"+i)
-    PartOrigine = document.createElement("textarea")
-    PartOrigine.id = Part.id;
-    PartOrigine.name = PartOrigine.id;
-    PartOrigine.value = Part.src;
-    document.getElementById("Partenaire").append(PartOrigine);
-  }
-  document.getElementsByClassName("customer-logos2")[0].children[0].remove();
-  document.getElementById("Partenaire").className ="customer-logos2 "
-  editeur = document.createElement("img");
-  editeur.className = "edit";
-  editeur.src = "https://s1.qwant.com/thumbr/0x380/b/0/becdf805fd34b4faa5c667fd83a386d47b1dc8459d37fdd89ffe1305138080/img_376363.png?u=http%3A%2F%2Fcdn.onlinewebfonts.com%2Fsvg%2Fimg_376363.png&q=0&b=1&p=0&a=0"
-  editeur.id = "Part";
-  document.getElementById("PartB+").className = "";
-  document.getElementById("PartB-").className = "";
-  document.getElementById("PartChange").append(editeur)
-  editeur.addEventListener('click',function () {
-    if (document.getElementById("fin") != null)
-    {
-      document.getElementById("fin").remove()
-    }
-    this.remove()
-    editPartenaire();
-  })
-}
-function editConfiance() {
-  for (let i = 0; i < document.getElementById("NumbConf").value; i++) {
-    ConfOrigine = document.getElementById("Conf"+i)
-    Conf = document.createElement("img")
-    Conf.id = ConfOrigine.id;
-    Conf.src = ConfOrigine.value;
-    ConfOrigine.remove();
-    Div = document.createElement("div")
-    Div.className = "slide"
-    Div.append(Conf);
-    document.getElementById("Confiance").append(Div);
-  }
-  editeur = document.createElement("img");
-  editeur.className = "edit";
-  editeur.src = "https://s1.qwant.com/thumbr/0x380/b/0/becdf805fd34b4faa5c667fd83a386d47b1dc8459d37fdd89ffe1305138080/img_376363.png?u=http%3A%2F%2Fcdn.onlinewebfonts.com%2Fsvg%2Fimg_376363.png&q=0&b=1&p=0&a=0"
-  editeur.id = "Conf";
-  document.getElementById("ConfB+").className = "hide";
-  document.getElementById("ConfB-").className = "hide";
-  document.getElementById("ConfChange").append(editeur)
-  editeur.addEventListener('click',function () {
-    this.remove()
-    reditConfiance()
-  })
-  $('.customer-logos').slick({
-    slidesToShow: 6,
-    slidesToScroll: 3,
-    autoplay: true,
-    autoplaySpeed: 2000,
-    arrows: false,
-    responsive: [{
-      breakpoint: 768,
-      setting: {
-        slidesToShow: 4
-      }
-    }, {
-      breakpoint: 520,
-      setting: {
-        slidesToShow: 3
-      }
-    }]
-  });
-}
-function reditConfiance() {
-  for (let i = 0; i < document.getElementById("NumbConf").value; i++) {
-    Conf = document.getElementById("Conf"+i)
-    ConfOrigine = document.createElement("textarea")
-    ConfOrigine.id = Conf.id;
-    ConfOrigine.name = ConfOrigine.id;
-    ConfOrigine.value = Conf.src;
-    document.getElementById("Confiance").append(ConfOrigine);
-  }
-  if (document.getElementsByClassName("slick-list draggable").length > 1) {
-    document.getElementsByClassName("slick-list draggable")[1].remove();
-  }
-  else
-  {
-    document.getElementsByClassName("slick-list draggable")[0].remove();
-  }
-  document.getElementById("Confiance").className ="customer-logos slider"
-  editeur = document.createElement("img");
-  editeur.className = "edit";
-  editeur.src = "https://s1.qwant.com/thumbr/0x380/b/0/becdf805fd34b4faa5c667fd83a386d47b1dc8459d37fdd89ffe1305138080/img_376363.png?u=http%3A%2F%2Fcdn.onlinewebfonts.com%2Fsvg%2Fimg_376363.png&q=0&b=1&p=0&a=0"
-  editeur.id = "Conf";
-  document.getElementById("ConfB+").className = "";
-  document.getElementById("ConfB-").className = "";
-  document.getElementById("ConfChange").append(editeur)
-  editeur.addEventListener('click',function () {
-    if (document.getElementById("fin") != null)
-    {
-      document.getElementById("fin").remove()
-    }
-    this.remove()
-    editConfiance();
   })
 }
 function editPhone() {

@@ -187,11 +187,23 @@ a{
 }
 .modifleft{
     position: absolute;
-    left: -150px;
+    top: 90%;
+    left: -46.5%;
+    width: 116px;
+    z-index: 10;
 }
 .modifright{
     position: absolute;
-    left: 218px;
+    top: 90%;
+    left: 100%;
+    width: 116px;
+    z-index: 10;
+}
+.modifmiddle{
+    position: absolute;
+    top: 90%;
+    width: 116px;
+    z-index: 10;
 }
 textarea{
     border-color: rgb(47, 53, 83);
@@ -245,4 +257,36 @@ input{
     opacity: 0;
     position: absolute;
     z-index: -1;
+}
+.descriptionmodif{
+    position: absolute;
+    margin: 0;
+    color: black;
+    z-index: 10;
+}
+.description{
+    position: absolute;
+    top: 5%;
+    margin: 0;
+    text-shadow: -1px -1px white, 1px 1px white, -1px 1px white, 1px -1px white;
+    color: black;
+    z-index: 3;
+}
+#carreimg{
+    display: flex;
+    flex-direction: column;
+}
+#carreimg > .edit {
+    position: initial;
+    height: 5vh;
+    width: 4vw;
+}
+.logoedit{
+    position: absolute;
+    top: 80%;
+    left: 0%;
+}
+.coloredit{
+    position: absolute;
+    left: 0%;
 }

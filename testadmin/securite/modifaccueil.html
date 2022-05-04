@@ -16,7 +16,7 @@
 </head>
 
 <body>
-    <form method="post" action="/securite/PHP/modifaccueil.php">
+    <form method="POST" action="/securite/PHP/modifaccueil.php" enctype="multipart/form-data">
     <header>
 
         <!-- La bar navigation -->
@@ -26,6 +26,7 @@
             <div class="navbar">
         
                 <a href="modifaccueil.html"><img class="logo" src="/img/logo.png " alt="logo Servithen"></a>
+                <input type="file" name="logo" class="logoedit">
                 <div id="LocalConfirm">
                 <button type="button" id="Confirm">Préparer les changements</button>
                 </div>
@@ -113,13 +114,19 @@
             <textarea name="SousTitre" id="stxtTitre" class="pTitre">
             </textarea>
         </div>
-        <textarea name="Backgroundimg" id="Background"></textarea>
+        <img src="/img/Backgroundimg.png" class="fondaccueil">
+        <input type="file" name="Backgroundimg" id="Background">
     </div>
 
     <!-- section notre activité avec les image et les texte-->
 
     <div class="page"></div>
     <section class="nav">
+        <div class="coloredit">
+            <div><input type="range" min="0" max="255" id="red" name="red"><p id="redt">R:</p></div>
+            <div><input type="range" min="0" max="255" id="green" name="green"><p id="greent">G:</p></div>
+            <div><input type="range" min="0" max="255" id="blue" name="blue"><p id="bluet">B:</p></div>
+        </div>
         <div class="fond">
             <h3 class="headtitle">Notre activité</h3>
             <div class="déco">
@@ -141,17 +148,23 @@
                 <div class="hover">
                     <div class="card2">
                         <textarea name="description1" id="description1" class="descriptionmodif"></textarea>
-                        <textarea name="left1" id="left1" class="modifleft"></textarea>
-                        <textarea name="right1" id="right1" class="modifright"></textarea>
-                        <textarea name="middle1" id="middle1" class="modifmiddle"></textarea>
+                        <img src="/img/left1.png" class="left">
+                        <img src="/img/right1.png" class="right">
+                        <img src="/img/middle1.png" class="middle">
+                        <input type="file" name="left1" id="left1" class="modifleft">
+                        <input type="file" name="right1" id="right1" class="modifright">
+                        <input type="file" name="middle1" id="middle1" class="modifmiddle">
                     </div>
                 </div>
                 <div class="hover">
                     <div class="card2">
                         <textarea name="description2" id="description2" class="descriptionmodif"></textarea>
-                        <textarea name="left2" id="left2" class="modifleft"></textarea>
-                        <textarea name="right2" id="right2" class="modifright"></textarea>
-                        <textarea name="middle2" id="middle2" class="modifmiddle"></textarea>
+                        <img src="/img/left2.png" class="left">
+                        <img src="/img/right2.png" class="right">
+                        <img src="/img/middle2.png" class="middle">
+                        <input type="file" name="left2" id="left2" class="modifleft">
+                        <input type="file" name="right2" id="right2" class="modifright">
+                        <input type="file" name="middle2" id="middle2" class="modifmiddle">
                     </div>
                 </div>
             </div>
@@ -159,17 +172,23 @@
                 <div class="hover">
                     <div class="card2">
                         <textarea name="description3" id="description3" class="descriptionmodif"></textarea>
-                        <textarea name="left3" id="left3" class="modifleft"></textarea>
-                        <textarea name="right3" id="right3" class="modifright"></textarea>
-                        <textarea name="middle3" id="middle3" class="modifmiddle"></textarea>
+                        <img src="/img/left3.png" class="left">
+                        <img src="/img/right3.png" class="right">
+                        <img src="/img/middle3.png" class="middle">
+                        <input type="file" name="left3" id="left3" class="modifleft">
+                        <input type="file" name="right3" id="right3" class="modifright">
+                        <input type="file" name="middle3" id="middle3" class="modifmiddle">
                     </div>
                 </div>
                 <div class="hover">
                     <div class="card2">
                         <textarea name="description4" id="description4" class="descriptionmodif"></textarea>
-                        <textarea name="left4" id="left4" class="modifleft"></textarea>
-                        <textarea name="right4" id="right4" class="modifright"></textarea>
-                        <textarea name="middle4" id="middle4" class="modifmiddle"></textarea>
+                        <img src="/img/left4.png" class="left">
+                        <img src="/img/right4.png" class="right">
+                        <img src="/img/middle4.png" class="middle">
+                        <input type="file" name="left4" id="left4" class="modifleft">
+                        <input type="file" name="right4" id="right4" class="modifright">
+                        <input type="file" name="middle4" id="middle4" class="modifmiddle">
                     </div>
                 </div>
             </div>
@@ -178,9 +197,12 @@
                 <div class="hover">
                     <div class="card2">
                         <textarea name="description5" id="description5" class="descriptionmodif"></textarea>
-                        <textarea name="left5" id="left5" class="modifleft"></textarea>
-                        <textarea name="right5" id="right5" class="modifright"></textarea>
-                        <textarea name="middle5" id="middle5" class="modifmiddle"></textarea>
+                        <img src="/img/left5.png" class="left">
+                        <img src="/img/right5.png" class="right">
+                        <img src="/img/middle5.png" class="middle">
+                        <input type="file" name="left5" id="left5" class="modifleft">
+                        <input type="file" name="right5" id="right5" class="modifright">
+                        <input type="file" name="middle5" id="middle5" class="modifmiddle">
                     </div>
                 </div>
             </div>
@@ -189,17 +211,23 @@
                 <div class="hover">
                     <div class="card2">
                         <textarea name="descriptionP1" id="descriptionP1" class="descriptionmodif"></textarea>
-                        <textarea name="leftP1" id="leftP1" class="modifleft"></textarea>
-                        <textarea name="rightP1" id="rightP1" class="modifright"></textarea>
-                        <textarea name="middleP1" id="middleP1" class="modifmiddle"></textarea>
+                        <img src="/img/leftP1.png" class="left">
+                        <img src="/img/rightP1.png" class="right">
+                        <img src="/img/middleP1.png" class="middle">
+                        <input type="file" name="leftP1" id="leftP1" class="modifleft">
+                        <input type="file" name="rightP1" id="rightP1" class="modifright">
+                        <input type="file" name="middleP1" id="middleP1" class="modifmiddle">
                     </div>
                 </div>
                 <div class="hover">
                     <div class="card2">
                         <textarea name="descriptionP2" id="descriptionP2" class="descriptionmodif"></textarea>
-                        <textarea name="leftP2" id="leftP2" class="modifleft"></textarea>
-                        <textarea name="rightP2" id="rightP2" class="modifright"></textarea>
-                        <textarea name="middleP2" id="middleP2" class="modifmiddle"></textarea>
+                        <img src="/img/leftP2.png" class="left">
+                        <img src="/img/rightP2.png" class="right">
+                        <img src="/img/middleP2.png" class="middle">
+                        <input type="file" name="leftP2" id="leftP2" class="modifleft">
+                        <input type="file" name="rightP2" id="rightP2" class="modifright">
+                        <input type="file" name="middleP2" id="middleP2" class="modifmiddle">
                     </div>
                 </div>
             </div>
@@ -207,17 +235,23 @@
                 <div class="hover">
                     <div class="card2">
                         <textarea name="descriptionP3" id="descriptionP3" class="descriptionmodif"></textarea>
-                        <textarea name="leftP3" id="leftP3" class="modifleft"></textarea>
-                        <textarea name="rightP3" id="rightP3" class="modifright"></textarea>
-                        <textarea name="middleP3" id="middleP3" class="modifmiddle"></textarea>
+                        <img src="/img/leftP3.png" class="left">
+                        <img src="/img/rightP3.png" class="right">
+                        <img src="/img/middleP3.png" class="middle">
+                        <input type="file" name="leftP3" id="leftP3" class="modifleft">
+                        <input type="file" name="rightP3" id="rightP3" class="modifright">
+                        <input type="file" name="middleP3" id="middleP3" class="modifmiddle">
                     </div>
                 </div>
                 <div class="hover">
                     <div class="card2">
                         <textarea name="descriptionP4" id="descriptionP4" class="descriptionmodif"></textarea>
-                        <textarea name="leftP4" id="leftP4" class="modifleft"></textarea>
-                        <textarea name="rightP4" id="rightP4" class="modifright"></textarea> 
-                        <textarea name="middleP4" id="middleP4" class="modifmiddle"></textarea>
+                        <img src="/img/leftP4.png" class="left">
+                        <img src="/img/rightP4.png" class="right">
+                        <img src="/img/middleP4.png" class="middle">
+                        <input type="file" name="leftP4" id="leftP4" class="modifleft">
+                        <input type="file" name="rightP4" id="rightP4" class="modifright">
+                        <input type="file" name="middleP4" id="middleP4" class="modifmiddle">
                     </div>
                 </div>
             </div>
@@ -225,17 +259,23 @@
                 <div class="hover">
                     <div class="card2">
                         <textarea name="descriptionP5" id="descriptionP5" class="descriptionmodif"></textarea>
-                        <textarea name="leftP5" id="leftP5" class="modifleft"></textarea> 
-                        <textarea name="rightP5" id="rightP5" class="modifright"></textarea> 
-                        <textarea name="middleP5" id="middleP5" class="modifmiddle"></textarea>
+                        <img src="/img/leftP5.png" class="left">
+                        <img src="/img/rightP5.png" class="right">
+                        <img src="/img/middleP5.png" class="middle">
+                        <input type="file" name="leftP5" id="leftP5" class="modifleft">
+                        <input type="file" name="rightP5" id="rightP5" class="modifright">
+                        <input type="file" name="middleP5" id="middleP5" class="modifmiddle">
                     </div>
                 </div>
                 <div class="hover">
                     <div class="card2">
                         <textarea name="descriptionP6" id="descriptionP6" class="descriptionmodif"></textarea>
-                        <textarea name="leftP6" id="leftP6" class="modifleft"></textarea> 
-                        <textarea name="rightP6" id="rightP6" class="modifright"></textarea> 
-                        <textarea name="middleP6" id="middleP6" class="modifmiddle"></textarea>
+                        <img src="/img/leftP6.png" class="left">
+                        <img src="/img/rightP6.png" class="right">
+                        <img src="/img/middleP6.png" class="middle">
+                        <input type="file" name="leftP6" id="leftP6" class="modifleft">
+                        <input type="file" name="rightP6" id="rightP6" class="modifright">
+                        <input type="file" name="middleP6" id="middleP6" class="modifmiddle">
                     </div>
                 </div>
             </div>
@@ -243,21 +283,26 @@
                 <div class="hover">
                     <div class="card2">
                         <textarea name="descriptionP7" id="descriptionP7" class="descriptionmodif"></textarea>
-                        <textarea name="leftP7" id="leftP7" class="modifleft"></textarea> 
-                        <textarea name="rightP7" id="rightP7" class="modifright"></textarea> 
-                        <textarea name="middleP7" id="middleP7" class="modifmiddle"></textarea>
+                        <img src="/img/leftP7.png" class="left">
+                        <img src="/img/rightP7.png" class="right">
+                        <img src="/img/middleP7.png" class="middle">
+                        <input type="file" name="leftP7" id="leftP7" class="modifleft">
+                        <input type="file" name="rightP7" id="rightP7" class="modifright">
+                        <input type="file" name="middleP7" id="middleP7" class="modifmiddle">
                     </div>
                 </div>
                 <div class="hover">
                     <div class="card2">
                         <textarea name="descriptionP8" id="descriptionP8" class="descriptionmodif"></textarea>
-                        <textarea name="leftP8" id="leftP8" class="modifleft"></textarea> 
-                        <textarea name="rightP8" id="rightP8" class="modifright"></textarea> 
-                        <textarea name="middleP8" id="middleP8" class="modifmiddle"></textarea>
+                        <img src="/img/leftP8.png" class="left">
+                        <img src="/img/rightP8.png" class="right">
+                        <img src="/img/middleP8.png" class="middle">
+                        <input type="file" name="leftP8" id="leftP8" class="modifleft">
+                        <input type="file" name="rightP8" id="rightP8" class="modifright">
+                        <input type="file" name="middleP8" id="middleP8" class="modifmiddle">
                     </div>
                 </div>
             </div>
-        </div>
     </section>
 
     <!-- Les partenaires et nous font confiance -->
@@ -271,8 +316,11 @@
                 <div class="barre"></div>
                 <div class="sphère"></div>
             </div>
-            <section id="Partenaire" class="customer-logos2 slider2">
+            <section id="ShowPartenaire" class="customer-logos2 slider2">
             </section>
+            <div id="Partenaire">
+
+            </div>
             <div id="PartChange">
                 <button id="PartB+" type="button">+</button><button id="PartB-" type="button">-</button>
                 <textarea id="NumbPart" class="hide" name="NumbPart"></textarea>
@@ -281,18 +329,21 @@
 
         <div class="container">
             <h2 class="text-center font-weight-bold">nous font confiance :</h2>
-            <section id="Confiance" class="customer-logos slider">
+            <section id="ShowConfiance" class="customer-logos slider">
             </section>
+            <div id="Confiance">
+
+            </div>
             <div id="ConfChange">
                 <button id="ConfB+" type="button">+</button><button type="button" id="ConfB-">-</button>
                 <textarea id="NumbConf" class="hide" name="NumbConf"></textarea>
             </div>
         </div>
+    </div>
 
 
         <!-- bas de la page avec les coordonnées -->
         <footer class="coordonne">
-
             <div class="foters">
                 <h4>Coordonnées :</h4>
             </div>

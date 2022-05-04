@@ -1,5 +1,21 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    move_uploaded_file($_FILES['Backgroundimg']['tmp_name'], '../../img/Backgroundimg.png');
+    echo($_POST['Numbimg']);
+    echo($_POST['serv']);
+    $serv = $_POST['serv'];
+    $numbimg = $_POST['Numbimg'];
+    for ($i = 0; $i < $numbimg; $i++) {
+        move_uploaded_file($_FILES[$_POST['photoService'.$serv.":".$i]]['tmp_name'], '../../img/Serv'.$serv.":".$i.'.png');
+    };
+    $numbP = $_POST['NumbPart'];
+    for ($i = 0; $i < $numbP; $i++) {
+        move_uploaded_file($_FILES['Part'.$i]['tmp_name'], '../../img/Partenaire/Part'.$i.'.png');
+    };
+    $numbC = $_POST['NumbConf'];
+    for ($i = 0; $i < $numbC; $i++) {
+        move_uploaded_file($_FILES['Conf'.$i]['tmp_name'], '../../img/LogoConfiance/Conf'.$i.'.png');
+    };
     function get_data() {
         class stock{
         }
@@ -8,7 +24,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $datae2->SousTitre = $_POST['SousTitre'];
         $datae2->text1 = $_POST['text1'];
         $datae2->text2 = $_POST['text2'];
-        $datae2->img = $dataeI;
         $datae=new stock();
         if ($_POST['langage'] == "Francais") {
         $datae->Francais=$datae2;
@@ -20,15 +35,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         return json_encode($datae);
     }
     function get_dataC() {
-            $serv = $_POST['serv'];
             $datae2=new stock();
-            $numbimg = $_POST['Numbimg'];
-            for ($i = 0; $i < $numbimg; $i++) {
-                $datae3 = new stock();
-                $datae3->Image = $_POST['photoService'.$i];
-                $dataeI[$i] = $datae3;
-            };
-            $datae2->img = $dataeI;
+            $datae2->numbimg = $_POST['Numbimg'];
             $datae=new stock();
             $datae->Francais=$datae2;
             return json_encode($datae);
@@ -43,21 +51,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $dataeG2->LinkedinURL = $_POST['LinkedinURL'];
         $dataeG2->Localisation = $_POST['Local'];
         $dataeG2->LocalisationURL = $_POST['LocalURL'];
-        $dataeG2->Backgroundimg = $_POST['Backgroundimg'];
-        $numbP = $_POST['NumbPart'];
-        for ($i = 0; $i < $numbP; $i++) {
-            $dataeG3 = new stock();
-            $dataeG3->Image = $_POST['Part'.$i];
-            $dataeGP[$i] = $dataeG3;
-        };
-        $numbC = $_POST['NumbConf'];
-        for ($i = 0; $i < $numbC; $i++) {
-            $dataeG4 = new stock();
-            $dataeG4->Image = $_POST['Conf'.$i];
-            $dataeGC[$i] = $dataeG4;
-        };
-        $dataeG2->Partenaire = $dataeGP;
-        $dataeG2->Confiance = $dataeGC;
+        $dataeG2->numbP = $_POST['NumbPart'];
+        $dataeG2->numbC = $_POST['NumbConf'];
+        $dataeG2->red = $_POST['red'];
+        $dataeG2->green = $_POST['green'];
+        $dataeG2->blue = $_POST['blue'];
         $dataeG=new stock();
         $dataeG->Francais=$dataeG2;
         return json_encode($dataeG);
@@ -85,8 +83,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             if(file_put_contents("$file_name", get_dataG())) {
                 $file_name = "../../fr/jsonFR/generalcross.json";
                 if(file_put_contents("$file_name", get_dataGC())) {
-                $redirect_page = '/securite/modifservice'.$serv.'.html';
-                header('Location:'.$redirect_page);
+                /*$redirect_page = '/securite/modifservice'.$serv.'.html';
+                header('Location:'.$redirect_page);*/
                 }
             }
         }

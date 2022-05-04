@@ -1,5 +1,25 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    move_uploaded_file($_FILES['Backgroundimg']['tmp_name'], '../../img/Backgroundimg.png');
+    move_uploaded_file($_FILES['logo']['tmp_name'], '../../img/logo.png');
+    $numbP = $_POST['NumbPart'];
+    for ($i = 0; $i < $numbP; $i++) {
+        move_uploaded_file($_FILES['Part'.$i]['tmp_name'], '../../img/Partenaire/Part'.$i.'.png');
+    };
+    $numbC = $_POST['NumbConf'];
+    for ($i = 0; $i < $numbC; $i++) {
+        move_uploaded_file($_FILES['Conf'.$i]['tmp_name'], '../../img/LogoConfiance/Conf'.$i.'.png');
+    };
+    for ($i = 1; $i <= 5; $i++) {
+        move_uploaded_file($_FILES['left'.$i]['tmp_name'], '../../img/left'.$i.'.png');
+        move_uploaded_file($_FILES['right'.$i]['tmp_name'], '../../img/right'.$i.'.png');
+        move_uploaded_file($_FILES['middle'.$i]['tmp_name'], '../../img/middle'.$i.'.png');
+    };
+    for ($i = 1; $i <= 8; $i++) {
+            move_uploaded_file($_FILES['leftP'.$i]['tmp_name'], '../../img/leftP'.$i.'.png');
+            move_uploaded_file($_FILES['rightP'.$i]['tmp_name'], '../../img/rightP'.$i.'.png');
+            move_uploaded_file($_FILES['middleP'.$i]['tmp_name'], '../../img/middleP'.$i.'.png');
+        };
     function get_data() {
         class stock{
         }
@@ -29,51 +49,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
         return json_encode($datae);
     }
-    function get_dataC() {
-            $datae2=new stock();
-            $datae2->left1 = $_POST['left1'];
-            $datae2->left2 = $_POST['left2'];
-            $datae2->left3 = $_POST['left3'];
-            $datae2->left4 = $_POST['left4'];
-            $datae2->left5 = $_POST['left5'];
-            $datae2->right1 = $_POST['right1'];
-            $datae2->right2 = $_POST['right2'];
-            $datae2->right3 = $_POST['right3'];
-            $datae2->right4 = $_POST['right4'];
-            $datae2->right5 = $_POST['right5'];
-            $datae2->middle1 = $_POST['middle1'];
-            $datae2->middle2 = $_POST['middle2'];
-            $datae2->middle3 = $_POST['middle3'];
-            $datae2->middle4 = $_POST['middle4'];
-            $datae2->middle5 = $_POST['middle5'];
-            $datae2->left1P = $_POST['leftP1'];
-            $datae2->left2P = $_POST['leftP2'];
-            $datae2->left3P = $_POST['leftP3'];
-            $datae2->left4P = $_POST['leftP4'];
-            $datae2->left5P = $_POST['leftP5'];
-            $datae2->left6P = $_POST['leftP6'];
-            $datae2->left7P = $_POST['leftP7'];
-            $datae2->left8P = $_POST['leftP8'];
-            $datae2->rightP1 = $_POST['rightP1'];
-            $datae2->rightP2 = $_POST['rightP2'];
-            $datae2->rightP3 = $_POST['rightP3'];
-            $datae2->rightP4 = $_POST['rightP4'];
-            $datae2->rightP5 = $_POST['rightP5'];
-            $datae2->rightP6 = $_POST['rightP6'];
-            $datae2->rightP7 = $_POST['rightP7'];
-            $datae2->rightP8 = $_POST['rightP8'];
-            $datae2->middleP1 = $_POST['middleP1'];
-            $datae2->middleP2 = $_POST['middleP2'];
-            $datae2->middleP3 = $_POST['middleP3'];
-            $datae2->middleP4 = $_POST['middleP4'];
-            $datae2->middleP5 = $_POST['middleP5'];
-            $datae2->middleP6 = $_POST['middleP6'];
-            $datae2->middleP7 = $_POST['middleP7'];
-            $datae2->middleP8 = $_POST['middleP8'];
-            $datae=new stock();
-            $datae->Francais=$datae2;
-            return json_encode($datae);
-    }
     function get_dataGC() {
         $dataeG2=new stock();
         $dataeG2->Telephone = $_POST['Telephone'];
@@ -84,38 +59,28 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $dataeG2->LinkedinURL = $_POST['LinkedinURL'];
         $dataeG2->Localisation = $_POST['Local'];
         $dataeG2->LocalisationURL = $_POST['LocalURL'];
-        $dataeG2->Backgroundimg = $_POST['Backgroundimg'];
-        $numbP = $_POST['NumbPart'];
-        for ($i = 0; $i < $numbP; $i++) {
-            $dataeG3 = new stock();
-            $dataeG3->Image = $_POST['Part'.$i];
-            $dataeGP[$i] = $dataeG3;
-        };
-        $numbC = $_POST['NumbConf'];
-        for ($i = 0; $i < $numbC; $i++) {
-            $dataeG4 = new stock();
-            $dataeG4->Image = $_POST['Conf'.$i];
-            $dataeGC[$i] = $dataeG4;
-        };
-        $dataeG2->Partenaire = $dataeGP;
-        $dataeG2->Confiance = $dataeGC;
+        $dataeG2->numbP = $_POST['NumbPart'];
+        $dataeG2->numbC = $_POST['NumbConf'];
+        $dataeG2->red = $_POST['red'];
+        $dataeG2->green = $_POST['green'];
+        $dataeG2->blue = $_POST['blue'];
         $dataeG=new stock();
         $dataeG->Francais=$dataeG2;
         return json_encode($dataeG);
     }
     function get_dataG() {
         $dataeG2=new stock();
-                $dataeG2->Titre = $_POST['Titre'];
-                $dataeG=new stock();
-                if ($_POST['langage'] == "Francais") {
-                $dataeG->Francais=$dataeG2;
-                }
-                else
-                {
-                $dataeG->Anglais=$dataeG2;
-                }
-                return json_encode($dataeG);
-                }
+        $dataeG2->Titre = $_POST['Titre'];
+        $dataeG=new stock();
+        if ($_POST['langage'] == "Francais") {
+        $dataeG->Francais=$dataeG2;
+        }
+        else
+        {
+        $dataeG->Anglais=$dataeG2;
+        }
+        return json_encode($dataeG);
+        }
     }
     if ($_POST['langage'] == "Francais") {
     $file_name='../../fr/jsonFR/accueil.json';
@@ -125,21 +90,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $file_name='../../en/jsonEN/accueil.json';
     }
     if(file_put_contents("$file_name", get_data())) {
-        $file_name='../../fr/jsonFR/accueilcross.json';
-        if(file_put_contents("$file_name", get_dataC())) {
-            if ($_POST['langage'] == "Francais") {
-            $file_name='../../fr/jsonFR/general.json';
-            }
-            else
-            {
-            $file_name='../../en/jsonEN/general.json';
-            }
-            if(file_put_contents("$file_name", get_dataG())) {
-                $file_name='../../fr/jsonFR/generalcross.json';
-                if(file_put_contents("$file_name", get_dataGC())) {
-                $redirect_page = '/securite/modifaccueil.html';
-                header('Location:'.$redirect_page);
-                }
+        if ($_POST['langage'] == "Francais") {
+        $file_name='../../fr/jsonFR/general.json';
+        }
+        else
+        {
+        $file_name='../../en/jsonEN/general.json';
+        }
+        if(file_put_contents("$file_name", get_dataG())) {
+            $file_name='../../fr/jsonFR/generalcross.json';
+            if(file_put_contents("$file_name", get_dataGC())) {
+            $redirect_page = '/securite/modifaccueil.html';
+            header('Location:'.$redirect_page);
             }
         }
     }                

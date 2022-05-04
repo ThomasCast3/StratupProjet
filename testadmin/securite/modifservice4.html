@@ -18,7 +18,7 @@
 </head>
 
 <body>
-    <form method="post" action="/securite/PHP/modifservice.php">
+    <form method="post" action="/securite/PHP/modifservice.php" enctype="multipart/form-data">
     <header>
 
         <!-- La bar navigation -->
@@ -28,6 +28,7 @@
             <div class="navbar">
 
                 <a href="modifaccueil.html"><img class="logo" src="/img/logo.png " alt="logo Servithen"></a>
+                <input type="file" name="logo" class="logoedit">
                 <div id="LocalConfirm"><button type="button" id="Confirm">Préparer les changements</button></div>
                 <textarea id="langage" class="hide" name="langage"></textarea>
                 <textarea id="number" class="service" name="serv">4</textarea>
@@ -115,13 +116,19 @@
                 Audits et Expertises d’installations.
             </textarea>
         </div>
-        <textarea name="Backgroundimg" id="Background"></textarea>
+        <img src="/img/Backgroundimg.png" class="fondaccueil">
+        <input type="file" name="Backgroundimg" id="Background">
     </div>
 
     <!-- section notre activité avec les image et les texte-->
 
     <div class="page"></div>
     <section class="nav">
+        <div class="coloredit">
+            <div><input type="range" min="0" max="255" id="red" name="red"><p id="redt">R:</p></div>
+            <div><input type="range" min="0" max="255" id="green" name="green"><p id="greent">G:</p></div>
+            <div><input type="range" min="0" max="255" id="blue" name="blue"><p id="bluet">B:</p></div>
+        </div>
         <div class="fond">
             <h3 class="headtitle">Etude de projet</h3>
             <div class="déco">
@@ -148,37 +155,39 @@
 
     <!-- Les partenaires et nous font confiance -->
 
-    <div id="caroussel">
+        <div id="caroussel">
 
-        <div class="container2">
-            <h3 class="text-center2 font-weight-bold2">Nos partenaires :</h3>
-            <div class="déco">
-                <div class="sphère"></div>
+            <div class="container2">
+                <h3 class="text-center2 font-weight-bold2">Nos partenaires :</h3>
+                <div class="déco">
+                    <div class="sphère"></div>
+                    <div class="barre"></div>
+                    <div class="sphère"></div>
+                </div>
+                <section id="ShowPartenaire" class="customer-logos2 slider2">
+                </section>
+                <div id="Partenaire">
 
-                <div class="barre"></div>
-                <div class="sphère"></div>
+                </div>
+                <div id="PartChange">
+                    <button id="PartB+" type="button">+</button><button id="PartB-" type="button">-</button>
+                    <textarea id="NumbPart" class="hide" name="NumbPart"></textarea>
+                </div>
             </div>
-            <section id="Partenaire" class="customer-logos2 slider2">
-            </section>
-            <div id="PartChange">
-                <button id="PartB+" type="button">+</button><button id="PartB-" type="button">-</button>
-                <textarea id="NumbPart" class="hide" name="NumbPart"></textarea>
+
+            <div class="container">
+                <h2 class="text-center font-weight-bold">nous font confiance :</h2>
+                <section id="ShowConfiance" class="customer-logos slider">
+                </section>
+                <div id="Confiance">
+
+                </div>
+                <div id="ConfChange">
+                    <button id="ConfB+" type="button">+</button><button type="button" id="ConfB-">-</button>
+                    <textarea id="NumbConf" class="hide" name="NumbConf"></textarea>
+                </div>
             </div>
         </div>
-
-
-
-        <div class="container">
-            <h2 class="text-center font-weight-bold">nous font confiance :</h2>
-            <section id="Confiance" class="customer-logos slider">
-            </section>
-            <div id="ConfChange">
-                <button id="ConfB+" type="button">+</button><button type="button" id="ConfB-">-</button>
-                <textarea id="NumbConf" class="hide" name="NumbConf"></textarea>
-            </div>
-        </div>
-
-    </div>
         <!-- bas de la page avec les coordonnées -->
 
 
@@ -213,6 +222,7 @@
             </div>
             <p class="Copyright">&copy; Copyright 1986 - 2022 | SERVITHEN | Tous droits réservés | <a class="Copyright" href="/fr/MentionsLegales.html">Mentions légales</a> </p>
         </footer>
+    </form>
 </body>
 
 </html>

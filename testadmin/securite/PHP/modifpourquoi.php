@@ -1,5 +1,14 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    move_uploaded_file($_FILES['Backgroundimg']['tmp_name'], '../../img/Backgroundimg.png');
+    $numbP = $_POST['NumbPart'];
+    for ($i = 0; $i < $numbP; $i++) {
+        move_uploaded_file($_FILES['Part'.$i]['tmp_name'], '../../img/Partenaire/Part'.$i.'.png');
+    };
+    $numbC = $_POST['NumbConf'];
+    for ($i = 0; $i < $numbC; $i++) {
+        move_uploaded_file($_FILES['Conf'.$i]['tmp_name'], '../../img/LogoConfiance/Conf'.$i.'.png');
+    };
     function get_data() {
         class stock{
         }
@@ -28,21 +37,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $dataeG2->LinkedinURL = $_POST['LinkedinURL'];
             $dataeG2->Localisation = $_POST['Local'];
             $dataeG2->LocalisationURL = $_POST['LocalURL'];
-            $dataeG2->Backgroundimg = $_POST['Backgroundimg'];
-            $numbP = $_POST['NumbPart'];
-            for ($i = 0; $i < $numbP; $i++) {
-                $dataeG3 = new stock();
-                $dataeG3->Image = $_POST['Part'.$i];
-                $dataeGP[$i] = $dataeG3;
-            };
-            $numbC = $_POST['NumbConf'];
-            for ($i = 0; $i < $numbC; $i++) {
-                $dataeG4 = new stock();
-                $dataeG4->Image = $_POST['Conf'.$i];
-                $dataeGC[$i] = $dataeG4;
-            };
-            $dataeG2->Partenaire = $dataeGP;
-            $dataeG2->Confiance = $dataeGC;
+            $dataeG2->numbP = $_POST['NumbPart'];
+            $dataeG2->numbC = $_POST['NumbConf'];
+            $dataeG2->red = $_POST['red'];
+            $dataeG2->green = $_POST['green'];
+            $dataeG2->blue = $_POST['blue'];
             $dataeG=new stock();
             $dataeG->Francais=$dataeG2;
             return json_encode($dataeG);

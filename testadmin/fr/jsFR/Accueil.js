@@ -2,7 +2,6 @@ function changetext(site) {
     document.getElementById('txtTitre').innerHTML = site[langage]["Titre"];
 }
 function changetextC(site) {
-
     document.getElementById("francais").addEventListener("click",function () {
         localStorage.setItem("langue","Francais")
         if (localStorage.getItem("langue") === "Francais") {
@@ -23,19 +22,29 @@ function changetextC(site) {
     document.getElementById('Linkedin').href = site["Francais"]["LinkedinURL"];
     document.getElementById('Local').innerHTML = site["Francais"]["Localisation"];
     document.getElementById('Local').href = site["Francais"]["LocalisationURL"];
-    document.getElementById('infoAccueil').innerHTML = '<img src="' + site["Francais"]["Backgroundimg"] + '" class="fondaccueil">' + document.getElementById('infoAccueil').innerHTML;
     let Confiance = document.getElementById('Confiance')
-    for (let i = 0; i < site["Francais"]["Confiance"].length; i++) {
-        if (i == 4){
-            Confiance.innerHTML = Confiance.innerHTML + '<img class="TailleImg" src="' + site["Francais"]["Confiance"][i]["Image"] +'"></div>';
-        } else {
-            Confiance.innerHTML = Confiance.innerHTML + '<div class="slide"><img src="' + site["Francais"]["Confiance"][i]["Image"] +'"></div>';
-        }
+    for (let i = 0; i < site["Francais"]["numbC"]; i++) {
+        Confiance.innerHTML = Confiance.innerHTML + '<div class="slide"><img src="/img/LogoConfiance/Conf' + i +'.png"></div>';
     }
     let Partenaire = document.getElementById('Partenaire')
-    for (let i = 0; i < site["Francais"]["Partenaire"].length; i++) {
-        Partenaire.innerHTML = Partenaire.innerHTML + '<div class="slide"><img src="' + site["Francais"]["Partenaire"][i]["Image"] +'"></div>';
+    for (let i = 0; i < site["Francais"]["numbP"]; i++) {
+        Partenaire.innerHTML = Partenaire.innerHTML + '<div class="slide"><img src="/img/Partenaire/Part'+i+'.png"></div>';
     }
+    R = site["Francais"]["red"];
+    G = site["Francais"]["green"];
+    B = site["Francais"]["blue"];
+    document.getElementsByClassName("coordonne")[0].style.backgroundColor = "rgb("+R+","+G+","+B+")";
+    document.getElementsByClassName("navbar")[0].style.backgroundColor = "rgb("+R+","+G+","+B+")";
+    document.getElementsByClassName("navbar")[0].style.boxShadow = "rgb("+R+","+G+","+B+" / 62%) 0 5px 20px";
+    document.getElementsByClassName("page")[0].style.backgroundColor = "rgb("+R+","+G+","+B+")";
+    for (let k = 0; k < document.getElementsByClassName("sphère").length; k++) {
+        document.getElementsByClassName("sphère")[k].style.backgroundColor = "rgb("+R+","+G+","+B+")";
+    }
+    for (let k = 0; k < document.getElementsByClassName("barre").length; k++) {
+        document.getElementsByClassName("barre")[k].style.backgroundColor = "rgb("+R+","+G+","+B+")";
+    }
+    document.getElementById("infoAccueil").style.backgroundImage = "linear-gradient( rgb("+R+","+G+","+B+"), rgba(0,0,0,0))";
+
     $('.customer-logos').slick({
         slidesToShow: 6,
         slidesToScroll: 3,
@@ -105,47 +114,6 @@ function changetextP(site){
         }
     })
 }
-function changetextPC(site){
-    document.getElementById('L1').src = site["Francais"]["left1"];
-    document.getElementById('L2').src = site["Francais"]["left2"];
-    document.getElementById('L3').src = site["Francais"]["left3"];
-    document.getElementById('L4').src = site["Francais"]["left4"];
-    document.getElementById('L5').src = site["Francais"]["left5"];
-    document.getElementById('R1').src = site["Francais"]["right1"];
-    document.getElementById('R2').src = site["Francais"]["right2"];
-    document.getElementById('R3').src = site["Francais"]["right3"];
-    document.getElementById('R4').src = site["Francais"]["right4"];
-    document.getElementById('R5').src = site["Francais"]["right5"];
-    document.getElementById('M1').src = site["Francais"]["middle1"];
-    document.getElementById('M2').src = site["Francais"]["middle2"];
-    document.getElementById('M3').src = site["Francais"]["middle3"];
-    document.getElementById('M4').src = site["Francais"]["middle4"];
-    document.getElementById('M5').src = site["Francais"]["middle5"];
-    document.getElementById('LP1').src = site["Francais"]["left1P"];
-    document.getElementById('LP2').src = site["Francais"]["left2P"];
-    document.getElementById('LP3').src = site["Francais"]["left3P"];
-    document.getElementById('LP4').src = site["Francais"]["left4P"];
-    document.getElementById('LP5').src = site["Francais"]["left5P"];
-    document.getElementById('LP6').src = site["Francais"]["left6P"];
-    document.getElementById('LP7').src = site["Francais"]["left7P"];
-    document.getElementById('LP8').src = site["Francais"]["left8P"];
-    document.getElementById('RP1').src = site["Francais"]["rightP1"];
-    document.getElementById('RP2').src = site["Francais"]["rightP2"];
-    document.getElementById('RP3').src = site["Francais"]["rightP3"];
-    document.getElementById('RP4').src = site["Francais"]["rightP4"];
-    document.getElementById('RP5').src = site["Francais"]["rightP5"];
-    document.getElementById('RP6').src = site["Francais"]["rightP6"];
-    document.getElementById('RP7').src = site["Francais"]["rightP7"];
-    document.getElementById('RP8').src = site["Francais"]["rightP8"];
-    document.getElementById('MP1').src = site["Francais"]["middleP1"];
-    document.getElementById('MP2').src = site["Francais"]["middleP2"];
-    document.getElementById('MP3').src = site["Francais"]["middleP3"];
-    document.getElementById('MP4').src = site["Francais"]["middleP4"];
-    document.getElementById('MP5').src = site["Francais"]["middleP5"];
-    document.getElementById('MP6').src = site["Francais"]["middleP6"];
-    document.getElementById('MP7').src = site["Francais"]["middleP7"];
-    document.getElementById('MP8').src = site["Francais"]["middleP8"];
-}
 
 let key;
 
@@ -171,13 +139,6 @@ fetch(requestURL)
     .then(jsonData => {
         changetextC(jsonData)
     })
-requestURL = "/fr/jsonFR/accueilcross.json";
-fetch(requestURL)
-    .then(response => response.json())
-    .then(jsonData => {
-        changetextPC(jsonData)
-    })
-
 if (langage === "Francais") {
     requestURL = "/fr/jsonFR/general.json";
     fetch(requestURL)

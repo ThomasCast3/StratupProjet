@@ -16,7 +16,7 @@
 </head>
 
 <body>
-    <form method="post" action="/securite/PHP/modifElectro.php">
+    <form method="POST" action="/securite/PHP/modifElectro.php" enctype="multipart/form-data">
     <header>
 
         <!-- La bar navigation -->
@@ -26,6 +26,7 @@
             <div class="navbar">
 
                 <a href="modifaccueil.html"><img class="logo" src="/img/logo.png " alt="logo Servithen"></a>
+                <input type="file" name="logo" class="logoedit">
                 <div id="LocalConfirm"><button type="button" id="Confirm">Préparer les changements</button></div>
                 <textarea id="langage" class="hide" name="langage"></textarea>
                 <a id="francais"><img class="langage" src="/img/drapeau/france-flag-png-large.png" alt="logo drapeau fr"/></a>
@@ -108,13 +109,19 @@
             <textarea name="SousTitre" id="stxtTitre" class="pTitre">
             </textarea>
         </div>
-        <textarea name="Backgroundimg" id="Background"></textarea>
+        <img src="/img/Backgroundimg.png" class="fondaccueil">
+        <input type="file" name="Backgroundimg" id="Background">
     </div>
 
     <!-- section notre activité avec les image et les texte-->
 
     <div class="page"></div>
     <section class="nav">
+        <div class="coloredit">
+            <div><input type="range" min="0" max="255" id="red" name="red"><p id="redt">R:</p></div>
+            <div><input type="range" min="0" max="255" id="green" name="green"><p id="greent">G:</p></div>
+            <div><input type="range" min="0" max="255" id="blue" name="blue"><p id="bluet">B:</p></div>
+        </div>
         <div class="fondBroch">
             <h3>Electrofiltres humides / secs</h3>
             <div class="déco">
@@ -127,12 +134,15 @@
             </div>
             <div class="carrerimg">
                 <div id="editImg">
-                <textarea name="imgProduit" id="imgProduit"></textarea>
+                    <img src="/img/Electro.png" id="imgProduit" class="imgBrochur">
+                    <input name="imgProduit" type="file">
                 </div>
+                <div id="carreimg">
                 <textarea name="txtProduit" id="txtProduit"></textarea>
-                <textarea name="lienProduit" id="lienProduit" target="_blank"></textarea>
+                </div>
+                <a href="/img/brochure/Electro.pdf" id="lienProduit" target="_blank"><button type="button" class="btnPDF">Afficher la brochure</button></a>
+                <input type="file" name="pdf">
             </div>
-
         </div>
     </section>
 
@@ -147,22 +157,30 @@
                 <div class="barre"></div>
                 <div class="sphère"></div>
             </div>
-            <section id="Partenaire" class="customer-logos2 slider2">
+            <section id="ShowPartenaire" class="customer-logos2 slider2">
             </section>
+            <div id="Partenaire">
+
+            </div>
             <div id="PartChange">
                 <button id="PartB+" type="button">+</button><button id="PartB-" type="button">-</button>
                 <textarea id="NumbPart" class="hide" name="NumbPart"></textarea>
             </div>
         </div>
+
         <div class="container">
             <h2 class="text-center font-weight-bold">nous font confiance :</h2>
-            <section id="Confiance" class="customer-logos slider">
+            <section id="ShowConfiance" class="customer-logos slider">
             </section>
+            <div id="Confiance">
+
+            </div>
             <div id="ConfChange">
                 <button id="ConfB+" type="button">+</button><button type="button" id="ConfB-">-</button>
                 <textarea id="NumbConf" class="hide" name="NumbConf"></textarea>
             </div>
         </div>
+    </div>
 
 
         <!-- bas de la page avec les coordonnées -->

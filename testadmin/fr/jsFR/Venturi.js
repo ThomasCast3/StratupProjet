@@ -22,19 +22,29 @@ function changetextC(site) {
     document.getElementById('Linkedin').href = site["Francais"]["LinkedinURL"];
     document.getElementById('Local').innerHTML = site["Francais"]["Localisation"];
     document.getElementById('Local').href = site["Francais"]["LocalisationURL"];
-    document.getElementById('infoAccueil').innerHTML = '<img src="' + site["Francais"]["Backgroundimg"] + '" class="fondaccueil">' + document.getElementById('infoAccueil').innerHTML;
     let Confiance = document.getElementById('Confiance')
-    for (let i = 0; i < site["Francais"]["Confiance"].length; i++) {
-        if (i == 4){
-            Confiance.innerHTML = Confiance.innerHTML + '<img class="TailleImg" src="' + site["Francais"]["Confiance"][i]["Image"] +'"></div>';
-        } else {
-            Confiance.innerHTML = Confiance.innerHTML + '<div class="slide"><img src="' + site["Francais"]["Confiance"][i]["Image"] +'"></div>';
-        }
+    for (let i = 0; i < site["Francais"]["numbC"]; i++) {
+        Confiance.innerHTML = Confiance.innerHTML + '<div class="slide"><img src="/img/LogoConfiance/Conf' + i +'.png"></div>';
     }
     let Partenaire = document.getElementById('Partenaire')
-    for (let i = 0; i < site["Francais"]["Partenaire"].length; i++) {
-        Partenaire.innerHTML = Partenaire.innerHTML + '<div class="slide"><img src="' + site["Francais"]["Partenaire"][i]["Image"] +'"></div>';
+    for (let i = 0; i < site["Francais"]["numbP"]; i++) {
+        Partenaire.innerHTML = Partenaire.innerHTML + '<div class="slide"><img src="/img/Partenaire/Part'+i+'.png"></div>';
     }
+    R = site["Francais"]["red"];
+    G = site["Francais"]["green"];
+    B = site["Francais"]["blue"];
+    document.getElementsByClassName("carrerimg")[0].style.backgroundColor = "rgb("+R+","+G+","+B+")";
+    document.getElementsByClassName("coordonne")[0].style.backgroundColor = "rgb("+R+","+G+","+B+")";
+    document.getElementsByClassName("navbar")[0].style.backgroundColor = "rgb("+R+","+G+","+B+")";
+    document.getElementsByClassName("navbar")[0].style.boxShadow = "rgb("+R+","+G+","+B+" / 62%) 0 5px 20px";
+    document.getElementsByClassName("page")[0].style.backgroundColor = "rgb("+R+","+G+","+B+")";
+    for (let k = 0; k < document.getElementsByClassName("sphère").length; k++) {
+        document.getElementsByClassName("sphère")[k].style.backgroundColor = "rgb("+R+","+G+","+B+")";
+    }
+    for (let k = 0; k < document.getElementsByClassName("barre").length; k++) {
+        document.getElementsByClassName("barre")[k].style.backgroundColor = "rgb("+R+","+G+","+B+")";
+    }
+    document.getElementById("infoAccueil").style.backgroundImage = "linear-gradient( rgb("+R+","+G+","+B+"), rgba(0,0,0,0))";
     $('.customer-logos').slick({
         slidesToShow: 6,
         slidesToScroll: 3,
@@ -77,7 +87,7 @@ function changetextP(site){
     document.getElementById('txtProduit').innerHTML = site[langage]["txtProduit"];
 }
 function changetextPC(site){
-    document.getElementById('imgProduit').innerHTML = `<img class="imgBrochur" src="`+ site["Francais"]["imgProduit"] +`">`;
+    document.getElementById('imgProduit').innerHTML = `<img class="imgBrochur" src="/img/venturi.png">`;
     document.getElementById('lienProduit').href = site["Francais"]["lienProduit"];
 }
 
