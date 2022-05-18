@@ -42,4 +42,4 @@ function send_mail_to($to_email, $data) {
 
 }
 
-send_mail_to("castanier.thomas0703@gmail.com", []);    //ajouter data pour le contenu
+send_mail_to("davidroquain03@gmail.com", []);    //ajouter data pour le contenu

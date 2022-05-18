@@ -1,0 +1,90 @@
+h2 {
+    text-align: left;
+}
+
+#contacte {
+    margin: 0px;
+    padding: 60px;
+    display: flex;
+}
+
+.formulaire {
+    background-color: rgb(47, 53, 83);
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    box-shadow: 10px 5px 5px black;
+}
+
+#titreForm {
+    font-size: 30px;
+    position: relative;
+    top: 20px;
+    text-shadow: -1px -1px white, 1px 1px white, -1px 1px white, 1px -1px white;
+}
+
+#message {
+    resize: none;
+}
+
+.champSaisi {
+    width: 70%;
+    background-color: transparent;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    color: white;
+}
+
+ ::placeholder {
+    color: white;
+}
+
+#asideContainer {
+    width: 20%;
+    margin: 40px;
+    padding: 10px;
+    border: 2px solid black;
+    box-shadow: 6px 3px 3px gray;
+    background-color: rgba(160, 157, 157, 0.884);
+}
+
+.logoP {
+    display: flex;
+    align-items: center;
+}
+
+#test {
+    display: inline;
+}
+
+#containerInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+#lienLink {
+    text-decoration: none;
+    color: black;
+}
+
+.logoinfo {
+    margin-right: 4%;
+    width: 10%;
+    max-height: 45px;
+    min-width: 30px;
+}
+
+.coordonne {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+footer {
+    background-color: rgb(47, 53, 83);
+    color: white;
+    padding-bottom: 10px;
+    display: flex;
+}

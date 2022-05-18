@@ -7,18 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Servithen</title>   
     <link rel="shortcut icon" href="/img/logo.png" type="image/x-icon">    <!--logo principale servithen -->
-    <link rel="stylesheet" href="/fr/cssFR/accueilFR.css">
-    <link rel="stylesheet" href="/fr/cssFR/accueil2FR.css">
-<link rel="stylesheet" href="/fr/cssFR/accueil3FR.css">      <!--lien vers css de l'accueil -->
+    <link rel="stylesheet" href="/css/accueilFR.css">
+    <link rel="stylesheet" href="/css/accueil2FR.css">
+    <link rel="stylesheet" href="/css/accueil3FR.css">
+    <link rel="stylesheet" href="/css/Responsive.css">   <!--lien vers css de l'accueil -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
-    <script src="fr/jsFR/Accueil.js"></script>
+    <script src="js/Accueil.js"></script>
+    <script src="js/Script.js"></script>
 
 </head>
 
 <body>
-
-
 
     <header>
 
@@ -29,70 +29,72 @@
             <div class="navbar">
 
 
-                <div><img id="access" class="logo" src="/img/logo.png" alt="logo Servithen"></div>
+                <div id="logod"><img id="access" class="logo" src="/img/logo." alt="logo Servithen"></div>
 
                 <a id="francais"><img class="langage" src="/img/drapeau/france-flag-png-large.png" alt="logo drapeau fr"/></a>
 
                 <a id="anglais"><img class="langage" src="/img/drapeau/united-kingdom-flag-png-large.png" alt="logo drapeau en"/></a>
 
 
+                <div id="menu">
 
-                <div class="dropdown">
+                    <div class="dropdown" id="leftmen">
 
-                    <a id="contact" class="MenuBtn" href="/fr/Form.html">NOUS CONTACTER</a>
+                        <a id="accueil" class="MenuBtn" href="/index.html">ACCUEIL</a>
 
-                </div>
-
-
-                <div class="dropdown">
-                    <button id="industrie" class="dropbtn">INDUSTRIE 4.0
-                  </button>
-                    <div class="dropdown-content3">
-                        <a href="fr/Appli.html">MyPartner</a>
-                        <a id="solution" href="fr/SolutionConnecteeGestionDistance.html">Solution connectée de gestion à distance</a>
                     </div>
-                </div>
 
-                <div class="dropdown">
-                    <button class="dropbtn">SERVICES
-                  </button>
-                    <div class="dropdown-content3">
-                        <a id="Audit" href="fr/service/service1.html">Audits et Expertises d’installations</a>
-                        <a id="Remise" href="fr/service/service2.html">Remise aux normes réglementaire </a>
-                        <a id="Valor" href="fr/service/service3.html">Valorisation énergétique</a>
-                        <a id="Etude" href="fr/service/service4.html">Etudes de faisabilité, Avant-projets et études de détail</a>
-                        <a id="Maintenance" href="fr/service/service5.html">Maintenance préventive / curative</a>
+                    <div class="dropdown">
+                        <button id="Savoir" class="dropbtn">SAVOIR-FAIRE
+                        </button>
+                        <div class="dropdown-content3">
+                            <a id="Metier" href="/Presentation.html">Notre métier</a>
+                            <a id="Servithen" href="/PourquoiServithen.html">Pourquoi Servithen</a>
+                            <a id="Engagement" href="/NotreEngagement.html">Notre engagement</a>
+                        </div>
                     </div>
-                </div>
 
-                <div class="dropdown">
-                    <button id="Produit" class="dropbtn">PRODUITS
-                  </button>
-                    <div class="dropdown-content3">
-                        <a id="Tour" href="fr/Produit/ToursDeLavage.html">Tours de lavage</a>
-                        <a href="fr/Produit/Venturi.html">Venturi</a>
-                        <a id="Electro" href="fr/Produit/ElectrofiltresHumidesSecs.html">Electrofiltres humides / secs</a>
-                        <a id="Filtre" href="fr/Produit/FiltresManches.html">Filtres à manches</a>
-                        <a id="EDIP" href="fr/Produit/EquipementsDosageInjectionDePoudres.html">EDIP : Equipements de Dosage et Injection de Poudres</a>
-                        <a id="Installation" href="fr/Produit/Installations.html">Installations « Clés en mains »</a>
-                        <a id="Recuperation" href="fr/Produit/RecuperationEnergie.html">Récupération d’énergie</a>
-                        <a id="Fourniture" href="fr/Produit/FourniturePiecesRechange.html">Fourniture de pièces de rechange</a>
+                    <div class="dropdown" id="rightmen">
+                        <button id="Produit" class="dropbtn">PRODUITS
+                        </button>
+                        <div class="dropdown-content3">
+                            <a id="Tour" href="/Produit/ToursDeLavage.html">Tours de lavage</a>
+                            <a href="/Produit/Venturi.html">Venturi</a>
+                            <a id="Electro" href="/Produit/ElectrofiltresHumidesSecs.html">Electrofiltres humides / secs</a>
+                            <a id="Filtre" href="/Produit/FiltresManches.html">Filtres à manches</a>
+                            <a id="EDIP" href="/Produit/EquipementsDosageInjectionDePoudres.html">EDIP : Dosage et Injection de Poudres</a>
+                            <a id="Installation" href="/Produit/Installations.html">Installations « Clés en mains »</a>
+                            <a id="Recuperation" href="/Produit/RecuperationEnergie.html">Récupération d’énergie</a>
+                            <a id="Fourniture" href="/Produit/FourniturePiecesRechange.html">Fourniture de pièces de rechange</a>
+                        </div>
                     </div>
-                </div>
 
-                <div class="dropdown">
-                    <button id="Savoir" class="dropbtn">SAVOIR-FAIRE
-                  </button>
-                    <div class="dropdown-content3">
-                        <a id="Metier" href="fr/Presentation.html">Notre métier</a>
-                        <a id="Servithen" href="fr/PourquoiServithen.html">Pourquoi Servithen</a>
-                        <a id="Engagement" href="fr/NotreEngagement.html">Notre engagement</a>
+                    <div class="dropdown">
+                        <button class="dropbtn">SERVICES
+                        </button>
+                        <div class="dropdown-content3">
+                            <a id="Audit" href="/service/service1.html">Audits et Expertises d’installations</a>
+                            <a id="Remise" href="/service/service2.html">Remise aux normes réglementaire </a>
+                            <a id="Valor" href="/service/service3.html">Valorisation énergétique</a>
+                            <a id="Etude" href="/service/service4.html">Etudes de faisabilité, Avant-projets et études de détail</a>
+                            <a id="Maintenance" href="/service/service5.html">Maintenance préventive / curative</a>
+                        </div>
                     </div>
-                </div>
 
-                <div class="dropdown">
+                    <div class="dropdown">
+                        <button id="industrie" class="dropbtn">INDUSTRIE 4.0
+                      </button>
+                        <div class="dropdown-content3">
+                            <a href="/Appli.html">MyPartner</a>
+                            <a id="solution" href="/SolutionConnecteeGestionDistance.html">Solution de gestion à distance</a>
+                        </div>
+                    </div>
 
-                    <a id="accueil" class="MenuBtn" href="index.html">ACCUEIL</a>
+                    <div class="dropdown">
+
+                        <a id="contact" class="MenuBtn" href="/Form.html">NOUS CONTACTER</a>
+
+                    </div>
 
                 </div>
 
@@ -100,24 +102,22 @@
 
         </div>
 
-
-
     </header>
 
     <!-- texte sur l'image en haut de la page -->
 
     <div id="infoAccueil">
         <div id="txtAccueil">
-            <p id="txtTitre" class="pTitre">
-                Servithen, industrie française, <br> 30 ans de savoir faire. <br>
-            </p>
+            <h1 id="txtTitre" class="pTitre">
+                Servithen, industrie française, <br> depuis 1986. <br>
+            </h1>
         </div>
         <div id="soustxtAccueil">
-            <p id="stxtTitre" class="pTitre">
+            <h2 id="stxtTitre" class="pTitre">
                 Ingénierie, audit et assistance à la maitrise d'ouvrage.
-            </p>
+            </h2>
         </div>
-        <img src="/img/Backgroundimg.png" class="fondaccueil">
+        <img src="/img/Backgroundimg." class="fondaccueil">
     </div>
 
     <!-- section notre activité avec les image et les texte-->
@@ -148,43 +148,31 @@
                 <div class="hover" id="carteSection1">
                     <div class="card2">
                         <p id="description1" class="description">Diagnostic d'installation</p>
-                        <img id="L1" src="/img/left1.png" class="left" alt="photo des services">
-                        <img id="R1" src="/img/right1.png" class="right" alt="photo des services">
-                        <img id="M1" src="/img/middle1.png" class="middle" alt="photo des services">
+                        <img id="M1" src="/img/middle1." class="middle" alt="photo des services">
                     </div>
                 </div>
                 <div class="hover" id="carteSection2">
                     <div class="card2">
                         <p id="description2" class="description">Remise aux normes</p>
-                        <img id="L2" src="/img/left2.png" class="left" alt="photo des services">
-                        <img id="R2" src="/img/right2.png" class="right" alt="photo des services">
-                        <img id="M2" src="/img/middle2.png" class="middle" alt="photo des services">
+                        <img id="M2" src="/img/middle2." class="middle" alt="photo des services">
                     </div>
                 </div>
                 <div class="hover" id="carteSection3">
                     <div class="card2">
                         <p id="description3" class="description">Valorisation énergétique</p>
-                        <img id="L3" src="/img/left3.png" class="left" alt="photo des services">
-                        <img id="R3" src="/img/right3.png" class="right" alt="photo des services">
-                        <img id="M3" src="/img/middle3.png" class="middle" alt="photo des services">
+                        <img id="M3" src="/img/middle3." class="middle" alt="photo des services">
                     </div>
                 </div>
-            </div>
-            <div class="flex">
                 <div class="hover" id="carteSection4">
                     <div class="card2">
                         <p id="description4" class="description">Etude de projet</p>
-                        <img id="L4" src="/img/left4.png" class="left" alt="photo des services">
-                        <img id="R4" src="/img/right4.png" class="right" alt="photo des services">
-                        <img id="M4" src="/img/middle4.png" class="middle" alt="photo des services">
+                        <img id="M4" src="/img/middle4." class="middle" alt="photo des services">
                     </div>
                 </div>
                 <div class="hover" id="carteSection5">
                     <div class="card2">
                         <p id="description5" class="description">Installation complète</p>
-                        <img id="L5" src="/img/left5.png" class="left" alt="photo des services">
-                        <img id="R5" src="/img/right5.png" class="right" alt="photo des services">
-                        <img id="M5" src="/img/middle5.png" class="middle" alt="photo des services">
+                        <img id="M5" src="/img/middle5." class="middle" alt="photo des services">
                     </div>
                 </div>
             </div>
@@ -200,72 +188,50 @@
                 <div class="hover" id="carteProduit1">
                     <div class="card2">
                         <p id="descriptionP1" class="description">Tour de lavage</p>
-                        <img id="LP1" src="/img/leftP1.png" class="left" alt="photo des services">
-                        <img id="RP1" src="/img/rightP1.png" class="right" alt="photo des services">
-                        <img id="MP1" src="/img/middleP1.png" class="middle" alt="photo des services">
+                        <img id="MP1" src="/img/middleP1." class="middle" alt="photo des services">
                     </div>
                 </div>
                 <div class="hover" id="carteProduit2">
                     <div class="card2">
                         <p id="descriptionP2" class="description">Venturi</p>
-                        <img id="LP2" src="/img/leftP2.png" class="left" alt="photo des services">
-                        <img id="RP2" src="/img/rightP2.png" class="right" alt="photo des services">
-                        <img id="MP2" src="/img/middleP2.png" class="middle" alt="photo des services">
+                        <img id="MP2" src="/img/middleP2." class="middle" alt="photo des services">
                     </div>
                 </div>
                 <div class="hover" id="carteProduit3">
                     <div class="card2">
                         <p id="descriptionP3" class="description">Electrofiltres humides et sec</p>
-                        <img id="LP3" src="/img/leftP3.png" class="left" alt="photo des services">
-                        <img id="RP3" src="/img/rightP3.png" class="right" alt="photo des services">
-                        <img id="MP3" src="/img/middleP3.png" class="middle" alt="photo des services"></div>
+                        <img id="MP3" src="/img/middleP3." class="middle" alt="photo des services"></div>
                 </div>
-            </div>
-
-            <div class="flex">
                 <div class="hover" id="carteProduit4">
                     <div class="card2">
                         <p id="descriptionP4" class="description">Filtres à manches</p>
-                        <img id="LP4" src="/img/leftP4.png" class="left" alt="photo des services">
-                        <img id="RP4" src="/img/rightP4.png" class="right" alt="photo des services">
-                        <img id="MP4" src="/img/middleP4.png" class="middle" alt="photo des services">
+                        <img id="MP4" src="/img/middleP4." class="middle" alt="photo des services">
                     </div>
                 </div>
                 <div class="hover" id="carteProduit5">
                     <div class="card2">
                         <p id="descriptionP5" class="description">EDIP</p>
-                        <img id="LP5" src="/img/leftP5.png" class="left" alt="photo des services">
-                        <img id="RP5" src="/img/rightP5.png" class="right" alt="photo des services">
-                        <img id="MP5" src="/img/middleP5.png" class="middle" alt="photo des services"></div>
+                        <img id="MP5" src="/img/middleP5." class="middle" alt="photo des services"></div>
                 </div>
                 <div class="hover" id="carteProduit6">
                     <div class="card2">
                         <p id="descriptionP6" class="description">installation "clé en main"</p>
-                        <img id="LP6" src="/img/leftP6.png" class="left" alt="photo des services">
-                        <img id="RP6" src="/img/rightP6.png" class="right" alt="photo des services">
-                        <img id="MP6" src="/img/middleP6.png" class="middle" alt="photo des services"></div>
+                        <img id="MP6" src="/img/middleP6." class="middle" alt="photo des services"></div>
                 </div>
-            </div>
-
-            <div class="flex">
                 <div class="hover" id="carteProduit7">
                     <div class="card2">
                         <p id="descriptionP7" class="description">Récupération d'énergie</p>
-                        <img id="LP7" src="/img/leftP7.png" class="left" alt="photo des services">
-                        <img id="RP7" src="/img/rightP7.png" class="right" alt="photo des services">
-                        <img id="MP7" src="/img/middleP7.png" class="middle" alt="photo des services"></div>
+                        <img id="MP7" src="/img/middleP7." class="middle" alt="photo des services"></div>
                 </div>
                 <div class="hover" id="carteProduit8">
                     <div class="card2">
                         <p id="descriptionP8" class="description">Fourniture de pièce de rechange</p>
-                        <img id="LP8" src="/img/leftP8.png" class="left" alt="photo des services">
-                        <img id="RP8" src="/img/rightP8.png" class="right" alt="photo des services">
-                        <img id="MP8" src="/img/middleP8.png" class="middle" alt="photo des services">
+                        <img id="MP8" src="/img/middleP8." class="middle" alt="photo des services">
                     </div>
                 </div>
             </div>
 
-            <h3 id="Industrie4">industrie 4.0 :</h3>
+            <h3 id="Industrie4">Industrie 4.0 :</h3>
 
             <div class="déco">
                 <div class="sphère"></div>
@@ -274,7 +240,7 @@
             </div>
             
             <div class="flex">
-                <video width="500" height="320" controls>
+                <video class="vid" controls>
                         <source src="/video/PresentationMP.mp4" type="video/mp4">
                     </video>
             </div>
@@ -335,10 +301,10 @@
         <div class="foter">
             <img class="logoinfo" src="/img/LogoFooter/logoPosW.png" alt="logo position ">
             <a id="Local" class="footerp" target="_blank" href="https://www.google.fr/maps/place/SERVITHEN/@48.8155515,1.9083403,20z/data=!4m13!1m7!3m6!1s0x47e69b2e4c101591:0x3c4b6015d2f3a5ea!2s8+Rue+Guillaume+de+Bois+Nivard,+78640+Neauphle-le-Ch%C3%A2teau!3b1!8m2!3d48.8155576!4d1.9084528!3m4!1s0x47e69b2e4914fd6f:0xefa5b210e1554b90!8m2!3d48.8155084!4d1.9085263">
-                        8 Rue Guillaume de Bois Nivard,<br> 78640 Neauphle-le-Château</a>
-
+                        8 Rue Guillaume de Bois Nivard,<br> 78640 Neauphle-le-Château
+            </a>
         </div>
-        <p id="Copyright" class="Copyright">&copy; Copyright 1986 - 2022 | SERVITHEN | Tous droits réservés | <a class="Copyright" href="/fr/MentionsLegales.html">Mentions légales</a> </p>
+        <p id="Copyright" class="Copyright">&copy; Copyright 1986 - 2022 | SERVITHEN | Tous droits réservés | <a class="Copyright" href="/MentionsLegales.html">Mentions légales</a> </p>
 
     </footer>
 </body>

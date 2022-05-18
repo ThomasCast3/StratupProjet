@@ -1,0 +1,261 @@
+@media only screen and (min-width: 320px){
+    aside{
+        position: absolute;
+        opacity: 0;
+    }
+    .déco{
+        margin-bottom: 16px;
+    }
+    .imgBrochur{
+        width: 50vw;
+    }
+    .navbar{
+        height: 80px;
+    }
+    .textphoto{
+        font-size: 15px;
+    }
+    .presentation{
+        font-size: 15px;
+    }
+    .headtitle{
+        font-size: 200%;
+    }
+    h3{
+        font-size: 200%
+    }
+    .barre{
+        width: 180px;
+        margin-bottom: 32px;
+    }
+    .sphère{
+        margin-bottom: 32px;
+    }
+    #soustxtAccueil{
+        padding-bottom: 0%;
+    }
+    #txtTitre{
+        font-size: 200%;
+    }
+    .dropdown{
+        height: 50%;
+        padding-top: 5px;
+    }
+    .MenuBtn{
+        font-size: 60%;
+    }
+    .dropdown .dropbtn{
+        font-size: 60%;
+    }
+    .card2{
+        width: 170px;
+        height: 250px;
+    }
+    .middle{
+        max-width: 160px;
+        max-height: 230px;
+    }
+    .vid{
+        width: 80vw;
+    }
+    #txtAccueil{
+        padding-top: 100px;
+    }
+    #leftmen{
+        padding-left: 25%;
+    }
+    #rightmen{
+        padding-right: 25%;
+    }
+    .dropdown-content3 > a{
+        font-size: 14px;
+    }
+    .logo{
+        width: 60px;
+        height: 60px;
+    }
+    .foter{
+        width: 100%;
+    }
+    #francais{
+        top: -20px;
+        right: 50px;
+    }
+    #anglais{
+        top: -20px;
+        right: 20px;
+    }
+    .champSaisi {
+        width: 100%;
+    }
+    #contacte{
+        padding: 0%;
+    }
+    #message{
+        width: 100%;
+    }
+}
+@media only screen and (min-width: 720px){
+    .mdp{
+        left: 15%;
+        top: 20%;
+    }
+    .mdptext{
+        left: 15%;
+        top: 50%;
+    }
+    .playstore{
+        width: 40vw;
+        left: 30vw;
+    }
+    .déco{
+        margin-bottom: 32px;
+    }
+    .imgBrochur{
+        width: 50vw;
+    }
+    .navbar{
+        height: 125px;
+    }
+    .textphoto{
+        font-size: 30px;
+    }
+    .presentation{
+        font-size: 30px;
+    }
+    .headtitle{
+        font-size: 300%;
+    }
+    h3{
+        font-size: 300%
+    }
+    #soustxtAccueil{
+        padding-bottom: 10%;
+    }
+    #txtTitre{
+        font-size: 300%;
+    }
+    .vid{
+        width: 60vw;
+    }
+    #txtAccueil{
+        padding-top: 150px;
+    }
+    #leftmen{
+        padding-left: 27%;
+    }
+    #rightmen{
+        padding-right: 27%;
+    }
+    .dropdown .dropbtn{
+        font-size: 100%;
+    }
+    .MenuBtn{
+        font-size: 100%;
+    }
+    .logo{
+        width: 120px;
+        height: 120px;
+    }
+    .barre{
+        width: 360px;
+    }
+    .foter{
+        width: 60%;
+    }
+    .langage{
+        width: 50px;
+        height: 45px;
+    }
+    #francais{
+        top: 0px;
+        right: 80px;
+    }
+    #anglais{
+        top: 0px;
+        right: 20px;
+    }
+    .logoinfo{
+        width: 5%;
+    }
+    #contacte{
+        padding: 60px;
+    }
+}
+@media only screen and (min-width: 1024px){
+    .playstore{
+        width: 40vw;
+        left: 30vw;
+    }
+    .déco{
+        margin-bottom: 32px;
+    }
+    .imgBrochur{
+        width: 25vw;
+    }
+    .dropdown .dropbtn{
+        font-size: 100%;
+    }
+    .navbar{
+        height: 125px;
+    }
+    .textphoto{
+        font-size: 30px;
+    }
+    .presentation{
+        font-size: 30px;
+    }
+    .headtitle{
+        font-size: 300%;
+    }
+    h3{
+        font-size: 300%
+    }
+    #soustxtAccueil{
+        padding-bottom: 10%;
+    }
+    #txtTitre{
+        font-size: 300%;
+    }
+    .card2{
+        width: 200px;
+        height: 275px;
+    }
+    .middle{
+        max-width: 160px;
+        max-height: 230px;
+    }
+    .vid{
+        width: 60vw;
+    }
+    #txtAccueil{
+        padding-top: 150px;
+    }
+    #leftmen{
+        padding-left: 0%;
+    }
+    #rightmen{
+        padding-right: 0%;
+    }
+    .MenuBtn{
+        font-size: 100%;
+    }
+    .logo{
+        width: 120px;
+        height: 120px;
+    }
+    .barre{
+        width: 360px;
+    }
+    .foter{
+        width: 50%;
+    }
+    .logoinfo{
+        width: 5%;
+    }
+    aside{
+        float: right;
+        position: relative;
+        opacity: 1;
+    }
+}

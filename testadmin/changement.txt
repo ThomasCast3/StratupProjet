@@ -1,0 +1,4 @@
+Ajout d'un soulignement en dessous de l'image des partenaires et des entreprises de confiance lorsqu'on passe la souris sur les éléments pour uploader une image
+    -> Soulignement non présent sur les éléments au début du carrousel lorsque des images de la fin du carrousel sont visibles.
+Correction de la version portable/pc du formulaire "Nous contacter", les informations sur le côté sont visible uniquement avec un écran pc quand la fenètre est large.
+Correction de la police des zones de textes dans les pages Admin, le texte est plus lisible.

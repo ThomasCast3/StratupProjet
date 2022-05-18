@@ -1,0 +1,365 @@
+
+.page {
+    background-color: rgb(47, 53, 83);
+    width: 100%;
+    height: 4px;
+}
+
+.sphère {
+    border-radius: 128px;
+    background-color: rgb(47, 53, 83);
+    width: 6px;
+    height: 6px;
+}
+
+.barre {
+    background-color: rgb(47, 53, 83);
+    width: 256px;
+    height: 4px;
+}
+
+.déco {
+    left: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 64px;
+}
+
+@keyframes pompe {
+    from {
+        left: 37vw;
+    }
+    to {
+        left: 63vw;
+    }
+}
+
+.transmission {
+    position: absolute;
+    background-color: rgb(47, 53, 83);
+    border-radius: 128px;
+    width: 5.5px;
+    height: 5.5px;
+    left: 582px;
+    animation-name: pompe;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+.footers1 {
+    margin-top: 16px;
+}
+
+.logoinfo {
+    margin-right: 4%;
+    width: 10%;
+}
+
+.foter {
+    width: 40vw;
+    display: flex;
+    justify-content: center;
+}
+
+.foters {
+    width: 50vw;
+    text-align: center;
+}
+
+.coordonne {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.imgBrochur {
+    margin: 3%;
+    border-radius: 5px;
+}
+
+.fondBroch {
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.carrerimg {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(47, 53, 83);
+}
+.carre{
+    display: flex;
+    flex-direction: column;
+}
+
+.texteBroch {
+    color: white;
+    margin: 3%;
+}
+
+.DL {
+    color: black;
+    text-decoration: none;
+}
+
+.btnPDF {
+    margin: 3%;
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    padding: 1% 1% 1%;
+    border-radius: 30px;
+    background-color: rgb(214, 213, 213);
+}
+
+.btnPDF:hover {
+    text-decoration: none;
+    background-color: rgb(233, 232, 232);
+}
+
+.btnPDF:active {
+    position: relative;
+    top: 1px;
+}
+
+.Copyright {
+    text-align: start;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+P.mention {
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+}
+
+h4 {
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+    font-size: 120%;
+}
+.fondaccueil{
+    top: 0px;
+    position: absolute;
+    width: 100vw;
+    z-index: -1;
+}
+section{
+    background-color: white;
+}
+.headtitle{
+    margin-top: 0px;
+    padding-top: 50px;
+    font-size: 300%;
+    z-index: 1;
+}
+a{
+    color: white;
+    text-decoration: underline;
+}
+#access{
+    cursor: pointer;
+}
+#deco{
+    cursor: pointer;
+    position: absolute;
+}
+.service{
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+}
+#francais{
+    display: flex;
+    cursor: pointer;
+    z-index: 10;
+    align-items: center;
+    position: absolute;
+    height: 100%;
+}
+#anglais{
+    display: flex;
+    cursor: pointer;
+    z-index: 10;
+    align-items: center;
+    position: absolute;
+    height: 100%;
+}
+#deco{
+    cursor: pointer;
+    z-index: 10;
+}
+.modifleft{
+    position: absolute;
+    top: 90%;
+    left: -46.5%;
+    width: 116px;
+    z-index: 10;
+}
+.modifright{
+    position: absolute;
+    top: 90%;
+    left: 100%;
+    width: 116px;
+    z-index: 10;
+}
+.modifmiddle{
+    position: absolute;
+    top: 90%;
+    z-index: 10;
+}
+textarea{
+    border-color: rgb(47, 53, 83);
+    border-radius: 8px;
+    z-index: 10;
+}
+.edit{
+    width: 2vw;
+    cursor: pointer;
+    z-index: 10;
+}
+.card2 > .edit{
+    position: absolute;
+    top: -4vh;
+    height: 4vh;
+}
+#ConfChange > .edit{
+    height: 3vh;
+}
+#PartChange > .edit{
+    height: 3vh;
+}
+.foter > .edit{
+    right: 35vw;
+}
+button{
+    background-color: rgb(47, 53, 83);
+    border-radius: 8px;
+    border-color: white;
+    color: white;
+}
+input{
+    background-color: rgb(47, 53, 83);
+    border-radius: 8px;
+    border-color: white;
+    color: white;
+}
+#nousContacter{
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: space-around;
+}
+.photoService{
+    width: 50vw;
+    border-radius: 5px;
+}
+.alignPhoto{
+    padding-top: 5%;
+    padding-bottom: 5%;
+    display: flex;
+    justify-content: end;
+}
+.hide{
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+}
+.descriptionmodif{
+    position: absolute;
+    margin: 0;
+    color: black;
+    z-index: 10;
+}
+.description{
+    text-align: center;
+    position: absolute;
+    margin: 0;
+    text-shadow: -1px -1px white, 1px 1px white, -1px 1px white, 1px -1px white;
+    color: black;
+    z-index: 3;
+}
+#carreimg{
+    display: flex;
+    flex-direction: column;
+}
+#carreimg > .edit {
+    position: initial;
+    height: 5vh;
+    width: 4vw;
+}
+.logoedit{
+    position: absolute;
+    top: 80%;
+    left: 0%;
+}
+.coloredit{
+    position: absolute;
+    left: 0%;
+}
+.mdp{
+    position: absolute;
+    left: 40vw;
+    top: 0%;
+    color: white;
+}
+.mdptext{
+    position: absolute;
+    left: 50vw;
+    top: 10%;
+}
+#confia{
+    padding-top: 0px;
+}
+h1{
+    font-size: 5vh;
+    font-weight: lighter;
+    text-shadow: -1px -1px black, 1px 1px black, -1px 1px black, 1px -1px black;
+}
+h2{
+    font-size: 3vh;
+    font-weight: lighter;
+    text-shadow: -1px -1px black, 1px 1px black, -1px 1px black, 1px -1px black;
+}
+.vid{
+    width: 80vw;
+}
+.flex{
+    width: 100vw;
+    flex-wrap: wrap;
+}
+#menu{
+    flex-wrap: wrap;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#logod{
+    position: absolute;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.playstore{
+    left: 10vw;
+    width: 90vw;
+}
+#NousContact{
+    color: white;
+    text-shadow: -1px -1px black, 1px 1px black, -1px 1px black, 1px -1px black;
+    left: 40vw;
+    position: relative;
+}
+input{
+    text-shadow: -1px -1px black, 1px 1px black, -1px 1px black, 1px -1px black;
+}
