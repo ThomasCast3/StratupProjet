@@ -1,0 +1,5 @@
+AuthUserFile /Users/arxcoz/Downloads/StratupProjet/test/securite/.htpasswd
+AuthName "Accès Protégé"
+AuthType Basic
+
+Require valid-user
